@@ -1,0 +1,31 @@
+.number {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 75px;
+    
+    &_button {
+        background: $color;
+        border: none;
+        line-height: 11px;
+        color: $light_color;
+        font-size: 20px;
+        font-weight: bold;
+        border-radius: 50%;
+        height: 18px;
+        width: 18px;
+        padding: 0;
+    }
+    &_input {
+        border-radius: 5px;
+        background: transparent;
+        color: $color;
+        border: 1px solid #ccc;
+        font: 16px $font-family__heading;
+        margin: 3px;
+        padding: 4px 5px;
+        width: 25px;
+        text-align: center;
+        box-sizing: border-box;
+    }
+}

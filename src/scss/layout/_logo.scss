@@ -1,0 +1,9 @@
+.logo {
+    background: url(#{$img-path}/logo.png) no-repeat center top;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    height: 59px;
+    width: 124px;
+    transform: translate(-50%, 0);
+}

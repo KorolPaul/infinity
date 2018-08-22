@@ -1,0 +1,55 @@
+@mixin invisible-text {
+    font: 0/0 a;
+    text-shadow: none;
+    color: transparent;
+}
+@mixin cutted-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+@mixin tablet() {
+    @media all and (min-width: 768px) { @content; }
+}
+@mixin desktop() {
+    @media all and (min-width: 960px) { @content; }
+}
+@mixin media($resolution) {
+    @media all and (min-width: $resolution) { @content; }
+}
+@mixin placeholder-color($color) {
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    &::-moz-placeholder {
+        color: $color;
+    }
+    &:-ms-input-placeholder
+    {
+        color: $color;
+    }
+}
+
+@mixin layout {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: $layout_indent;
+    padding-right: $layout_indent;
+    box-sizing: border-box;
+
+    @include desktop {
+        width: $max-width;
+    }
+}
+@mixin block-heading {
+    p {
+        line-height: 2;
+    }
+    & > h2,
+    & > p {
+        flex-basis: 100%;
+        @include desktop {
+            padding: 0 12%;
+        }
+    }
+}

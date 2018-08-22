@@ -1,0 +1,50 @@
+%button {
+    background: transparent;
+    border: 1px solid currentColor;
+    border-radius: 30px;
+    cursor: pointer;
+    color: $bright_color;
+    font-family: $font-family__heading;
+    font-weight: bold;
+    padding: 15px 50px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    transition: .2s ease-in-out border, 
+                .2s ease-in-out background-color,
+                .2s ease-in-out color;
+}
+
+.button,
+button,
+input[type="button"],
+input[type="submit"],  {
+    @extend %button;
+
+    &:hover {
+        background-color: $bright_color;
+        color: $light_color;
+    }
+}
+
+.button {
+    &__blue {
+        color: $link_color;
+    }
+    &__filled {
+        background-color: $bright_color;
+        color: $light_color;
+
+        &:hover {
+            background-color: #c02055;
+        }
+    }
+    &__filled-blue {
+        background-color: $link_color;
+        color: $light_color;
+
+        &:hover {
+            background-color: $link_color__hover;
+        }
+    }
+}

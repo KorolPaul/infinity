@@ -1,0 +1,30 @@
+.header {
+    &_top {
+        background: $bright_color;
+        padding: 10px 0;
+        text-align: center;
+    }
+    &_bottom {
+        box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
+        position: relative;
+        @include tablet {
+            position: static;
+        }
+    }
+    &_other {
+        display: none;
+        @include desktop {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+    }
+    &_holder {
+        @include tablet {
+            position: relative;
+        }
+    }
+    &_row {
+        flex-wrap: nowrap;
+    }
+}

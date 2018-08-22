@@ -1,0 +1,90 @@
+.car {
+    animation: 1.5s ease-in-out car-appearance forwards;
+    background: url(#{$img-path}/car.png) no-repeat;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    height: 303px;
+    width: 867px;
+    transform: translateX(-200%);
+
+    .slow-speed & {
+        animation: .8s ease-in car-active forwards;
+    }
+    .freeze & {
+        animation: none;
+        transform: translateX(-50%);
+    }
+
+    &_wheel {
+        animation: 1.5s ease-in-out wheel-appearance;
+        background: url(#{$img-path}/wheel.png) no-repeat;
+        position: absolute;
+        bottom: 6px;
+        height: 130px;
+        width: 130px;
+
+        .slow-speed & {
+            animation: .8s ease-in wheel-active, .5s linear wheel-active .8s infinite;
+        }
+        .freeze & {
+            animation: none;
+        }
+
+        &__back {
+            left: 128px;;
+        }
+        &__front {
+            right: 124px;;
+        }
+    }
+    &_light {
+        background: url(#{$img-path}/light.png) no-repeat;
+        position: absolute;
+        left: 91%;
+        bottom: 110px;
+        height: 146px;
+        width: 639px;
+        opacity: 0;
+        transition: .3s ease-out opacity;
+
+        .fast-speed & {
+            opacity: 1;
+        }
+    }
+}
+
+@keyframes car-appearance {
+    0% {
+        transform: translateX(-200%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+@keyframes car-active {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes wheel-appearance {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes wheel-active {
+    0% {
+        transform: rotateZ(0);
+    }
+    100% {
+        transform: rotateZ(360deg);
+    }
+}

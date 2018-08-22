@@ -1,0 +1,61 @@
+.footer {
+    background: #333;
+    color: #ccc;
+    padding: 45px 0 0;
+
+    &_menu-column-title {
+        @extend %heading-2;
+        color: $light_color;
+        margin: 0 0 15px;
+    }
+    &_menu-column {
+        margin: 0 0 30px;
+        @include tablet {
+            margin: 0;
+        }
+
+        p {
+            margin: 0 0 13px;
+        }
+        a {
+            color: #ccc;
+            border-bottom: 1px solid currentColor;
+            transition: .2s ease-in-out opacity;
+
+            &:hover {
+                opacity: .6;
+                text-decoration: none;
+            }
+        }
+    }
+    &_username {
+        color: $light_color;
+        font-weight: bold;
+        font-style: italic;
+    }
+    &_social {
+        margin: 0 0 25px;
+    }
+    &_social-icon {
+        margin: 0 8px 0 0;
+    } 
+    &_payment {
+        margin: 25px 0 0;
+    }
+    &_card {
+        margin: 0 10px 0 0;
+    }
+    &_bottom {
+        border-top: 1px solid #616161;
+        padding: 15px 0;
+        text-align: center;
+        @include tablet {
+            margin: 50px 0 0;
+        }
+    }
+    &_copyright {
+        color: #888888;
+        font-family: $font-family__heading;
+        margin: 0;
+    }
+}

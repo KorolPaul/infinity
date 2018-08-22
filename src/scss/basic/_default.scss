@@ -1,0 +1,63 @@
+body {
+    background: #aaa;
+    color: $color;
+    font: $font-size $font-family;
+    transition: .3s ease-in-out all;
+
+    &.fast-speed {
+        background: #000;
+    }
+}
+
+a {
+    color: $link_color;
+    transition: .2s ease-in-out color;
+
+    &:hover {
+        color: $link_color__hover;
+        outline: none;
+    }
+}
+
+p {
+    line-height: 1.75;
+    margin: 0 0 20px;
+}
+
+ul,
+ol {
+    padding: 0 0 0 20px;
+}
+
+ul {
+    padding: 0;
+
+    li:not([class]) {
+        line-height: 28px;
+        list-style: none;
+        padding: 0 0 0 15px;
+        margin: 0 0 15px;
+        position: relative;
+
+        &::before {
+            content: '>';
+            color: $bright_color;
+            font-weight: bold;
+            position: absolute;
+            top: -1px;
+            left: 0;
+        }
+    }
+}
+
+img {
+    max-width: 100%;
+}
+
+button,
+input,
+textarea {
+    &:focus {
+        outline: none;
+    }
+}

@@ -1,0 +1,37 @@
+.error404 {
+    background: url(#{$img-path}/404.svg) no-repeat;
+    background-size: cover;
+
+    &_wrapper {
+        text-align: center;
+        @include tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: calc(100vh - 145px - 330px);
+        }
+    }
+    &_header,
+    &_content {
+        @include tablet {
+            margin: 0 auto 50px;
+            width: 60%;
+        }
+
+        p {
+            font-size: 18px;
+            margin: 0 0 20px;
+            @include tablet {
+                font-size: 36px;
+            }
+        }
+    }
+    &_title {
+        font-size: 30vmin;
+        line-height: .8;
+        margin: 0;
+        @include tablet {
+            font-size: 220px;
+        }
+    }
+}
