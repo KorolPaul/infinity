@@ -1,0 +1,8 @@
+<svg width="34" height="201" viewBox="0 0 34 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="34" height="201" fill="black" fill-opacity="0"/>
+<rect x="1" y="72" width="32" height="56" rx="16" stroke="white" stroke-width="2"/>
+<path d="M17 0V1M17 4V5M17 8V9M17 12V13M17 16V17M17 20V21M17 24V25M17 28V29M17 32V33M17 36V37M17 40V41M17 44V45M17 48V49M17 52V53M17 56V57M17 60V61M17 64V65M17 68V69" stroke="white" stroke-opacity="0.5"/>
+<path d="M17 132V133M17 136V137M17 140V141M17 144V145M17 148V149M17 152V153M17 156V157M17 160V161M17 164V165M17 168V169M17 176V177M17 180V181M17 184V185M17 188V189M17 192V193M17 196V197M17 200V201M17 172V173" stroke="white" stroke-opacity="0.5"/>
+<path d="M17 164V148.5M17 164L22 158.824M17 164L12 158.824" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="17" cy="86" r="2" stroke="white" stroke-width="2"/>
+</svg>

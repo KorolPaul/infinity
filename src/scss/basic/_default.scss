@@ -2,6 +2,7 @@ body {
     background: #aaa;
     color: $color;
     font: $font-size $font-family;
+    overflow: hidden;
     transition: .3s ease-in-out all;
 
     &.fast-speed {

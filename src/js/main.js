@@ -1,3 +1,3 @@
 window.addEventListener('load', () => {
-    document.body.classList.remove('freeze');
+    document.body.classList.add('init');
 });

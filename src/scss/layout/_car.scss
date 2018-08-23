@@ -1,24 +1,30 @@
 .car {
-    animation: 1.5s ease-in-out car-appearance forwards;
-    background: url(#{$img-path}/car.png) no-repeat;
+    animation: none;
+    background: url(#{$img-path}/car.png) no-repeat center 0;
+    background-size: 88% auto;
     position: absolute;
-    bottom: 10%;
+    bottom: 18%;
     left: 50%;
     height: 303px;
     width: 867px;
+    z-index: 2;
     transform: translateX(-200%);
+    transition: 1.5s ease-in-out transform;
 
-    .slow-speed & {
-        animation: .8s ease-in car-active forwards;
+    .start-moving & {
+        transform: translateX(-50%);
+    }
+    .init & {
+        transform: translateX(-100%);
     }
     .freeze & {
         animation: none;
-        transform: translateX(-50%);
     }
 
     &_wheel {
         animation: 1.5s ease-in-out wheel-appearance;
         background: url(#{$img-path}/wheel.png) no-repeat;
+        background-size: 100% auto;
         position: absolute;
         bottom: 6px;
         height: 130px;
@@ -28,7 +34,9 @@
             animation: .8s ease-in wheel-active, .5s linear wheel-active .8s infinite;
         }
         .freeze & {
-            animation: none;
+            animation-timing-function: ease-out;
+            animation-duration: .8s;
+            animation-fill-mode: forwards;
         }
 
         &__back {
@@ -40,9 +48,10 @@
     }
     &_light {
         background: url(#{$img-path}/light.png) no-repeat;
+        background-size: 100% auto;
         position: absolute;
-        left: 91%;
-        bottom: 110px;
+        left: 86%;
+        bottom: 116px;
         height: 146px;
         width: 639px;
         opacity: 0;

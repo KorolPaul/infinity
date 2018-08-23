@@ -1,0 +1,41 @@
+.road {
+    animation: .8s ease-out road-stop;
+    background: url(#{$img-path}/road.png) repeat-x;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 406px;
+    width: 1920px;
+    z-index: 1;
+    
+    .init & {
+        //animation: none;
+    }
+    .slow-speed & {
+        animation: .8s ease-in road-movement, .4s linear road-movement .8s infinite;
+        filter: url(#{$img-path}/filters.svg#motion-blur);
+    }
+    .freeze & {
+        filter: none;
+        animation-duration: .8s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes road-movement {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1920px 0;
+    }
+}
+@keyframes road-stop {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1920px 0;
+    }
+}
