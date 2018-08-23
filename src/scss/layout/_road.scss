@@ -8,9 +8,10 @@
     height: 406px;
     width: 1920px;
     z-index: 1;
+    will-change: background;
     
     .init & {
-        //animation: none;
+        animation: none;
     }
     .slow-speed & {
         animation: .8s ease-in road-movement, .4s linear road-movement .8s infinite;
