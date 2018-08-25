@@ -1,6 +1,55 @@
 .content {
-    padding: 0 0 30px;
-    @include tablet {
-        padding-bottom: 100px;
+    display: flex;
+    height: 75vh;
+    position: relative;
+    z-index: 1;
+
+    &_left {
+        background: rgba(255, 255, 255, .15);
+        flex-grow: 1;
+    }
+    &_right {
+        background: rgba(0, 0, 0, .15);
+        flex-grow: 1;
+    }
+    &_intro {
+        color: #fff;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &_intro-title {
+        text-transform: uppercase;
+        max-width: 480px;
+        margin: 0 auto 40px;
+        opacity: 0;
+
+        .loaded & {
+            animation: .6s ease-in-out text-appearance forwards;
+        }
+    }
+    &_intro-text {
+        font-size: 18px;
+        line-height: normal;
+        max-width: 580px;
+        margin: auto;
+        opacity: 0;
+
+        .loaded & {
+            animation: .6s ease-in-out text-appearance .4s forwards;
+        }
+    }
+}
+
+@keyframes text-appearance {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

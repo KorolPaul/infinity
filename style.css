@@ -4,7 +4,6 @@
  * 2. Prevent adjustments of font size after orientation changes in
  *    IE on Windows Phone and in iOS.
  */
-@import url("https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Yellowtail&subset=latin-ext");
 html {
   line-height: 1.15;
   /* 1 */
@@ -435,10 +434,31 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: 'infiniti_brandbold';
+  src: url("./src/fonts/infinitibrandcy-bold-webfont.woff2") format("woff2"), url("./src/fonts/infinitibrandcy-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'infiniti_brandlight';
+  src: url("./src/fonts/infinitibrandcy-light-webfont.woff2") format("woff2"), url("./src/fonts/infinitibrandcy-light-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'infiniti_brandregular';
+  src: url("./src/fonts/infinitibrandcy-regular-webfont.woff2") format("woff2"), url("./src/fonts/infinitibrandcy-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  background: #aaa;
+  background: #000;
   color: #000;
-  font: 16px "Quattrocento", serif;
+  font: 16px "infiniti_brandregular", serif;
   overflow: hidden;
   -webkit-transition: .3s ease-in-out all;
   transition: .3s ease-in-out all;
@@ -510,7 +530,6 @@ input[type="submit"] {
   border-radius: 30px;
   cursor: pointer;
   color: #ff3478;
-  font-family: "Quattrocento Sans", sans-serif;
   font-weight: bold;
   padding: 15px 50px;
   position: relative;
@@ -560,7 +579,6 @@ input[type="tel"] {
   background: transparent;
   color: #000;
   border: 1px solid #ccc;
-  font: 16px "Quattrocento Sans", sans-serif;
   padding: 6px 15px 7px;
   -webkit-transition: .2s ease-in border-color, .2s ease-in color;
   transition: .2s ease-in border-color, .2s ease-in color;
@@ -608,7 +626,6 @@ textarea {
   background: transparent;
   color: #000;
   border: 1px solid #ccc;
-  font: 16px "Quattrocento Sans", sans-serif;
   resize: none;
   padding: 10px 15px;
   min-height: 180px;
@@ -693,7 +710,6 @@ input[type="checkbox"] + label {
   cursor: pointer;
   display: inline-block;
   color: #2b8999;
-  font-family: "Quattrocento Sans", sans-serif;
   font-weight: bold;
   padding: 0 0 0 20px;
   position: relative;
@@ -749,7 +765,6 @@ input[type="checkbox"]:disabled + label::before {
 }
 
 label {
-  font-family: "Quattrocento Sans", sans-serif;
   display: block;
 }
 
@@ -784,7 +799,6 @@ label {
   background: transparent;
   color: #000;
   border: 1px solid #ccc;
-  font: 16px "Quattrocento Sans", sans-serif;
   margin: 3px;
   padding: 4px 5px;
   width: 25px;
@@ -796,79 +810,72 @@ label {
 /*layout*/
 h1,
 .heading-1 {
-  font: bold 32px "Quattrocento Sans", sans-serif;
+  font: bold 32px "infiniti_brandbold", sans-serif;
   margin: 50px 0 10px;
 }
 
 @media all and (min-width: 768px) {
   h1,
   .heading-1 {
-    font: bold 42px "Quattrocento Sans", sans-serif;
+    font: bold 42px "infiniti_brandbold", sans-serif;
   }
 }
 
 h2,
 .heading-2, .footer_menu-column-title {
-  font: bold 26px "Quattrocento Sans", sans-serif;
+  font: bold 30px "infiniti_brandbold", sans-serif;
   margin: 20px 0 8px;
-}
-
-@media all and (min-width: 768px) {
-  h2,
-  .heading-2, .footer_menu-column-title {
-    font: bold 22px "Quattrocento Sans", sans-serif;
-  }
 }
 
 h3,
 .heading-3 {
-  font: bold 18px "Quattrocento Sans", sans-serif;
+  font: bold 18px "infiniti_brandbold", sans-serif;
   margin: 20px 0 8px;
 }
 
 @media all and (min-width: 768px) {
   h3,
   .heading-3 {
-    font: bold 20px "Quattrocento Sans", sans-serif;
+    font: bold 20px "infiniti_brandbold", sans-serif;
   }
 }
 
 h4,
 .heading-4 {
-  font: 20px "Quattrocento", serif;
+  font: 20px "infiniti_brandregular", serif;
   margin: 35px 0 20px;
 }
 
 @media all and (min-width: 768px) {
   h4,
   .heading-4 {
-    font: bold 22px "Quattrocento Sans", sans-serif;
+    font: bold 22px "infiniti_brandbold", sans-serif;
   }
 }
 
 h5,
 .heading-5 {
-  font: bold 15px "Quattrocento", serif;
+  font: bold 15px "infiniti_brandregular", serif;
   margin: 30px 0 20px;
 }
 
 @media all and (min-width: 768px) {
   h5,
   .heading-5 {
-    font: bold 16px "Quattrocento Sans", sans-serif;
+    font: bold 16px "infiniti_brandbold", sans-serif;
   }
 }
 
 h6,
 .heading-6 {
-  font: bold 13px "Quattrocento", serif;
+  font: bold 13px "infiniti_brandregular", serif;
   margin: 30px 0 20px;
 }
 
 @media all and (min-width: 768px) {
   h6,
   .heading-6 {
-    font: bold 15px "Quattrocento Sans", sans-serif;
+    font: bold 15px "infiniti_brandbold", sans-serif;
   }
 }
 
@@ -1024,7 +1031,6 @@ h6,
 
 .footer_copyright {
   color: #888888;
-  font-family: "Quattrocento Sans", sans-serif;
   margin: 0;
 }
 
@@ -1098,7 +1104,6 @@ h6,
 }
 
 .menu_link {
-  font-family: "Quattrocento Sans", sans-serif;
   font-weight: bold;
   text-decoration: none;
   text-transform: uppercase;
@@ -1391,87 +1396,190 @@ h6,
 .logo {
   background: url(src/img/icons/logo.svg) no-repeat center top;
   position: absolute;
-  top: 10px;
+  top: 50px;
   left: 50%;
   height: 59px;
   width: 124px;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
+  z-index: 2;
 }
 
 .content {
-  padding: 0 0 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 75vh;
+  position: relative;
+  z-index: 1;
 }
 
-@media all and (min-width: 768px) {
-  .content {
-    padding-bottom: 100px;
+.content_left {
+  background: rgba(255, 255, 255, 0.15);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.content_right {
+  background: rgba(0, 0, 0, 0.15);
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.content_intro {
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.content_intro-title {
+  text-transform: uppercase;
+  max-width: 480px;
+  margin: 0 auto 40px;
+  opacity: 0;
+}
+
+.loaded .content_intro-title {
+  -webkit-animation: .6s ease-in-out text-appearance forwards;
+  animation: .6s ease-in-out text-appearance forwards;
+}
+
+.content_intro-text {
+  font-size: 18px;
+  line-height: normal;
+  max-width: 580px;
+  margin: auto;
+  opacity: 0;
+}
+
+.loaded .content_intro-text {
+  -webkit-animation: .6s ease-in-out text-appearance .4s forwards;
+  animation: .6s ease-in-out text-appearance .4s forwards;
+}
+
+@-webkit-keyframes text-appearance {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes text-appearance {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 .car {
-  -webkit-animation: none;
-  animation: none;
-  background: url(src/img/car.png) no-repeat center 0;
-  background-size: 88% auto;
   position: absolute;
-  bottom: 18%;
+  bottom: 15%;
   left: 50%;
   height: 303px;
-  width: 867px;
+  width: 830px;
   z-index: 2;
-  -webkit-transform: translateX(-200%);
-  transform: translateX(-200%);
-  -webkit-transition: 1.5s ease-in-out transform;
-  transition: 1.5s ease-in-out transform;
 }
 
-.start-moving .car {
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+.loaded .car {
+  -webkit-animation: 1.5s ease-in car-appearance forwards;
+  animation: 1.5s ease-in car-appearance forwards;
 }
 
-.init .car {
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
-}
-
-.freeze .car {
+.car__small {
   -webkit-animation: none;
   animation: none;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  height: 105px;
+  width: 245px;
+  margin: auto;
+}
+
+.car::before {
+  content: '';
+  background: url(src/img/car-white.png) no-repeat center 0;
+  background-size: 100% auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+.car::after {
+  content: '';
+  background: url(src/img/car.png) no-repeat center 0;
+  background-size: 100% auto;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: .2s ease opacity;
+  transition: .2s ease opacity;
+  z-index: 1;
+}
+
+.car__small::after,
+.dark .car::after {
+  opacity: 1;
 }
 
 .car_wheel {
-  -webkit-animation: 1.5s ease-in-out wheel-appearance;
-  animation: 1.5s ease-in-out wheel-appearance;
   background: url(src/img/wheel.png) no-repeat;
   background-size: 100% auto;
   position: absolute;
-  bottom: 6px;
+  bottom: 8px;
   height: 130px;
   width: 130px;
+  -webkit-filter: url(src/img/filters.svg#wheel-blur);
+  filter: url(src/img/filters.svg#wheel-blur);
+  z-index: 2;
 }
 
-.slow-speed .car_wheel {
-  -webkit-animation: .8s ease-in wheel-active, .5s linear wheel-active .8s infinite;
-  animation: .8s ease-in wheel-active, .5s linear wheel-active .8s infinite;
+.loaded .car_wheel {
+  -webkit-animation: .8s ease-in wheel, .4s linear wheel .8s, .3s linear wheel 1.2s, .2s linear wheel 1.5s infinite;
+  animation: .8s ease-in wheel, .4s linear wheel .8s, .3s linear wheel 1.2s, .2s linear wheel 1.5s infinite;
 }
 
-.freeze .car_wheel {
-  -webkit-animation-timing-function: ease-out;
-  animation-timing-function: ease-out;
-  -webkit-animation-duration: .8s;
-  animation-duration: .8s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+.car__small .car_wheel {
+  -webkit-animation: .2s linear wheel infinite;
+  animation: .2s linear wheel infinite;
+  height: 45px;
+  width: 45px;
 }
 
 .car_wheel__back {
-  left: 128px;
+  left: 13.7%;
+}
+
+.car__small .car_wheel__back {
+  left: 9.7%;
 }
 
 .car_wheel__front {
-  right: 124px;
+  right: 14.1%;
+}
+
+.car__small .car_wheel__front {
+  right: 8.7%;
 }
 
 .car_light {
@@ -1479,15 +1587,25 @@ h6,
   background-size: 100% auto;
   position: absolute;
   left: 86%;
-  bottom: 116px;
+  bottom: 38%;
   height: 146px;
   width: 639px;
   opacity: 0;
   -webkit-transition: .3s ease-out opacity;
   transition: .3s ease-out opacity;
+  z-index: 2;
 }
 
-.fast-speed .car_light {
+.car__small .car_light {
+  background-image: url(src/img/light-small.png);
+  height: 261px;
+  width: 1040px;
+  bottom: -99px;
+  left: 90%;
+  opacity: 1;
+}
+
+.dark .car_light {
   opacity: 1;
 }
 
@@ -1497,8 +1615,8 @@ h6,
     transform: translateX(-200%);
   }
   100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 
@@ -1508,34 +1626,12 @@ h6,
     transform: translateX(-200%);
   }
   100% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-}
-
-@-webkit-keyframes car-active {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
 
-@keyframes car-active {
-  0% {
-    -webkit-transform: translateX(-100%);
-    transform: translateX(-100%);
-  }
-  100% {
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-  }
-}
-
-@-webkit-keyframes wheel-appearance {
+@-webkit-keyframes wheel {
   0% {
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
@@ -1546,29 +1642,7 @@ h6,
   }
 }
 
-@keyframes wheel-appearance {
-  0% {
-    -webkit-transform: rotateZ(0);
-    transform: rotateZ(0);
-  }
-  100% {
-    -webkit-transform: rotateZ(360deg);
-    transform: rotateZ(360deg);
-  }
-}
-
-@-webkit-keyframes wheel-active {
-  0% {
-    -webkit-transform: rotateZ(0);
-    transform: rotateZ(0);
-  }
-  100% {
-    -webkit-transform: rotateZ(360deg);
-    transform: rotateZ(360deg);
-  }
-}
-
-@keyframes wheel-active {
+@keyframes wheel {
   0% {
     -webkit-transform: rotateZ(0);
     transform: rotateZ(0);
@@ -1580,9 +1654,6 @@ h6,
 }
 
 .road {
-  -webkit-animation: .8s ease-out road-stop;
-  animation: .8s ease-out road-stop;
-  background: url(src/img/road.png) repeat-x;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -1593,28 +1664,55 @@ h6,
   will-change: background;
 }
 
-.init .road {
-  -webkit-animation: none;
-  animation: none;
+.road::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: url(src/img/road.png) repeat-x;
 }
 
-.slow-speed .road {
-  -webkit-animation: .8s ease-in road-movement, .4s linear road-movement .8s infinite;
-  animation: .8s ease-in road-movement, .4s linear road-movement .8s infinite;
+.road::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: url(src/img/road-dark.png) repeat-x;
+  -webkit-transition: .2s ease opacity;
+  transition: .2s ease opacity;
+  z-index: 2;
+  opacity: 0;
+}
+
+.loaded .road::before,
+.loaded .road::after {
   -webkit-filter: url(src/img/filters.svg#motion-blur);
   filter: url(src/img/filters.svg#motion-blur);
+  -webkit-animation: .8s ease-in road, .4s linear road .8s infinite;
+  animation: .8s ease-in road, .4s linear road .8s infinite;
 }
 
-.freeze .road {
-  -webkit-filter: none;
-  filter: none;
-  -webkit-animation-duration: .8s;
-  animation-duration: .8s;
-  -webkit-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+.dark .road::after {
+  opacity: 1;
 }
 
-@-webkit-keyframes road-movement {
+.road__small {
+  height: 1px;
+  width: 820px;
+  left: 93%;
+  bottom: auto;
+  top: 90px;
+}
+
+.road__small::before {
+  -webkit-animation: .3s linear road-small infinite;
+  animation: .3s linear road-small infinite;
+  background-image: url(src/img/road-small.png);
+}
+
+@-webkit-keyframes road {
   0% {
     background-position: 0 0;
   }
@@ -1623,7 +1721,7 @@ h6,
   }
 }
 
-@keyframes road-movement {
+@keyframes road {
   0% {
     background-position: 0 0;
   }
@@ -1632,21 +1730,21 @@ h6,
   }
 }
 
-@-webkit-keyframes road-stop {
+@-webkit-keyframes road-small {
   0% {
     background-position: 0 0;
   }
   100% {
-    background-position: -1920px 0;
+    background-position: -8200px 0;
   }
 }
 
-@keyframes road-stop {
+@keyframes road-small {
   0% {
     background-position: 0 0;
   }
   100% {
-    background-position: -1920px 0;
+    background-position: -8200px 0;
   }
 }
 
@@ -1717,6 +1815,12 @@ h6,
   right: 0;
   bottom: 10%;
   z-index: 1;
+  -webkit-transition: .2s ease opacity;
+  transition: .2s ease opacity;
+}
+
+.dark .background {
+  opacity: .5;
 }
 
 .background_video {
@@ -1734,4 +1838,62 @@ h6,
   height: 100%;
   width: 100%;
   z-index: 2;
+}
+
+.loading {
+  background: #000;
+  color: #fff;
+  position: fixed;
+  padding: 10vh 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-transition: .3s ease opacity, 0s ease visibility .3s;
+  transition: .3s ease opacity, 0s ease visibility .3s;
+}
+
+.loaded .loading {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.loading_status {
+  position: relative;
+}
+
+.loading_text {
+  font-size: 18px;
+  line-height: 32px;
+  margin: 50px 0 0;
+  text-align: center;
+}
+
+.loading_text p {
+  margin: 0;
+}
+
+.loading_car {
+  background: url(src/img/car.png) no-repeat center 0;
+  background-size: 100% auto;
+  height: 200px;
+  width: 285px;
+}
+
+.loading_percent {
+  font: 21px "infiniti_brandbold", sans-serif;
 }

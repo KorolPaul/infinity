@@ -1,6 +1,13 @@
+@mixin read-pseudo {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+
 .road {
-    animation: .8s ease-out road-stop;
-    background: url(#{$img-path}/road.png) repeat-x;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -9,22 +16,41 @@
     width: 1920px;
     z-index: 1;
     will-change: background;
-    
-    .init & {
-        animation: none;
+
+    &::before {
+        @include read-pseudo;
+        background: url(#{$img-path}/road.png) repeat-x;
     }
-    .slow-speed & {
-        animation: .8s ease-in road-movement, .4s linear road-movement .8s infinite;
+    &::after {
+        @include read-pseudo;
+        background: url(#{$img-path}/road-dark.png) repeat-x;
+        transition: .2s ease opacity;
+        z-index: 2;
+        opacity: 0;
+    }
+    .loaded &::before,
+    .loaded &::after {
         filter: url(#{$img-path}/filters.svg#motion-blur);
+        animation: .8s ease-in road, .4s linear road .8s infinite;
     }
-    .freeze & {
-        filter: none;
-        animation-duration: .8s;
-        animation-fill-mode: forwards;
+    .dark &::after {
+        opacity: 1;
+    }
+
+    &__small {
+        height: 1px;
+        width: 820px;
+        left: 93%;
+        bottom: auto;
+        top: 90px;
+    }
+    &__small::before {
+        animation: .3s linear road-small infinite;
+        background-image: url(#{$img-path}/road-small.png);
     }
 }
 
-@keyframes road-movement {
+@keyframes road {
     0% {
         background-position: 0 0;
     }
@@ -32,11 +58,11 @@
         background-position: -1920px 0;
     }
 }
-@keyframes road-stop {
+@keyframes road-small {
     0% {
         background-position: 0 0;
     }
     100% {
-        background-position: -1920px 0;
+        background-position: -8200px 0;
     }
 }

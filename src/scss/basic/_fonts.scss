@@ -1,1 +1,22 @@
-@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans:400,400i,700,700i|Quattrocento:400,700|Yellowtail&subset=latin-ext');
+@font-face {
+    font-family: 'infiniti_brandbold';
+    src: url('./src/fonts/infinitibrandcy-bold-webfont.woff2') format('woff2'),
+         url('./src/fonts/infinitibrandcy-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'infiniti_brandlight';
+    src: url('./src/fonts/infinitibrandcy-light-webfont.woff2') format('woff2'),
+         url('./src/fonts/infinitibrandcy-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'infiniti_brandregular';
+    src: url('./src/fonts/infinitibrandcy-regular-webfont.woff2') format('woff2'),
+         url('./src/fonts/infinitibrandcy-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

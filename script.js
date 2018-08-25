@@ -1,46 +1,27 @@
 'use strict';
 
-window.addEventListener('load', function () {
-    document.body.classList.add('init');
-});
+var loadingPercentElement = document.querySelector('.loading_percent-value');
+var loadingInterval = setInterval(function () {
+    var percent = parseInt(loadingPercentElement.innerHTML);
+    if (percent < 100) {
+        loadingPercentElement.innerHTML = ++percent;
+    } else {
+        document.body.classList.add('loaded');
+        clearInterval(loadingInterval);
+    }
+}, 20);
+'use strict';
+
+window.addEventListener('load', function () {});
 'use strict';
 
 var speedElement = document.querySelector('#speed');
-var speed = 0,
-    hasStarted = false;
+var speed = 0;
 
-window.addEventListener('wheel', function (e) {
-    e.preventDefault();
+document.querySelector('.js-light').addEventListener('mouseenter', function () {
+    document.body.classList.remove('dark');
+});
 
-    if (e.deltaY > 0) {
-        speed++;
-    } else if (speed > 0) {
-        speed--;
-    }
-    speedElement.innerHTML = speed;
-
-    var slowSpeedClass = 'slow-speed',
-        fastSpeedClass = 'fast-speed',
-        zeroSpeedClass = 'freeze',
-        initClass = 'init';
-
-    if (speed > 0) {
-        document.body.classList.add(slowSpeedClass);
-        document.body.classList.remove(zeroSpeedClass);
-        document.body.classList.remove(initClass);
-
-        if (!hasStarted) {
-            hasStarted = true;
-            document.body.classList.add('start-moving');
-        }
-    } else {
-        document.body.classList.remove(slowSpeedClass);
-        document.body.classList.add(zeroSpeedClass);
-    }
-
-    if (speed > 40) {
-        document.body.classList.add(fastSpeedClass);
-    } else {
-        document.body.classList.remove(fastSpeedClass);
-    }
+document.querySelector('.js-dark').addEventListener('mouseenter', function () {
+    document.body.classList.add('dark');
 });

@@ -1,0 +1,44 @@
+.loading {
+    background: #000;
+    color: #fff;
+    position: fixed;
+    padding: 10vh 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: .3s ease opacity,
+                0s ease visibility .3s;
+
+    .loaded & {
+        visibility: hidden;
+        opacity: 0;
+    }
+    &_status {
+        position: relative;
+    }
+    &_text {
+        font-size: 18px;
+        line-height: 32px;
+        margin: 50px 0 0;
+        text-align: center;
+        
+        p {
+            margin: 0;
+        }
+    }
+    &_car {
+        background: url(#{$img-path}/car.png) no-repeat center 0;
+        background-size: 100% auto;
+        height: 200px;
+        width: 285px;
+    }
+    &_percent {
+        font: 21px $font-family__bold;
+    }
+}

@@ -1,49 +1,82 @@
 .car {
-    animation: none;
-    background: url(#{$img-path}/car.png) no-repeat center 0;
-    background-size: 88% auto;
     position: absolute;
-    bottom: 18%;
+    bottom: 15%;
     left: 50%;
     height: 303px;
-    width: 867px;
+    width: 830px;
     z-index: 2;
-    transform: translateX(-200%);
-    transition: 1.5s ease-in-out transform;
 
-    .start-moving & {
-        transform: translateX(-50%);
+    .loaded & {
+        animation: 1.5s ease-in car-appearance forwards;
     }
-    .init & {
-        transform: translateX(-100%);
-    }
-    .freeze & {
+    &__small {
         animation: none;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        height: 105px;
+        width: 245px;
+        margin: auto;
+    }
+    &::before {
+        content: '';
+        background: url(#{$img-path}/car-white.png) no-repeat center 0;
+        background-size: 100% auto;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    &::after {
+        content: '';
+        background: url(#{$img-path}/car.png) no-repeat center 0;
+        background-size: 100% auto;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .2s ease opacity;
+        z-index: 1;
+    }
+    &__small::after,
+    .dark &::after {
+        opacity: 1;
     }
 
     &_wheel {
-        animation: 1.5s ease-in-out wheel-appearance;
         background: url(#{$img-path}/wheel.png) no-repeat;
         background-size: 100% auto;
         position: absolute;
-        bottom: 6px;
+        bottom: 8px;
         height: 130px;
         width: 130px;
+        filter: url(#{$img-path}/filters.svg#wheel-blur);
+        z-index: 2;
 
-        .slow-speed & {
-            animation: .8s ease-in wheel-active, .5s linear wheel-active .8s infinite;
+        .loaded & {
+            animation: .8s ease-in wheel,
+                       .4s linear wheel .8s,
+                       .3s linear wheel 1.2s,
+                       .2s linear wheel 1.5s infinite;
         }
-        .freeze & {
-            animation-timing-function: ease-out;
-            animation-duration: .8s;
-            animation-fill-mode: forwards;
+        .car__small & {
+            animation: .2s linear wheel infinite;
+            height: 45px;
+            width: 45px;
         }
-
         &__back {
-            left: 128px;;
+            left: 13.7%;
+
+            .car__small & {
+                left: 9.7%;
+            }
         }
         &__front {
-            right: 124px;;
+            right: 14.1%;
+
+            .car__small & {
+                right: 8.7%;
+            }
         }
     }
     &_light {
@@ -51,13 +84,22 @@
         background-size: 100% auto;
         position: absolute;
         left: 86%;
-        bottom: 116px;
+        bottom: 38%;
         height: 146px;
         width: 639px;
         opacity: 0;
         transition: .3s ease-out opacity;
+        z-index: 2;
 
-        .fast-speed & {
+        .car__small & {
+            background-image: url(#{$img-path}/light-small.png);
+            height: 261px;
+            width: 1040px;
+            bottom: -99px;
+            left: 90%;
+            opacity: 1;
+        }
+        .dark & {
             opacity: 1;
         }
     }
@@ -68,28 +110,11 @@
         transform: translateX(-200%);
     }
     100% {
-        transform: translateX(-100%);
-    }
-}
-@keyframes car-active {
-    0% {
-        transform: translateX(-100%);
-    }
-    100% {
         transform: translateX(-50%);
     }
 }
 
-@keyframes wheel-appearance {
-    0% {
-        transform: rotateZ(0);
-    }
-    100% {
-        transform: rotateZ(360deg);
-    }
-}
-
-@keyframes wheel-active {
+@keyframes wheel {
     0% {
         transform: rotateZ(0);
     }

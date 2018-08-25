@@ -7,9 +7,43 @@
     <title>Infinity</title>
 </head>
 <body class="">
+    <div class="loading">
+        <img src="src/img/logo.png" alt="" class="loading_logo">
+        <div class="loading_status">
+            <div class="car car__small">
+                <div class="car_wheel car_wheel__back"></div>
+                <div class="car_wheel car_wheel__front"></div>
+                <div class="car_light"></div>
+            </div>
+            <div class="road road__small"></div>
+            <div class="loading_text">
+                <p>Соврешено новый INFINITI QX50, </p>
+                <p>Ты и он, сила интелекта и сила драйва</p>
+            </div>
+        </div>
+        <div class="loading_percent">
+            <span class="loading_percent-value">0</span>
+            %
+        </div>
+    </div>
+
     <div class="background">
-        <video src="src/img/bg.mp4" class="background_video" autoplay muted></video>
+        <video class="background_video" autoplay muted poster="src/img/bg.jpg">
+            <source src="src/img/bg.mp4" type="video/mp4">
+        </video>
         <div class="background_city"></div>
+    </div>
+    <div class="content">
+        <div class="content_left js-light">
+
+        </div>
+        <div class="content_right js-dark">
+            
+        </div>
+        <div class="content_intro">
+            <h2 class="content_intro-title">Знакомьтесь с НОВЫМ INFINITI  QX50.</h2>
+            <p class="content_intro-text">Автомобиль дает Вам возможность почувствовать силу интелекта и силу скорости. Пробуйте разгоняться быстрее, чтобы узнать “темную сторону” , снижая скорость Вы поведуете “светлую сторону” нового INFINITI QX50.</p>
+        </div>
     </div>
     <a href="#" class="logo"></a>
     <div class="car">
@@ -18,10 +52,6 @@
         <div class="car_light"></div>
     </div>
     <div class="road"></div>
-    <div class="spidometer">
-        <span class="spidometer_value" id="speed">0</span>
-        km/h
-    </div>
     <div class="mouse"></div>
     <script src="script.js"></script>
 </body>

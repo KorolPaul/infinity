@@ -1,9 +1,10 @@
 .logo {
     background: url(#{$img-path}/icons/logo.svg) no-repeat center top;
     position: absolute;
-    top: 10px;
+    top: 50px;
     left: 50%;
     height: 59px;
     width: 124px;
     transform: translate(-50%, 0);
+    z-index: 2;
 }
