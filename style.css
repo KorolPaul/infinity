@@ -1570,8 +1570,8 @@ h6,
 }
 
 .dark .car_wheel {
-  -webkit-animation: 1s ease-in wheel-speed-change, .15s linear wheel 1s infinite;
-  animation: 1s ease-in wheel-speed-change, .15s linear wheel 1s infinite;
+  -webkit-animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
+  animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
 }
 
 .light .car_wheel {
@@ -1854,20 +1854,20 @@ h6,
 .loaded .road::after {
   -webkit-filter: url(src/img/filters.svg#motion-blur);
   filter: url(src/img/filters.svg#motion-blur);
-  -webkit-animation: .8s ease-in road, .5s linear road .8s infinite;
-  animation: .8s ease-in road, .5s linear road .8s infinite;
+  -webkit-animation: .8s ease-in road-speed-change, .5s linear road .8s infinite;
+  animation: .8s ease-in road-speed-change, .5s linear road .8s infinite;
 }
 
 .dark .road::before,
 .dark .road::after {
-  -webkit-animation: 1s ease road, .2s linear road 1s infinite;
-  animation: 1s ease road, .2s linear road 1s infinite;
+  -webkit-animation: 1s ease road-speed-change, .2s linear road 1s infinite;
+  animation: 1s ease road-speed-change, .2s linear road 1s infinite;
 }
 
 .light .road::before,
 .light .road::after {
-  -webkit-animation: 2s ease road-speed-change, .5s linear road 2s infinite;
-  animation: 2s ease road-speed-change, .5s linear road 2s infinite;
+  -webkit-animation: 1s ease road-speed-change, .5s linear road 1s infinite;
+  animation: 1s ease road-speed-change, .5s linear road 1s infinite;
 }
 
 .dark .road::after {

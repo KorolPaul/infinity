@@ -66,8 +66,8 @@
                        .2s linear wheel .7s infinite;
         }
         .dark & {
-            animation: 1s ease-in wheel-speed-change,
-                       .15s linear wheel 1s infinite;
+            animation: .2s ease-in wheel-speed-change,
+                       .15s linear wheel .2s infinite;
         }
         .light & {
             animation: .15s ease-out wheel-speed-change,

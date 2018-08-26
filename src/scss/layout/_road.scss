@@ -31,17 +31,17 @@
     .loaded &::before,
     .loaded &::after {
         filter: url(#{$img-path}/filters.svg#motion-blur);
-        animation: .8s ease-in road, .5s linear road .8s infinite;
+        animation: .8s ease-in road-speed-change, .5s linear road .8s infinite;
     }
     .dark &::before,
     .dark &::after {
-        animation: 1s ease road,
+        animation: 1s ease road-speed-change,
                    .2s linear road 1s infinite;
     }
     .light &::before,
     .light &::after {
-        animation: 2s ease road-speed-change,
-                   .5s linear road 2s infinite;
+        animation: 1s ease road-speed-change,
+                   .5s linear road 1s infinite;
     }
     .dark &::after {
         opacity: 1;
