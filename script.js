@@ -6,8 +6,21 @@ var loadingInterval = setInterval(function () {
     if (percent < 100) {
         loadingPercentElement.innerHTML = ++percent;
     } else {
-        document.body.classList.add('loaded');
+        document.body.classList.add('show-intro');
+        document.querySelector('.intro iframe').src = 'https://www.youtube.com/embed/NRFjsh_aOC8?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;color=white';
         clearInterval(loadingInterval);
+        //document.body.classList.add('loaded');
+        //setTimeout(()=> {
+        //    setSpeedChange();
+        //}, 2000);
+
+        document.querySelector('.intro_close').addEventListener('click', function () {
+            document.querySelector('.intro iframe').remove();
+            document.body.classList.add('loaded');
+            setTimeout(function () {
+                setSpeedChange();
+            }, 2000);
+        });
     }
 }, 20);
 'use strict';
@@ -15,13 +28,16 @@ var loadingInterval = setInterval(function () {
 window.addEventListener('load', function () {});
 'use strict';
 
-var speedElement = document.querySelector('#speed');
-var speed = 0;
+var setSpeedChange = function setSpeedChange() {
+    document.querySelector('.js-light').addEventListener('mouseenter', function () {
+        if (document.body.classList.contains('dark')) {
+            document.body.classList.remove('dark');
+            document.body.classList.add('light');
+        }
+    });
 
-document.querySelector('.js-light').addEventListener('mouseenter', function () {
-    document.body.classList.remove('dark');
-});
-
-document.querySelector('.js-dark').addEventListener('mouseenter', function () {
-    document.body.classList.add('dark');
-});
+    document.querySelector('.js-dark').addEventListener('mouseenter', function () {
+        document.body.classList.add('dark');
+        document.body.classList.remove('light');
+    });
+};

@@ -5,7 +5,8 @@
                 <animate attributeName="stdDeviation"
                          from="0"
                          to="2, 0" 
-                         dur="0.8s"
+                         begin="1s"
+                         dur="1s"
                          fill="freeze"  />
             </feGaussianBlur>
         </filter>

@@ -5,11 +5,11 @@
     z-index: 1;
 
     &_left {
-        background: rgba(255, 255, 255, .15);
+        background: rgba(255, 255, 255, .1);
         flex-grow: 1;
     }
     &_right {
-        background: rgba(0, 0, 0, .15);
+        background: rgba(0, 0, 0, .1);
         flex-grow: 1;
     }
     &_intro {

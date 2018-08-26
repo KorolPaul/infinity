@@ -18,7 +18,8 @@
         width: 100%;
     }
     &_city {
-        background: url(#{$img-path}/city.png) no-repeat right bottom;
+        background: url(#{$img-path}/city.png) no-repeat left center;
+        background-size: 100% auto;
         position: absolute;
         bottom: 0;
         left: 0;

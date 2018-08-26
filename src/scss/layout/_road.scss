@@ -31,7 +31,17 @@
     .loaded &::before,
     .loaded &::after {
         filter: url(#{$img-path}/filters.svg#motion-blur);
-        animation: .8s ease-in road, .4s linear road .8s infinite;
+        animation: .8s ease-in road, .5s linear road .8s infinite;
+    }
+    .dark &::before,
+    .dark &::after {
+        animation: 1s ease road,
+                   .2s linear road 1s infinite;
+    }
+    .light &::before,
+    .light &::after {
+        animation: 2s ease road-speed-change,
+                   .5s linear road 2s infinite;
     }
     .dark &::after {
         opacity: 1;
@@ -40,12 +50,12 @@
     &__small {
         height: 1px;
         width: 820px;
-        left: 93%;
+        left: 98%;
         bottom: auto;
         top: 90px;
     }
     &__small::before {
-        animation: .3s linear road-small infinite;
+        animation: 1s linear road-small infinite;
         background-image: url(#{$img-path}/road-small.png);
     }
 }
@@ -58,11 +68,19 @@
         background-position: -1920px 0;
     }
 }
+@keyframes road-speed-change {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: -1920px 0;
+    }
+}
 @keyframes road-small {
     0% {
         background-position: 0 0;
     }
     100% {
-        background-position: -8200px 0;
+        background-position: -820px 0;
     }
 }
