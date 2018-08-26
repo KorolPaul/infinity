@@ -7,14 +7,16 @@
     z-index: 2;
 
     .loaded & {
-        animation: 2.5s ease-in-out car-appearance forwards;
-                   //10s ease-in-out car-moving 2.5s infinite forwards;
+        animation: 2.5s ease-in-out car-appearance,
+                   10s ease-in-out car-moving 2.5s infinite;
     }
     .light & {
-        animation: 2.5s ease car-speed-down forwards;
+        animation: 2.5s ease-in-out car-speed-down,
+                   10s ease-in-out car-moving 3s infinite;
     }
     .dark & {
-        animation: 2.5s ease car-speed-up forwards;
+        animation: 2.5s ease-in-out car-speed-up,
+                   10s ease-in-out car-moving 3s infinite;
     }
     &__small {
         animation: none;

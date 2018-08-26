@@ -1499,18 +1499,18 @@ h6,
 }
 
 .loaded .car {
-  -webkit-animation: 2.5s ease-in-out car-appearance forwards;
-  animation: 2.5s ease-in-out car-appearance forwards;
+  -webkit-animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving 2.5s infinite;
+  animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving 2.5s infinite;
 }
 
 .light .car {
-  -webkit-animation: 2.5s ease car-speed-down forwards;
-  animation: 2.5s ease car-speed-down forwards;
+  -webkit-animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving 3s infinite;
+  animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving 3s infinite;
 }
 
 .dark .car {
-  -webkit-animation: 2.5s ease car-speed-up forwards;
-  animation: 2.5s ease car-speed-up forwards;
+  -webkit-animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 3s infinite;
+  animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 3s infinite;
 }
 
 .car__small {
@@ -2033,6 +2033,13 @@ h6,
   height: 100%;
   width: 100%;
   z-index: 2;
+  -webkit-transition: .2s ease filter;
+  transition: .2s ease filter;
+}
+
+.dark .background_city {
+  -webkit-filter: brightness(0.8);
+  filter: brightness(0.8);
 }
 
 .loading {
