@@ -21,11 +21,15 @@ var loadingInterval = setInterval(function () {
             }
         });
     }
-}, 20);
+}, 0);
 
 var closeIntro = function closeIntro() {
     document.querySelector('.intro iframe').remove();
     document.body.classList.add('loaded');
+    window.addEventListener('wheel', function (e) {
+        document.body.classList.add('scrolled');
+    });
+
     setTimeout(function () {
         setSpeedChange();
     }, 2000);

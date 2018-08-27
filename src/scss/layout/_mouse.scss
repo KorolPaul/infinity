@@ -1,7 +1,7 @@
 .mouse {
     background: url(#{$img-path}/icons/mouse-icon.svg) no-repeat center center;
     position: absolute;
-    bottom: 10%;
+    top: 100%;
     left: 50%;
     height: 146px;
     width: 40px;
@@ -10,9 +10,12 @@
     transition: .2s ease opacity;
     opacity: 0;
 
-    .init & {
-        animation: .5s ease-in-out scroll 1.5s;
+    .loaded & {
+        animation: 2s ease-in-out scroll 1s infinite;
         opacity: 1;
+    }
+    .scrolled & {
+        opacity: 0;
     }
 }
 
@@ -20,8 +23,14 @@
     0% {
         transform: translate(-50%, 0);
     }
+    25% {
+        transform: translate(-50%, 0);
+    }
     50% {
-        transform: translate(-50%, 50%);
+        transform: translate(-50%, 25%);
+    }
+    75% {
+        transform: translate(-50%, 0);
     }
     100% {
         transform: translate(-50%, 0);

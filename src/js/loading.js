@@ -19,12 +19,17 @@ let loadingInterval = setInterval(() => {
             }
         });
     }
-}, 20);
+}, 0);
 
 let closeIntro = () => {
     document.querySelector('.intro iframe').remove();
     document.body.classList.add('loaded');
+    window.addEventListener('wheel', (e) => {
+        document.body.classList.add('scrolled');
+    });
+
     setTimeout(()=> {
         setSpeedChange();
     }, 2000);
+
 }
