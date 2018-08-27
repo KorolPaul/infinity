@@ -14,15 +14,22 @@ var loadingInterval = setInterval(function () {
         //    setSpeedChange();
         //}, 2000);
 
-        document.querySelector('.intro_close').addEventListener('click', function () {
-            document.querySelector('.intro iframe').remove();
-            document.body.classList.add('loaded');
-            setTimeout(function () {
-                setSpeedChange();
-            }, 2000);
+        document.querySelector('.intro_close').addEventListener('click', closeIntro);
+        document.addEventListener('keyup', function (e) {
+            if (e.keyCode == 27) {
+                closeIntro();
+            }
         });
     }
 }, 20);
+
+var closeIntro = function closeIntro() {
+    document.querySelector('.intro iframe').remove();
+    document.body.classList.add('loaded');
+    setTimeout(function () {
+        setSpeedChange();
+    }, 2000);
+};
 'use strict';
 
 window.addEventListener('load', function () {});

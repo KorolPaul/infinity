@@ -12,12 +12,19 @@ let loadingInterval = setInterval(() => {
         //    setSpeedChange();
         //}, 2000);
 
-        document.querySelector('.intro_close').addEventListener('click', () => {
-            document.querySelector('.intro iframe').remove();
-            document.body.classList.add('loaded');
-            setTimeout(()=> {
-                setSpeedChange();
-            }, 2000);
+        document.querySelector('.intro_close').addEventListener('click', closeIntro);
+        document.addEventListener('keyup', (e) => {
+            if(e.keyCode == 27) {
+                closeIntro();
+            }
         });
     }
 }, 20);
+
+let closeIntro = () => {
+    document.querySelector('.intro iframe').remove();
+    document.body.classList.add('loaded');
+    setTimeout(()=> {
+        setSpeedChange();
+    }, 2000);
+}

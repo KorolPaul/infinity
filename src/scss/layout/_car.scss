@@ -5,18 +5,19 @@
     height: 303px;
     width: 830px;
     z-index: 2;
+    transform: translateX(-50%);
 
     .loaded & {
         animation: 2.5s ease-in-out car-appearance,
-                   10s ease-in-out car-moving 2.5s infinite;
+                   10s ease-in-out car-moving2 2.5s infinite;
     }
     .light & {
         animation: 2.5s ease-in-out car-speed-down,
-                   10s ease-in-out car-moving 3s infinite;
+                   10s ease-in-out car-moving2 2.5s infinite;
     }
     .dark & {
         animation: 2.5s ease-in-out car-speed-up,
-                   10s ease-in-out car-moving 3s infinite;
+                   10s ease-in-out car-moving 2.5s infinite;
     }
     &__small {
         animation: none;
@@ -132,16 +133,36 @@
         transform: translateX(-50%);
     }
     20% {
-        transform: translateX(-52%);
+        transform: translateX(-53%);
     }
     30% {
         transform: translateX(-48%);
     }
     51% {
-        transform: translateX(-53%);
+        transform: translateX(-52%);
     }
     66% {
-        transform: translateX(-49%);
+        transform: translateX(-47%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+@keyframes car-moving2 {
+    0% {
+        transform: translateX(-50%);
+    }
+    20% {
+        transform: translateX(-48%);
+    }
+    30% {
+        transform: translateX(-53%);
+    }
+    51% {
+        transform: translateX(-47%);
+    }
+    66% {
+        transform: translateX(-52%);
     }
     100% {
         transform: translateX(-50%);
