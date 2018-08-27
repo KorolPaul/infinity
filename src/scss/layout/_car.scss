@@ -173,7 +173,7 @@
         transform: translateX(-50%);
     }
     30% {
-        transform: translateX(-40%);
+        transform: translateX(-40%) rotateZ(-0.7deg);
     }
     100% {
         transform: translateX(-50%);
@@ -184,7 +184,7 @@
         transform: translateX(-50%);
     }
     30% {
-        transform: translateX(-60%);
+        transform: translateX(-60%) rotateZ(0.7deg);
     }
     100% {
         transform: translateX(-50%);
