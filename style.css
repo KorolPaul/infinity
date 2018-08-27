@@ -455,6 +455,13 @@ template {
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'icomoonregular';
+  src: url("./src/fonts/infiniti-global_1-webfont.woff2") format("woff2"), url("./src/fonts/infiniti-global_1-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   background: #000;
   color: #000;
@@ -1455,8 +1462,8 @@ h6,
 }
 
 .scrolled .content_right {
-  -webkit-animation: .3s ease-in-out side-dark 1s forwards, .3s ease-in-out side-light 4s forwards;
-  animation: .3s ease-in-out side-dark 1s forwards, .3s ease-in-out side-light 4s forwards;
+  -webkit-animation: .3s ease-in-out side-dark 1s forwards, .3s ease-in-out side-light 4s forwards;
+  animation: .3s ease-in-out side-dark 1s forwards, .3s ease-in-out side-light 4s forwards;
 }
 
 .content_intro {
@@ -1514,8 +1521,8 @@ h6,
 }
 
 .scrolled .content_step__1 {
-  -webkit-animation: .6s ease-in-out step-appearance 1s forwards, .6s ease-in-out step-leave 4s forwards;
-  animation: .6s ease-in-out step-appearance 1s forwards, .6s ease-in-out step-leave 4s forwards;
+  -webkit-animation: .6s ease-in-out step-appearance 1s forwards, .6s ease-in-out step-leave 4s forwards;
+  animation: .6s ease-in-out step-appearance 1s forwards, .6s ease-in-out step-leave 4s forwards;
 }
 
 .scrolled .content_step__2 {
@@ -1798,18 +1805,18 @@ h6,
 }
 
 .loaded .car {
-  -webkit-animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
-  animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
+  -webkit-animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
+  animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
 }
 
 .light .car {
-  -webkit-animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving2 2.5s infinite;
-  animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving2 2.5s infinite;
+  -webkit-animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving2 2.5s infinite;
+  animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving2 2.5s infinite;
 }
 
 .dark .car {
-  -webkit-animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 2.5s infinite;
-  animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 2.5s infinite;
+  -webkit-animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 2.5s infinite;
+  animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 2.5s infinite;
 }
 
 .car__small {
@@ -1864,18 +1871,18 @@ h6,
 }
 
 .loaded .car_wheel {
-  -webkit-animation: .4s ease-in wheel, .3s linear wheel .4s, .2s linear wheel .7s infinite;
-  animation: .4s ease-in wheel, .3s linear wheel .4s, .2s linear wheel .7s infinite;
+  -webkit-animation: .4s ease-in wheel, .3s linear wheel .4s, .2s linear wheel .7s infinite;
+  animation: .4s ease-in wheel, .3s linear wheel .4s, .2s linear wheel .7s infinite;
 }
 
 .dark .car_wheel {
-  -webkit-animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
-  animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
+  -webkit-animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
+  animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
 }
 
 .light .car_wheel {
-  -webkit-animation: .15s ease-out wheel-speed-change, .2s linear wheel .2s infinite;
-  animation: .15s ease-out wheel-speed-change, .2s linear wheel .2s infinite;
+  -webkit-animation: .15s ease-out wheel-speed-change, .2s linear wheel .2s infinite;
+  animation: .15s ease-out wheel-speed-change, .2s linear wheel .2s infinite;
 }
 
 .car__small .car_wheel {
@@ -2525,4 +2532,15 @@ h6,
   background: inherit;
   color: inherit;
   opacity: .7;
+}
+
+.sections {
+  color: #fff;
+  font-family: icomoonregular;
+  position: absolute;
+  left: 50%;
+  bottom: 50px;
+  z-index: 2;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
 }
