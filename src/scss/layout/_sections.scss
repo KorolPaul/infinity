@@ -1,9 +1,114 @@
 .sections {
     color: #fff;
-    font-family: icomoonregular;
+    font-family: 'icon-Infiniti-Global';
     position: absolute;
     left: 50%;
     bottom: 50px;
     z-index: 2;
     transform: translateX(-50%);
+    opacity: 0;
+
+    .scrolled & {
+        animation: .5s ease-out sections-appereance 1s forwards;
+    }
+
+    &_icon {
+        color: #fff;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        margin: 0 15px;
+        border: none;
+        text-align: center;
+        vertical-align: middle;
+        transition: .2s ease background,
+                    .2s ease color;
+
+        &:hover,
+        &__active {
+            background: #fff;
+            color: #000;
+        }
+
+        &::after {
+            content: attr(data-char);
+            font: 20px 'icon-Infiniti-Global';
+            speak: none;
+            text-transform: none;
+        }
+    }
+    &_prev,
+    &_next {
+        color: #fff;
+        border-radius: 50%;
+        border: 1px solid currentColor;
+        font-size: 40px;
+        height: 53px;
+        width: 53px;
+        position: relative;
+        vertical-align: middle;
+        transition: .2s ease background,
+                    .2s ease color;
+
+        &:hover {
+            color: #000;
+            background: #fff;
+        }
+    }
+    &_prev {
+        margin: 0 120px 0 0;
+        &::before {
+            content: '';
+            border-style: solid;
+            border-width:  0 0 2px 2px;
+            height: 12px;
+            width: 12px;
+            transform: rotateZ(45deg);
+            position: absolute;
+            top: 19px;
+            left: 21px;
+        }
+        &::after {
+            content: '';
+            border-bottom: 2px solid currentColor;
+            width: 75px;
+            position: absolute;
+            top: 25px;
+            left: 20px;
+        }
+    }
+
+    &_next {
+        margin: 0 0 0 120px;
+        &::before {
+            content: '';
+            border-style: solid;
+            border-width:  2px 2px 0 0;
+            height: 12px;
+            width: 12px;
+            transform: rotateZ(45deg);
+            position: absolute;
+            top: 19px;
+            left: 16px;
+        }
+        &::after {
+            content: '';
+            border-bottom: 2px solid currentColor;
+            width: 75px;
+            position: absolute;
+            top: 25px;
+            right: 20px;
+        }
+    }
+}
+
+@keyframes sections-appereance {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
 }

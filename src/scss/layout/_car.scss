@@ -57,11 +57,13 @@
         background: url(#{$img-path}/wheel.png) no-repeat;
         background-size: 100% auto;
         position: absolute;
-        bottom: 8px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
         height: 130px;
         width: 130px;
         filter: url(#{$img-path}/filters.svg#wheel-blur);
-        z-index: 2;
 
         .loaded & {
             animation: .4s ease-in wheel,
@@ -81,12 +83,31 @@
             height: 45px;
             width: 45px;
         }
+
+    }
+    &_wheel-wrapper {
+        position: absolute;
+        bottom: 8px;
+        height: 130px;
+        width: 130px;
+        z-index: 2;
+
         &__back {
             left: 13.7%;
+
+            .loaded & {
+                animation: .3s ease wheel-jolting .1s infinite;
+            }
         }
         &__front {
             right: 14.1%;
+
+            .loaded & {
+                animation: .3s ease wheel-jolting infinite;
+            }
         }
+
+        
     }
     &_light {
         background: url(#{$img-path}/light.png) no-repeat;
@@ -206,3 +227,27 @@
         transform: rotateZ(360deg);
     }
 }
+@keyframes wheel-jolting {
+    0% {
+        transform: translate(0, -1%);
+    }
+    25% {
+        transform: translate(0, -1%);
+    }
+    30% {
+        transform: translate(0, 1.5%);
+    }
+    40% {
+        transform: translate(0, -0.5%);
+    }
+    55% {
+        transform: translate(0, 0.5%);
+    }
+    60% {
+        transform: translate(0, 0);
+    }
+    100% {
+        transform: translate(0, 0%);
+    }
+}
+

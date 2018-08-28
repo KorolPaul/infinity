@@ -19,13 +19,25 @@ let loadingInterval = setInterval(() => {
             }
         });
     }
-}, 0);
+}, 1);
 
 let closeIntro = () => {
     document.querySelector('.intro iframe').remove();
     document.body.classList.add('loaded');
-    window.addEventListener('wheel', (e) => {
+    window.addEventListener('wheel', function addScroll(e) {
         document.body.classList.add('scrolled');
+
+        setTimeout(()=> {
+            changeSlide(1)
+            window.removeEventListener('wheel', addScroll);
+            window.addEventListener('wheel', (e) => {
+                if(e.deltaY > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            });
+        }, 5000);
     });
 
     setTimeout(()=> {

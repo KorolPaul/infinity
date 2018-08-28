@@ -22,9 +22,12 @@
 }
 
 @font-face {
-    font-family: 'icomoonregular';
-    src: url('./src/fonts/infiniti-global_1-webfont.woff2') format('woff2'),
-         url('./src/fonts/infiniti-global_1-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
+    font-family: 'icon-Infiniti-Global';
+    src:url(./src/fonts/Infiniti-Global.eot);
+    src:url(./src/fonts/Infiniti-Global.eot?#iefix) format("embedded-opentype"),
+        url(./src/fonts/Infiniti-Global.woff2) format("woff2"),
+        url(./src/fonts/Infiniti-Global.woff) format("woff"),
+        url(./src/fonts/Infiniti-Global.ttf) format("truetype");
+    font-weight:400;
+    font-style:normal;
 }
