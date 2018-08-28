@@ -1,10 +1,11 @@
 .logo {
     background: url(#{$img-path}/logo.png) no-repeat center top;
+    background-size: 100% auto;
     position: absolute;
-    top: 25px;
+    top: 15px;
     left: 50%;
-    height: 59px;
-    width: 124px;
+    height: 50px;
+    width: 100px;
     transform: translate(-50%, 0);
     z-index: 2;
 }

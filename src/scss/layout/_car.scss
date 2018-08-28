@@ -22,7 +22,7 @@
     &__small {
         animation: none;
         position: relative;
-        left: 0;
+        left: 42%;
         bottom: 0;
         height: 107px;
         width: 280px;
@@ -83,7 +83,7 @@
     }
     &_wheel-wrapper {
         position: absolute;
-        bottom: 8px;
+        bottom: 11px;
         height: 130px;
         width: 130px;
         z-index: 2;
@@ -150,42 +150,42 @@
 }
 @keyframes car-moving {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(0) scale(1);
     }
     20% {
         transform: translateX(-53%);
     }
     30% {
-        transform: translateX(-48%);
+        transform: translateX(-48%) translateY(1.4%) scale(1.02);
     }
     51% {
         transform: translateX(-52%);
     }
     66% {
-        transform: translateX(-47%);
+        transform: translateX(-47%) translateY(-1.2%) scale(0.98);
     }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(0) scale(1);
     }
 }
 @keyframes car-moving2 {
     0% {
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(0) scale(1);
     }
     20% {
-        transform: translateX(-48%);
-    }
-    30% {
         transform: translateX(-53%);
     }
-    51% {
-        transform: translateX(-47%);
+    30% {
+        transform: translateX(-48%) translateY(1.4%) scale(1.02);
     }
-    66% {
+    51% {
         transform: translateX(-52%);
     }
+    66% {
+        transform: translateX(-47%) translateY(-1.2%) scale(0.98);
+    }
     100% {
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(0) scale(1);
     }
 }
 @keyframes car-speed-up {
@@ -249,4 +249,3 @@
         transform: translate(0, 0%);
     }
 }
-

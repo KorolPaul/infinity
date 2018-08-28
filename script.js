@@ -7,7 +7,7 @@ var loadingInterval = setInterval(function () {
         loadingPercentElement.innerHTML = ++percent;
     } else {
         document.body.classList.add('show-intro');
-        document.querySelector('.intro iframe').src = 'https://www.youtube.com/embed/NRFjsh_aOC8?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;color=white';
+        document.querySelector('.intro iframe').src = 'https://www.youtube.com/embed/YI_pVTIJuAo?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;color=white';
         clearInterval(loadingInterval);
         //document.body.classList.add('loaded');
         //setTimeout(()=> {
