@@ -53,6 +53,7 @@
 
         .loaded & {
             animation: .6s ease-in-out text-appearance forwards;
+            filter: url(#{$img-path}/filters.svg#slide-appearance);            
         }
         .scrolled & {
             animation: .6s ease-in-out text-leave forwards;
@@ -67,6 +68,7 @@
 
         .loaded & {
             animation: .6s ease-in-out text-appearance .4s forwards;
+            filter: url(#{$img-path}/filters.svg#slide-appearance);
         }
         .scrolled & {
             animation: .6s ease-in-out text-appearance forwards, .6s ease-in-out text-leave .4s forwards;
@@ -90,6 +92,7 @@
         [data-slide="4"] &__4,
         [data-slide="5"] &__5 {
             animation: .6s ease-in-out step-appearance .6s forwards;
+            filter: url(#{$img-path}/filters.svg#slide-appearance);
         }
         [data-old="1"] &__1,
         [data-old="2"] &__2,
@@ -97,6 +100,7 @@
         [data-old="4"] &__4,
         [data-old="5"] &__5 {
             animation: .6s ease-in-out step-leave forwards;
+            //filter: url(#{$img-path}/filters.svg#slide-leave);
         }
     }
     &_step-image {

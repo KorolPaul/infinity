@@ -21,7 +21,7 @@ var loadingInterval = setInterval(function () {
             }
         });
     }
-}, 1);
+}, 20);
 
 var closeIntro = function closeIntro() {
     document.querySelector('.intro iframe').remove();

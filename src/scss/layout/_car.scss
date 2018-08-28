@@ -61,8 +61,6 @@
         left: 0;
         right: 0;
         bottom: 0;
-        height: 130px;
-        width: 130px;
         filter: url(#{$img-path}/filters.svg#wheel-blur);
 
         .loaded & {
@@ -80,8 +78,6 @@
         }
         .car__small & {
             animation: .2s linear wheel infinite;
-            height: 45px;
-            width: 45px;
         }
 
     }
@@ -106,7 +102,10 @@
                 animation: .3s ease wheel-jolting infinite;
             }
         }
-
+        .car__small & {
+            height: 45px;
+            width: 45px;
+        }
         
     }
     &_light {

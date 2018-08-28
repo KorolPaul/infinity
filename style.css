@@ -1456,6 +1456,8 @@ h6,
 .loaded .content_intro-title {
   -webkit-animation: .6s ease-in-out text-appearance forwards;
   animation: .6s ease-in-out text-appearance forwards;
+  -webkit-filter: url(src/img/filters.svg#slide-appearance);
+  filter: url(src/img/filters.svg#slide-appearance);
 }
 
 .scrolled .content_intro-title {
@@ -1474,6 +1476,8 @@ h6,
 .loaded .content_intro-text {
   -webkit-animation: .6s ease-in-out text-appearance .4s forwards;
   animation: .6s ease-in-out text-appearance .4s forwards;
+  -webkit-filter: url(src/img/filters.svg#slide-appearance);
+  filter: url(src/img/filters.svg#slide-appearance);
 }
 
 .scrolled .content_intro-text {
@@ -1502,6 +1506,8 @@ h6,
 [data-slide="5"] .content_step__5 {
   -webkit-animation: .6s ease-in-out step-appearance .6s forwards;
   animation: .6s ease-in-out step-appearance .6s forwards;
+  -webkit-filter: url(src/img/filters.svg#slide-appearance);
+  filter: url(src/img/filters.svg#slide-appearance);
 }
 
 [data-old="1"] .content_step__1,
@@ -1849,8 +1855,6 @@ h6,
   left: 0;
   right: 0;
   bottom: 0;
-  height: 130px;
-  width: 130px;
   -webkit-filter: url(src/img/filters.svg#wheel-blur);
   filter: url(src/img/filters.svg#wheel-blur);
 }
@@ -1873,8 +1877,6 @@ h6,
 .car__small .car_wheel {
   -webkit-animation: .2s linear wheel infinite;
   animation: .2s linear wheel infinite;
-  height: 45px;
-  width: 45px;
 }
 
 .car_wheel-wrapper {
@@ -1901,6 +1903,11 @@ h6,
 .loaded .car_wheel-wrapper__front {
   -webkit-animation: .3s ease wheel-jolting infinite;
   animation: .3s ease wheel-jolting infinite;
+}
+
+.car__small .car_wheel-wrapper {
+  height: 45px;
+  width: 45px;
 }
 
 .car_light {

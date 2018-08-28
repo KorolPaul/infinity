@@ -19,7 +19,7 @@ let loadingInterval = setInterval(() => {
             }
         });
     }
-}, 1);
+}, 20);
 
 let closeIntro = () => {
     document.querySelector('.intro iframe').remove();

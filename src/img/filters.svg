@@ -28,5 +28,23 @@
                          fill="freeze"  />
             </feGaussianBlur>
         </filter>
+        <filter id="slide-appearance">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2,0">
+                <animate attributeName="stdDeviation"
+                         from="0, 5"
+                         to="0, 0" 
+                         dur="2s"
+                         fill="freeze"  />
+            </feGaussianBlur>
+        </filter>
+        <filter id="slide-leave">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="2,0">
+                <animate attributeName="stdDeviation"
+                         from="0, 0"
+                         to="0, 5" 
+                         dur="2s"
+                         fill="freeze"  />
+            </feGaussianBlur>
+        </filter>
     </defs>
 </svg>
