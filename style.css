@@ -542,8 +542,8 @@ input[type="submit"] {
   position: relative;
   text-align: center;
   text-transform: uppercase;
-  -webkit-transition: .2s ease-in-out border,  .2s ease-in-out background-color, .2s ease-in-out color;
-  transition: .2s ease-in-out border,  .2s ease-in-out background-color, .2s ease-in-out color;
+  -webkit-transition: .2s ease-in-out border,  .2s ease-in-out background-color, .2s ease-in-out color;
+  transition: .2s ease-in-out border,  .2s ease-in-out background-color, .2s ease-in-out color;
 }
 
 input[type="text"],
@@ -1792,21 +1792,22 @@ h6,
   z-index: 2;
   -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
+  will-change: transform;
 }
 
 .loaded .car {
-  -webkit-animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
-  animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
+  -webkit-animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
+  animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
 }
 
 .light .car {
-  -webkit-animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving2 2.5s infinite;
-  animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving2 2.5s infinite;
+  -webkit-animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving2 2.5s infinite;
+  animation: 2.5s ease-in-out car-speed-down, 10s ease-in-out car-moving2 2.5s infinite;
 }
 
 .dark .car {
-  -webkit-animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 2.5s infinite;
-  animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 2.5s infinite;
+  -webkit-animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 2.5s infinite;
+  animation: 2.5s ease-in-out car-speed-up, 10s ease-in-out car-moving 2.5s infinite;
 }
 
 .car__small {
@@ -1858,21 +1859,22 @@ h6,
   bottom: 0;
   -webkit-filter: url(src/img/filters.svg#wheel-blur);
   filter: url(src/img/filters.svg#wheel-blur);
+  will-change: transform;
 }
 
 .loaded .car_wheel {
-  -webkit-animation: .4s ease-in wheel, .3s linear wheel .4s, .2s linear wheel .7s infinite;
-  animation: .4s ease-in wheel, .3s linear wheel .4s, .2s linear wheel .7s infinite;
+  -webkit-animation: .4s ease-in wheel, .3s linear wheel .4s, .2s linear wheel .7s infinite;
+  animation: .4s ease-in wheel, .3s linear wheel .4s, .2s linear wheel .7s infinite;
 }
 
 .dark .car_wheel {
-  -webkit-animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
-  animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
+  -webkit-animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
+  animation: .2s ease-in wheel-speed-change, .15s linear wheel .2s infinite;
 }
 
 .light .car_wheel {
-  -webkit-animation: .15s ease-out wheel-speed-change, .2s linear wheel .2s infinite;
-  animation: .15s ease-out wheel-speed-change, .2s linear wheel .2s infinite;
+  -webkit-animation: .15s ease-out wheel-speed-change, .2s linear wheel .2s infinite;
+  animation: .15s ease-out wheel-speed-change, .2s linear wheel .2s infinite;
 }
 
 .car__small .car_wheel {
@@ -1886,6 +1888,7 @@ h6,
   height: 130px;
   width: 130px;
   z-index: 2;
+  will-change: transform;
 }
 
 .car_wheel-wrapper__back {
@@ -2637,8 +2640,8 @@ h6,
   border: none;
   text-align: center;
   vertical-align: middle;
-  -webkit-transition: .2s ease background, .2s ease color;
-  transition: .2s ease background, .2s ease color;
+  -webkit-transition: .2s ease background, .2s ease color;
+  transition: .2s ease background, .2s ease color;
 }
 
 .sections_icon:hover, .sections_icon__active {
@@ -2662,8 +2665,8 @@ h6,
   width: 53px;
   position: relative;
   vertical-align: middle;
-  -webkit-transition: .2s ease background, .2s ease color;
-  transition: .2s ease background, .2s ease color;
+  -webkit-transition: .2s ease background, .2s ease color;
+  transition: .2s ease background, .2s ease color;
 }
 
 .sections_prev:hover, .sections_next:hover {

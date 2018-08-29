@@ -6,6 +6,7 @@
     width: 830px;
     z-index: 2;
     transform: translateX(-50%);
+    will-change: transform;
 
     .loaded & {
         animation: 2.5s ease-in-out car-appearance,
@@ -62,6 +63,7 @@
         right: 0;
         bottom: 0;
         filter: url(#{$img-path}/filters.svg#wheel-blur);
+        will-change: transform;
 
         .loaded & {
             animation: .4s ease-in wheel,
@@ -87,6 +89,7 @@
         height: 130px;
         width: 130px;
         z-index: 2;
+        will-change: transform;
 
         &__back {
             left: 13.7%;
