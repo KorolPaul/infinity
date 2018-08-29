@@ -39,7 +39,7 @@ var closeIntro = function closeIntro() {
                     prevSlide();
                 }
             });
-        }, 5000);
+        }, 500);
     });
 
     setTimeout(function () {
@@ -80,7 +80,7 @@ var changeSlide = function changeSlide(index, oldIndex) {
 
         setTimeout(function () {
             isAnimated = false;
-        }, 1000);
+        }, 4000);
     }
 };
 

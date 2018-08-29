@@ -1,6 +1,8 @@
 @mixin read-pseudo {
     content: '';
     position: absolute;
+    background-repeat: repeat-x;
+    background-size: auto 100%;
     height: 100%;
     width: 100%;
     z-index: 1;
@@ -12,18 +14,18 @@
     bottom: 0;
     left: 0;
     right: 0;
-    height: 406px;
+    height: 37.7vh;
     width: 1920px;
     z-index: 1;
     will-change: background;
 
     &::before {
         @include read-pseudo;
-        background: url(#{$img-path}/road.png) repeat-x;
+        background-image: url(#{$img-path}/road.png);
     }
     &::after {
         @include read-pseudo;
-        background: url(#{$img-path}/road-dark.png) repeat-x;
+        background-image: url(#{$img-path}/road-dark.png);
         transition: .2s ease opacity;
         z-index: 2;
         opacity: 0;

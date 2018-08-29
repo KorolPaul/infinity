@@ -26,7 +26,7 @@ const changeSlide = function(index, oldIndex) {
         document.body.dataset.old = oldIndex;
         changeActiveIcon(index);
 
-        setTimeout(() => {isAnimated = false}, 1000);
+        setTimeout(() => {isAnimated = false}, 4000);
     }
 }
 

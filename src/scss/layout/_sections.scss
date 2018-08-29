@@ -7,7 +7,8 @@
     z-index: 2;
     transform: translateX(-50%);
     opacity: 0;
-
+    white-space: nowrap;
+    
     .scrolled & {
         animation: .5s ease-out sections-appereance 1s forwards;
     }

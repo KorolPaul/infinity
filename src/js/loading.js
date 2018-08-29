@@ -37,7 +37,7 @@ let closeIntro = () => {
                     prevSlide();
                 }
             });
-        }, 5000);
+        }, 500);
     });
 
     setTimeout(()=> {
