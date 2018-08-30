@@ -7,10 +7,29 @@
     opacity: 0;
 
     .loaded & {
-        animation: 2s ease-in-out scroll 1s infinite;
-        opacity: 1;
+        animation: 1s ease-in-out mouse-appearance 1s forwards,
+                   2s ease-in-out scroll 2s infinite;
     }
     .scrolled & {
+        animation: .5s ease-in-out mouse-leave forwards;
+    }
+}
+
+@keyframes mouse-appearance {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+}
+@keyframes mouse-leave {
+    0% {
+        opacity: 1;
+    }
+    100% {
         opacity: 0;
     }
 }
