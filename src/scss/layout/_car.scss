@@ -119,7 +119,7 @@
         bottom: 10.5vh;
         height: 13.5vh;
         width: 59.3vh;
-        opacity: 0;
+        opacity: 1;
         transition: .3s ease-out opacity;
         z-index: 2;
 
@@ -131,8 +131,8 @@
             left: 90%;
             opacity: 1;
         }
-        .dark & {
-            opacity: 1;
+        .light & {
+            opacity: 0;
         }
     }
 }

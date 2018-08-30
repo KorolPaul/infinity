@@ -1994,7 +1994,7 @@ h6,
   bottom: 10.5vh;
   height: 13.5vh;
   width: 59.3vh;
-  opacity: 0;
+  opacity: 1;
   -webkit-transition: .3s ease-out opacity;
   transition: .3s ease-out opacity;
   z-index: 2;
@@ -2009,8 +2009,8 @@ h6,
   opacity: 1;
 }
 
-.dark .car_light {
-  opacity: 1;
+.light .car_light {
+  opacity: 0;
 }
 
 @-webkit-keyframes car-appearance {
@@ -2382,7 +2382,7 @@ h6,
   animation: 1s ease road-speed-change, .5s linear road 1s infinite;
 }
 
-.light .road::after {
+.light .road::before {
   opacity: 1;
 }
 
