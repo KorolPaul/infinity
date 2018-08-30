@@ -25,9 +25,9 @@ var loadingInterval = setInterval(function () {
         });
         setTimeout(function () {
             closeIntro();
-        }, 13000);
+        }, 13500);
     }
-}, 2);
+}, 20);
 
 var closeIntro = function closeIntro() {
     document.querySelector('.intro iframe').remove();

@@ -23,9 +23,9 @@ let loadingInterval = setInterval(() => {
         });
         setTimeout(() => {
             closeIntro();
-        }, 13000);
+        }, 13500);
     }
-}, 2);
+}, 20);
 
 let closeIntro = () => {
     document.querySelector('.intro iframe').remove();
