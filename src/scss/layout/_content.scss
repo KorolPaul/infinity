@@ -24,6 +24,7 @@
     &_left {
         flex-grow: 1;
         position: relative;
+        z-index: 1;
 
         .scrolled & {
             animation: .3s ease-in-out side-dark 1s forwards;
@@ -32,6 +33,7 @@
     &_right {
         flex-grow: 1;
         position: relative;
+        z-index: 2;
 
         .scrolled & {
             animation: .3s ease-in-out side-dark 1s forwards,
@@ -60,7 +62,7 @@
 
         .loaded & {
             animation: .6s ease-in-out text-appearance forwards;
-            filter: url(#{$img-path}/filters.svg#slide-appearance);            
+            //filter: url(#{$img-path}/filters.svg#slide-appearance);            
         }
         .scrolled & {
             animation: .6s ease-in-out text-leave forwards;
@@ -74,7 +76,7 @@
 
         .loaded & {
             animation: .6s ease-in-out text-appearance .4s forwards;
-            filter: url(#{$img-path}/filters.svg#slide-appearance);
+            //filter: url(#{$img-path}/filters.svg#slide-appearance);
         }
         .scrolled & {
             animation: .6s ease-in-out text-appearance forwards, .6s ease-in-out text-leave .4s forwards;
@@ -100,7 +102,7 @@
         [data-slide="4"] &__4,
         [data-slide="5"] &__5 {
             animation: .6s ease-in-out step-appearance 3.4s forwards;
-            filter: url(#{$img-path}/filters.svg#slide-appearance);
+            //filter: url(#{$img-path}/filters.svg#slide-appearance);
         }
         [data-old="1"] &__1,
         [data-old="2"] &__2,
@@ -131,9 +133,8 @@
         [data-slide="3"] &__3,
         [data-slide="4"] &__4,
         [data-slide="5"] &__5 {
-            animation: .8s ease-in-out step-appearance .3s forwards,
-                       .8s ease-in-out step-leave 3s forwards;
-            filter: url(#{$img-path}/filters.svg#slide-appearance);
+            animation: .8s ease-in-out step-appearance .3s forwards;
+            //filter: url(#{$img-path}/filters.svg#slide-appearance);
         }
     }
     &_step-image {
@@ -187,7 +188,8 @@
         [data-slide="3"] .content_step-intro__3 &,
         [data-slide="4"] .content_step-intro__4 &,
         [data-slide="5"] .content_step-intro__5 & {
-            animation: 1s ease-in-out step-title-left .8s forwards;
+            animation: 1s ease-in-out step-title-left .8s forwards,
+                       1s ease-in-out step-title-left 3s forwards reverse;
         }
     }
     &_step-title-right {
@@ -213,7 +215,8 @@
         [data-slide="3"] .content_step-intro__3 &,
         [data-slide="4"] .content_step-intro__4 &,
         [data-slide="5"] .content_step-intro__5 & {
-            animation: 1s ease-in-out step-title-right .8s forwards;
+            animation: 1s ease-in-out step-title-right .8s forwards,
+                       1s ease-in-out step-title-right 3s forwards reverse;
         }
     }
 }

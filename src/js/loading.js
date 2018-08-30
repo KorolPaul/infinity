@@ -21,6 +21,9 @@ let loadingInterval = setInterval(() => {
                 closeIntro();
             }
         });
+        setTimeout(() => {
+            closeIntro();
+        }, 13000);
     }
 }, 20);
 

@@ -23,6 +23,9 @@ var loadingInterval = setInterval(function () {
                 closeIntro();
             }
         });
+        setTimeout(function () {
+            closeIntro();
+        }, 13000);
     }
 }, 20);
 

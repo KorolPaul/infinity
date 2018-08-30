@@ -12,6 +12,15 @@
     transition: .3s ease opacity,
                 0s ease visibility;
 
+    &::after {
+        content: '';
+        background: #000;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        position: absolute;
+    }
     .show-intro & {
         visibility: visible;
         opacity: 1;
@@ -38,7 +47,8 @@
         border: 1px solid rgba(255, 255, 255, .8);
         border-radius: 0;
         transition: .2s ease opacity;
-
+        z-index: 2;
+        
         &:hover {
             background: inherit;
             color: inherit;

@@ -22,13 +22,13 @@
     &::before {
         @include read-pseudo;
         background-image: url(#{$img-path}/road.png);
+        z-index: 2;
+        transition: .2s ease opacity;
+        opacity: 0;
     }
     &::after {
         @include read-pseudo;
         background-image: url(#{$img-path}/road-dark.png);
-        transition: .2s ease opacity;
-        z-index: 2;
-        opacity: 0;
     }
     .loaded &::before,
     .loaded &::after {
@@ -45,7 +45,7 @@
         animation: 1s ease road-speed-change,
                    .5s linear road 1s infinite;
     }
-    .dark &::after {
+    .light &::after {
         opacity: 1;
     }
 
@@ -55,7 +55,7 @@
         bottom: auto;
         top: 90px;
     }
-    &__small::before {
+    &__small::after{
         animation: 1s linear road-small infinite;
         background-image: url(#{$img-path}/road-small.png);
     }

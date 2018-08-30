@@ -1,12 +1,14 @@
 .venom {
-    position: absolute;
-    top: 29%;
+    position: fixed;
+    top: 22%;
     left: 50%;
     transform: translate(-50%, 0);
-    z-index: 2;
+    z-index: 3;
 
     &_wrapper {
         padding: 17px;
+        height: 197px;
+        width: 197px;
 
         &::before {
             content: '';
@@ -19,13 +21,15 @@
             border: 3px solid #fff;
             opacity: 0;
             clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+            transition: 1s ease 1.1s opacity;
 
-            [data-slide="1"] .content_step-intro__1 &,
-            [data-slide="2"] .content_step-intro__2 &,
-            [data-slide="3"] .content_step-intro__3 &,
-            [data-slide="4"] .content_step-intro__4 &,
-            [data-slide="5"] .content_step-intro__5 & {
-                animation: 1s ease-out venom-rotate 1.1s forwards;
+            [data-slide="1"] .venom__1 &,
+            [data-slide="2"] .venom__2 &,
+            [data-slide="3"] .venom__3 &,
+            [data-slide="4"] .venom__4 &,
+            [data-slide="5"] .venom__5 & {
+                animation: 1s ease-out venom-rotate 1.1s forward;
+                opacity: 1;
             }
         }
         &::after {
@@ -39,13 +43,15 @@
             border: 3px solid rgba(255, 255, 255, .5);
             clip-path: inset(0 50% 0 0);
             opacity: 0;
+            transition: 1s ease .8s opacity;
 
-            [data-slide="1"] .content_step-intro__1 &,
-            [data-slide="2"] .content_step-intro__2 &,
-            [data-slide="3"] .content_step-intro__3 &,
-            [data-slide="4"] .content_step-intro__4 &,
-            [data-slide="5"] .content_step-intro__5 & {
+            [data-slide="1"] .venom__1 &,
+            [data-slide="2"] .venom__2 &,
+            [data-slide="3"] .venom__3 &,
+            [data-slide="4"] .venom__4 &,
+            [data-slide="5"] .venom__5 & {
                 animation: 1s ease-out venom-rotate .8s forwards;
+                opacity: 1;
             }
         }
         &:hover::after {
@@ -54,10 +60,38 @@
     }
     &_image {
         border-radius: 50%;
+        position: relative;
+        z-index: 2;
+        position: absolute;
+        left: 17px;
+        top: 17px;
         opacity: 0;
 
-        .scrolled & {
-            animation: .5s ease-out venom-appearance forwards;
+        [data-slide="1"] .venom__1 &,
+        [data-slide="2"] .venom__2 &,
+        [data-slide="3"] .venom__3 &,
+        [data-slide="4"] .venom__4 &,
+        [data-slide="5"] .venom__5 & {
+            animation: .5s ease-out venom-appearance forwards,
+                       .5s ease-out venom-appearance 4s forwards reverse;
+        }
+    }
+    &_face {
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        opacity: 0;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        transition: 0s linear .3s opacity;
+
+        [data-slide="1"] .venom__1 &,
+        [data-slide="2"] .venom__2 &,
+        [data-slide="3"] .venom__3 &,
+        [data-slide="4"] .venom__4 &,
+        [data-slide="5"] .venom__5 & {
+            opacity: 1;
         }
     }
 }
@@ -72,13 +106,25 @@
         transform: scale(1);
     }
 }
+@keyframes venom-wrapper-leave {
+    0% {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    100% {
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        bottom: 50%;
+    }
+}
 @keyframes venom-rotate {
     0% {
-        opacity: 0;
         transform: rotate(0);
     }
     100% {
-        opacity: 1;
         transform: rotate(-180deg);
     }
 }

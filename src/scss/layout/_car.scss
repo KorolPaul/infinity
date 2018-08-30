@@ -36,7 +36,9 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        z-index: 1;
+        z-index: 2;
+        opacity: 0;
+        transition: .2s ease opacity;
     }
     &::after {
         content: '';
@@ -45,12 +47,9 @@
         position: absolute;
         height: 100%;
         width: 100%;
-        opacity: 0;
-        transition: .2s ease opacity;
         z-index: 1;
     }
-    &__small::after,
-    .dark &::after {
+    .light &::before {
         opacity: 1;
     }
 
@@ -62,7 +61,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        filter: url(#{$img-path}/filters.svg#wheel-blur);
+        //filter: url(#{$img-path}/filters.svg#wheel-blur);
         will-change: transform;
 
         .loaded & {
