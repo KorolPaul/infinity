@@ -1,6 +1,6 @@
 .venom {
     position: absolute;
-    top: 33%;
+    top: 29%;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 2;
@@ -20,8 +20,12 @@
             opacity: 0;
             clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
 
-            .scrolled & {
-                animation: 1s ease-out venom-rotate 5.3s forwards;
+            [data-slide="1"] .content_step-intro__1 &,
+            [data-slide="2"] .content_step-intro__2 &,
+            [data-slide="3"] .content_step-intro__3 &,
+            [data-slide="4"] .content_step-intro__4 &,
+            [data-slide="5"] .content_step-intro__5 & {
+                animation: 1s ease-out venom-rotate 1.1s forwards;
             }
         }
         &::after {
@@ -36,8 +40,12 @@
             clip-path: inset(0 50% 0 0);
             opacity: 0;
 
-            .scrolled & {
-                animation: 1s ease-out venom-rotate 5s forwards;
+            [data-slide="1"] .content_step-intro__1 &,
+            [data-slide="2"] .content_step-intro__2 &,
+            [data-slide="3"] .content_step-intro__3 &,
+            [data-slide="4"] .content_step-intro__4 &,
+            [data-slide="5"] .content_step-intro__5 & {
+                animation: 1s ease-out venom-rotate .8s forwards;
             }
         }
         &:hover::after {
@@ -49,7 +57,7 @@
         opacity: 0;
 
         .scrolled & {
-            animation: .5s ease-out venom-appearance 5s forwards;
+            animation: .5s ease-out venom-appearance forwards;
         }
     }
 }
