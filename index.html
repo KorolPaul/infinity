@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="intro">
-        <iframe width="560" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <div id="player"></div>
         <button class="intro_close">Пропустить ролик</button>
     </div>
     <div class="background">
@@ -44,18 +44,43 @@
     <div class="content">
         <div class="content_left">
             <div class="content_step content_step__1">
-                <img src="src/img/engine2.png" alt="" class="content_step-image">
-                <span class="content_step-title">Оптимальная мощность</span>
-                <p class="content_step-text">Открой силу скорости</p>
+                <img src="src/img/engine-red.png" alt="" class="content_step-image">
+                <div class="counters">
+                    <div class="counters_item">
+                        <span class="counters_value">
+                            <span class="counters_number" data-number="380">0</span>
+                            нм
+                        </span>
+                        <span class="counters_description">крутящий момент</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_value">
+                            <span class="counters_number" data-number="249">0</span>
+                            л.с.
+                        </span>
+                        <span class="counters_description">мощность</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_value">
+                            <span class="counters_number"><span data-number="7">0</span>,3</span>
+                            сек
+                        </span>
+                        <span class="counters_description">до 100км/ч</span>
+                    </div>
+                </div>
             </div>
             <div class="content_step content_step__2">
                 <img src="src/img/slide-2-left.jpg" alt="" class="content_step-big-image">
                 <span class="content_step-title">Системы активной безопасности</span>
             </div>
             <div class="content_step content_step__3">
-                <img src="src/img/slide-3-left.jpg" alt="" class="content_step-big-image">
-                <span class="content_step-title">Мощные линии и пропорции</span>
-                <p class="content_step-text">Сделано и подогнано вручную Пакет Autograph</p>
+                <div class="assistant">
+                    <div class="assistant_car">
+                        <div class="assistant_light"></div>
+                        <div class="assistant_light"></div>
+                    </div>
+                    <div class="assistant_wheel"></div>
+                </div>
             </div>
             <div class="content_step content_step__4">
                 <img src="src/img/engine2.png" alt="" class="content_step-image">
@@ -70,9 +95,32 @@
         </div>
         <div class="content_right">
             <div class="content_step content_step__1">
-                <img src="src/img/engine3.png" alt="" class="content_step-image">
-                <span class="content_step-title">Максимальная эффективность</span>
-                <p class="content_step-text">Открой силу интиллекта</p>
+                <img src="src/img/engine-blue.png" alt="" class="content_step-image">
+                <div class="counters">
+                    <div class="counters_item">
+                        <span class="counters_value">
+                            на
+                            <span class="counters_number" data-number="44">0</span>
+                            %
+                        </span>
+                        <span class="counters_description">легче предшественника</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_value">
+                            на
+                            <span class="counters_number" data-number="20">0</span>
+                            л
+                        </span>
+                        <span class="counters_description">на 100 км</span>
+                    </div>
+                    <div class="counters_item">
+                        <span class="counters_value">
+                            <span class="counters_number"><span data-number="7">0</span>,6</span>
+                            сек
+                        </span>
+                        <span class="counters_description">до 100км/ч</span>
+                    </div>
+                </div>
             </div>
             <div class="content_step content_step__2">
                 <img src="src/img/slide-2-right.jpg" alt="" class="content_step-big-image">
@@ -100,29 +148,24 @@
             <div class="mouse"></div>
         </div>
         <div class="content_step-intro content_step-intro__1">
-            
             <span class="content_step-title-left">Двигатель</span>
-            <span class="content_step-title-right">vs turbo</span>
+            <span class="content_step-title-right">VC-Turbo</span>
         </div>
         <div class="content_step-intro content_step-intro__2">
-            
-            <span class="content_step-title-left">Двигатель</span>
-            <span class="content_step-title-right">vs turbo</span>
+            <span class="content_step-title-left">Динамика</span>
+            <span class="content_step-title-right">Управление</span>
         </div>
         <div class="content_step-intro content_step-intro__3">
-            
-            <span class="content_step-title-left">Двигатель</span>
-            <span class="content_step-title-right">vs turbo</span>
+            <span class="content_step-title-left">Уникальный</span>
+            <span class="content_step-title-right">дизайн</span>
         </div>
         <div class="content_step-intro content_step-intro__4">
-           
-            <span class="content_step-title-left">Двигатель</span>
-            <span class="content_step-title-right">vs turbo</span>
+            <span class="content_step-title-left">Технологии </span>
+            <span class="content_step-title-right">Безопасности</span>
         </div>
         <div class="content_step-intro content_step-intro__5">
-           
-            <span class="content_step-title-left">Двигатель</span>
-            <span class="content_step-title-right">vs turbo</span>
+            <span class="content_step-title-left">Удобство</span>
+            <span class="content_step-title-right">Комфорт</span>
         </div>
         
         <div class="venom venom__1">
@@ -181,6 +224,7 @@
         <button class="sections_icon" data-char="&#xe600;" data-index="5"></button>
         <button class="sections_next js-next-slide"></button>
     </div>
+    <script src="src/plugins/countUp.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

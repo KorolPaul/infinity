@@ -1,0 +1,50 @@
+.assistant {
+    background: url(#{$img_path}/assistant-bg.jpg) repeat;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &::before {
+        content: '';
+        background: url(#{$img_path}/assistant-line.png) no-repeat center 0;
+        width: 544px;
+        height: 130px;
+        position: absolute;
+        top: 25px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    &_car {
+        background: url(#{$img_path}/assistant-car.png) no-repeat;
+        width: 125px;
+        height: 257px;
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &_light {
+        background: url(#{$img_path}/assistant-light.png) no-repeat;
+        width: 281px;
+        height: 334px;
+        position: absolute;
+        bottom: 93%;
+        left: -90%;
+        transform-origin: bottom;
+
+        & + & {
+            left: -35%;
+        }
+    }
+    &_wheel {
+        background: url(#{$img_path}/assistant-wheel.png) no-repeat;
+        width: 125px;
+        height: 125px;
+        position: absolute;
+        bottom: 30%;
+        left: 45px;
+    }
+}
