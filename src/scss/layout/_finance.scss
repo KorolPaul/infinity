@@ -1,0 +1,49 @@
+.finance {
+    color: $light_color;
+    text-align: center;
+
+    &_subtitle {
+        font: 24px $font-family__bold;
+        margin: 0 0 20px;
+        text-transform: uppercase;
+    }
+    &_title {
+        font: 36px $font-family__light;
+        margin: 0 0 80px;
+        text-transform: uppercase;
+    }
+    &_prices {
+        display: flex;
+    }
+    &_price {
+        flex-grow: 1;
+        padding: 0 60px;
+
+        &:nth-child(2) {
+            border-left: 1px solid #fff;
+            border-right: 1px solid #fff;
+        }
+    }
+    &_price-title {
+        display: block;
+        text-transform: uppercase;
+        margin: 0 0 5px;
+        
+        &__big {
+            font-size: 31px;
+        }
+    }
+    &_price-value {
+        display: block;
+        font-size: 31px;
+        position: relative;
+    }
+    &_price-number {
+        font: bold 42px/42px $font-family__bold;
+    }
+    &_price-description {
+        font-size: 14px;
+        line-height: 1;
+        margin: 0;
+    }
+}

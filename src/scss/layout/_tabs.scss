@@ -1,0 +1,51 @@
+.tabs {
+    background: #222325;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+    &_header {
+        display: flex;
+        position: relative;
+        z-index: 1;
+    }
+    &_button {
+        color: #8c8d8f;
+        border: none;
+        border-bottom: 4px solid transparent;
+        flex-grow: 1;
+        font-size: 12px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 20px;
+        transition: .2s ease color;
+
+        &:hover {
+            color: $light_color;
+        }
+        &.active {
+            color: $light_color;
+            border-bottom: 4px solid $light_color;
+        }
+    }
+    &_video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s ease opacity,
+                    0s ease visibility .2s;
+
+        &.active {
+            opacity: 1;
+            visibility: visible;
+            transition: .2s ease opacity .2s,
+                    0s ease visibility;
+        }
+    }
+}

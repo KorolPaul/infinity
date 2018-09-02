@@ -24,7 +24,7 @@
     &_left {
         flex-grow: 1;
         position: relative;
-        z-index: 2;
+        //z-index: 2;
 
         .scrolled & {
             animation: .3s ease-in-out side-dark 1s forwards;
@@ -85,8 +85,8 @@
     &_step {
         position: absolute;
         left: 0;
-        top: 0;
-        bottom: 0;
+        top: 80px;
+        bottom: 80px;
         right: 0;
         transform: translate(0, -100%);
         opacity: 0;
@@ -100,7 +100,8 @@
         [data-slide="2"] &__2,
         [data-slide="3"] &__3,
         [data-slide="4"] &__4,
-        [data-slide="5"] &__5 {
+        [data-slide="5"] &__5,
+        [data-slide="6"] &__6 {
             animation: .6s ease-in-out step-appearance 3.4s forwards;
             //filter: url(#{$img-path}/filters.svg#slide-appearance);
         }
@@ -108,7 +109,8 @@
         [data-old="2"] &__2,
         [data-old="3"] &__3,
         [data-old="4"] &__4,
-        [data-old="5"] &__5 {
+        [data-old="5"] &__5,
+        [data-old="6"] &__6 {
             animation: .6s ease-in-out step-leave forwards;
             //filter: url(#{$img-path}/filters.svg#slide-leave);
         }
@@ -126,13 +128,14 @@
         justify-content: center;
         align-items: center;
         padding: 20px 5vw;
-        z-index: 3;
+        //z-index: 3;
 
         [data-slide="1"] &__1,
         [data-slide="2"] &__2,
         [data-slide="3"] &__3,
         [data-slide="4"] &__4,
-        [data-slide="5"] &__5 {
+        [data-slide="5"] &__5,
+        [data-slide="6"] &__6 {
             animation: .8s ease-in-out step-appearance .3s forwards;
             //filter: url(#{$img-path}/filters.svg#slide-appearance);
         }

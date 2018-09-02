@@ -1,13 +1,28 @@
 'use strict';
 
-document.querySelector('.switcher_left').addEventListener('mousemove', function (e) {
+var accordionItems = document.querySelectorAll('.accordion_item');
+
+accordionItems.forEach(function (el) {
+    el.addEventListener('click', changeAccordion);
+});
+
+function changeAccordion(e) {
+    accordionItems.forEach(function (el) {
+        el.classList.remove('active');
+    });
+    console.log(e);
+    e.currentTarget.classList.add('active');
+}
+'use strict';
+
+document.querySelector('.assistant').addEventListener('mousemove', function (e) {
     var width = window.innerWidth / 2,
         x = e.clientX,
         angle = x * 100 / width - 50;
 
     var wheel = document.querySelector('.assistant_wheel');
     var lights = document.querySelectorAll('.assistant_light');
-    console.log(angle);
+
     wheel.style.transform = 'rotate(' + angle / 2 + 'deg)';
     lights[0].style.transform = 'rotate(' + angle / 2 + 'deg)';
     lights[1].style.transform = 'rotate(' + angle / 2 + 'deg)';
@@ -126,7 +141,12 @@ function onPlayerStateChange(event) {
 }
 'use strict';
 
-window.addEventListener('load', function () {});
+window.addEventListener('load', function () {
+  new Glide('.slider', {
+    type: 'slider',
+    perView: 1
+  }).mount();
+});
 'use strict';
 
 var prevSlideElement = document.querySelector('.js-prev-slide');
@@ -143,7 +163,7 @@ function prevSlide() {
 };
 
 function nextSlide() {
-    if (slide < 5) {
+    if (slide < 6) {
         changeSlide(slide + 1, slide);
     }
 };
@@ -198,3 +218,27 @@ function setSpeedChange() {
         document.body.classList.remove('light');
     });
 };
+'use strict';
+
+var tabsButtons = document.querySelectorAll('.tabs_button');
+var tabsVideos = document.querySelectorAll('.tabs_video');
+
+tabsButtons.forEach(function (button) {
+    button.addEventListener('click', changeTab);
+});
+
+function changeTab(e) {
+    var tabIndex = e.currentTarget.dataset.tab - 1;
+
+    tabsButtons.forEach(function (el) {
+        el.classList.remove('active');
+    });
+    tabsVideos.forEach(function (el) {
+        el.classList.remove('active');
+    });
+    //tabsVideos.forEach(el => {el.stop()});
+
+    tabsButtons[tabIndex].classList.add('active');
+    tabsVideos[tabIndex].classList.add('active');
+    //tabsVideos[tabIndex].play();
+}

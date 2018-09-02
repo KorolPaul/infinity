@@ -12,7 +12,7 @@ function prevSlide() {
 };
 
 function nextSlide() {
-    if (slide < 5) {
+    if (slide < 6) {
         changeSlide(slide + 1, slide);
     }
 };
