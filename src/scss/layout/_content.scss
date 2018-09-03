@@ -1,5 +1,5 @@
 .content {
-    background: rgba(0, 0, 0, .6);
+    background: rgba(0, 0, 0, .1);
     box-sizing: border-box;
     display: flex;
     height: 75vh;
@@ -94,6 +94,7 @@
         bottom: 80px;
         right: 0;
         transform: translate(0, -100%);
+        visibility: hidden;
         opacity: 0;
         display: flex;
         flex-direction: column;
@@ -108,6 +109,7 @@
         [data-slide="5"] &__5,
         [data-slide="6"] &__6 {
             animation: .6s ease-in-out step-appearance 3.4s forwards;
+            visibility: visible;
             //filter: url(#{$img-path}/filters.svg#slide-appearance);
         }
         [data-old="1"] &__1,

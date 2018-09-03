@@ -1,57 +1,59 @@
 const loadingPercentElement = document.querySelector('.loading_percent-value');
 let player = null;
 
+function init() {
+        
+    const loadingInterval = setInterval(function () {
+        let percent = parseInt(loadingPercentElement.innerHTML);
+        if (percent < 100) {
+            loadingPercentElement.innerHTML = ++percent;
+        } else {
+            document.body.classList.add('show-intro');
+            clearInterval(loadingInterval);
 
-const loadingInterval = setInterval(function () {
-    let percent = parseInt(loadingPercentElement.innerHTML);
-    if (percent < 100) {
-        loadingPercentElement.innerHTML = ++percent;
-    } else {
-        document.body.classList.add('show-intro');
-        clearInterval(loadingInterval);
-
-        try {
-            player.playVideo();
-        } catch(err) {
-            console.log(err)
-        }
-
-        document.querySelector('.intro_close').addEventListener('click', closeIntro);
-        document.addEventListener('keyup', function (e) {
-            if (e.keyCode == 27) {
-                closeIntro();
+            try {
+                player.playVideo();
+            } catch(err) {
+                console.log(err)
             }
-        });
-    }
-}, 20);
 
-const closeIntro = function closeIntro() {
-    document.querySelector('.intro iframe').remove();
-    document.body.classList.add('loaded');
-    window.addEventListener('wheel', function addScroll(e) {
-        document.body.classList.add('scrolled');
-
-        setTimeout(function () {
-            setCounters();
-        }, 5500);
-
-        setTimeout(function () {
-            changeSlide(1);
-            window.removeEventListener('wheel', addScroll);
-            window.addEventListener('wheel', function (e) {
-                if (e.deltaY > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
+            document.querySelector('.intro_close').addEventListener('click', closeIntro);
+            document.addEventListener('keyup', function (e) {
+                if (e.keyCode == 27) {
+                    closeIntro();
                 }
             });
-        }, 1500);
-    });
+        }
+    }, 20);
 
-    setTimeout(function () {
-        setSpeedChange();
-    }, 2000);
-};
+    const closeIntro = function closeIntro() {
+        document.querySelector('.intro').innerHTML = '';
+        document.body.classList.add('loaded');
+        window.addEventListener('wheel', function addScroll(e) {
+            document.body.classList.add('scrolled');
+
+            setTimeout(function () {
+                setCounters();
+            }, 5500);
+
+            setTimeout(function () {
+                changeSlide(1);
+                window.removeEventListener('wheel', addScroll);
+                window.addEventListener('wheel', function (e) {
+                    if (e.deltaY > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                });
+            }, 1500);
+        });
+
+        setTimeout(function () {
+            setSpeedChange();
+        }, 2000);
+    };
+}
 
 function setCounters() {
     var counters = document.querySelectorAll('[data-number]'),
@@ -93,6 +95,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady(event) {
     //event.target.playVideo();
+    init();
     var fadeInterval = setInterval(function () {
         if (player.getDuration() - player.getCurrentTime() <= 2) {
             document.body.classList.add('faded');

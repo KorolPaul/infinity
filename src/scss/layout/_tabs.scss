@@ -38,14 +38,10 @@
         bottom: 0;
         opacity: 0;
         visibility: hidden;
-        transition: .2s ease opacity,
-                    0s ease visibility .2s;
 
         &.active {
             opacity: 1;
             visibility: visible;
-            transition: .2s ease opacity .2s,
-                    0s ease visibility;
         }
     }
     &_image {
