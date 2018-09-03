@@ -1,0 +1,28 @@
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    background: $light_color;
+
+    &_item {
+        position: relative;
+    }
+    &_info {
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        white-space: normal;
+    }
+    &_title {
+        font: 16px $font-family__bold;
+        text-transform: uppercase;
+    }
+    &_text {
+        font-size: 14px;
+        margin: 0;
+    }
+}

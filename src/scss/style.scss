@@ -18,6 +18,9 @@
 @import  "form-elements/label";
 @import  "form-elements/number";
 
+/* Plugins */
+@import  "plugins/glide";
+
 
 /*layout*/
 @import  "layout/headings";
@@ -39,4 +42,11 @@
 @import  "layout/sections";
 @import  "layout/venom";
 @import  "layout/switcher";
+@import  "layout/counters";
+@import  "layout/assistant";
+@import  "layout/tabs";
+@import  "layout/slider";
+@import  "layout/accordion";
+@import  "layout/finance";
+@import  "layout/note";
 

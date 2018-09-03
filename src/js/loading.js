@@ -1,53 +1,111 @@
 const loadingPercentElement = document.querySelector('.loading_percent-value');
-let loadingInterval = setInterval(() => {
-    let percent = parseInt(loadingPercentElement.innerHTML);
-    if(percent < 100) {
-        loadingPercentElement.innerHTML = ++percent;
+let player = null;
 
-        if(percent === 50) {
-            document.querySelector('.intro iframe').src = 'https://www.youtube.com/embed/9BCdoCeS-Co?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;color=white';//'https://www.youtube.com/embed/YI_pVTIJuAo?rel=0&amp;controls=0&amp;showinfo=0&amp;autoplay=1&amp;color=white';
-        }
+
+const loadingInterval = setInterval(function () {
+    let percent = parseInt(loadingPercentElement.innerHTML);
+    if (percent < 100) {
+        loadingPercentElement.innerHTML = ++percent;
     } else {
         document.body.classList.add('show-intro');
         clearInterval(loadingInterval);
-        //document.body.classList.add('loaded');
-        //setTimeout(()=> {
-        //    setSpeedChange();
-        //}, 2000);
+
+        try {
+            player.playVideo();
+        } catch(err) {
+            console.log(err)
+        }
 
         document.querySelector('.intro_close').addEventListener('click', closeIntro);
-        document.addEventListener('keyup', (e) => {
-            if(e.keyCode == 27) {
+        document.addEventListener('keyup', function (e) {
+            if (e.keyCode == 27) {
                 closeIntro();
             }
         });
-        setTimeout(() => {
-            closeIntro();
-        }, 13500);
     }
 }, 20);
 
-let closeIntro = () => {
+const closeIntro = function closeIntro() {
     document.querySelector('.intro iframe').remove();
     document.body.classList.add('loaded');
     window.addEventListener('wheel', function addScroll(e) {
         document.body.classList.add('scrolled');
 
-        setTimeout(()=> {
-            changeSlide(1)
+        setTimeout(function () {
+            setCounters();
+        }, 5500);
+
+        setTimeout(function () {
+            changeSlide(1);
             window.removeEventListener('wheel', addScroll);
-            window.addEventListener('wheel', (e) => {
-                if(e.deltaY > 0) {
+            window.addEventListener('wheel', function (e) {
+                if (e.deltaY > 0) {
                     nextSlide();
                 } else {
                     prevSlide();
                 }
             });
-        }, 500);
+        }, 1500);
     });
 
-    setTimeout(()=> {
+    setTimeout(function () {
         setSpeedChange();
     }, 2000);
+};
 
+function setCounters() {
+    var counters = document.querySelectorAll('[data-number]'),
+        options = {
+              useEasing: true,
+              useGrouping: true,
+              separator: '',
+              decimal: '.',
+            };
+
+    for(var i = 0; i < counters.length; i++) {
+        var counter = new CountUp(counters[i], 0, counters[i].dataset.number, 0, 3, options);
+        if (!counter.error) {
+            counter.start();
+        } else {
+          console.error(counter.error);
+        }
+    }
+}
+
+/* Youtube */
+var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+        height: '360',
+        width: '640',
+        videoId: '9BCdoCeS-Co',
+        playerVars: { 'fullscreen': 1, 'controls': 0, 'showinfo': 0 },
+        events: {
+            'onReady': onPlayerReady,
+            'onStateChange': onPlayerStateChange
+        }
+    });
+}
+
+function onPlayerReady(event) {
+    //event.target.playVideo();
+    var fadeInterval = setInterval(function () {
+        if (player.getDuration() - player.getCurrentTime() <= 2) {
+            document.body.classList.add('faded');
+            clearInterval(fadeInterval);
+        }
+    }, 1000);
+}
+
+let done = false;
+function onPlayerStateChange(event) {
+    if (event.data == YT.PlayerState.ENDED && !done) {
+        player.stopVideo();
+        closeIntro();
+        done = true;
+    }
 }

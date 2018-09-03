@@ -1,0 +1,22 @@
+.counters {
+    margin: 75px 0 0;
+    color: $light_color;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+
+    &_item {
+        margin: 0 20px;
+    }
+    &_value {
+        font-size: 16px;
+    }
+    &_number {
+        font: 34px $font-family__bold;
+    }
+    &_description {
+        font-size: 10px;
+        display: block;
+    }
+}

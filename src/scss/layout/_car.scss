@@ -2,7 +2,7 @@
     position: absolute;
     bottom: 15%;
     left: 50%;
-    height: 50vh;
+    height: 29vh;
     width: 77vh;
     z-index: 2;
     transform: translateX(-50%);
@@ -93,14 +93,14 @@
         &__back {
             left: 13.7%;
 
-            .loaded & {
+            .dark.loaded & {
                 animation: .3s ease wheel-jolting .1s infinite;
             }
         }
         &__front {
             right: 14.1%;
 
-            .loaded & {
+            .dark.loaded & {
                 animation: .3s ease wheel-jolting infinite;
             }
         }
