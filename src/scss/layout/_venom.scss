@@ -91,14 +91,13 @@
         opacity: 0;
         transform: translate(-50%, -50%);
         z-index: 1;
-        transition: 0s linear .3s opacity;
 
         [data-slide="1"] .venom__1 &,
         [data-slide="2"] .venom__2 &,
         [data-slide="3"] .venom__3 &,
         [data-slide="4"] .venom__4 &,
         [data-slide="5"] .venom__5 & {
-            opacity: 1;
+            animation: .5s ease-out face-appearance 2s forwards;
         }
     }
 }
@@ -111,6 +110,14 @@
     100% {
         opacity: 1;
         transform: scale(1);
+    }
+}
+@keyframes face-appearance {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 @keyframes venom-wrapper-leave {

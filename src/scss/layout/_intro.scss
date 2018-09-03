@@ -25,6 +25,9 @@
         visibility: visible;
         opacity: 1;
     }
+    .faded & {
+        animation: 2s ease intro-leave forwards;
+    }
     .loaded & {
         visibility: hidden;
         opacity: 0;
@@ -54,5 +57,14 @@
             color: inherit;
             opacity: .7;
         }
+    }
+}
+
+@keyframes intro-leave {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
     }
 }

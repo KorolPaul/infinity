@@ -16,6 +16,7 @@
     transition: .3s ease opacity,
                 0s ease visibility .3s;
 
+    .show-intro &,
     .loaded & {
         visibility: hidden;
         opacity: 0;
