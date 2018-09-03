@@ -22,7 +22,7 @@ gulp.task('sass', function () {
 gulp.task('js', function () {
     gulp.src(['src/js/*.js'])
         .pipe(babel({
-            presets: ['env']
+            presets: ['es2015']
         }))
         .pipe(concat('script.js'))
         .pipe(gulp.dest('./'))

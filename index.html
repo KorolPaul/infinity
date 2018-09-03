@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -42,7 +43,7 @@
         <div class="background_city"></div>
     </div>
     <div class="content">
-        <div class="content_left">
+        <div class="content_left js-light">
             <div class="content_step content_step__1">
                 <img src="src/img/engine-red.png" alt="" class="content_step-image">
                 <div class="counters">
@@ -70,8 +71,22 @@
                 </div>
             </div>
             <div class="content_step content_step__2">
-                <img src="src/img/slide-2-left.jpg" alt="" class="content_step-big-image">
-                <span class="content_step-title">Системы активной безопасности</span>
+                <div class="slider slider__dark glide">
+                    <div class="glide_track" data-glide-el="track">
+                        <div class="glide_slides">
+                            <div class="slider_item glide_slide">
+                                <img src="src/img/slide-3-left.jpg" alt="">
+                            </div>
+                            <div class="slider_item">
+                                <img src="src/img/slide-3-right.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                      <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide_arrow glide_arrow__left" data-glide-dir="<"></button>
+                        <button class="glide_arrow glide_arrow__right" data-glide-dir=">"></button>
+                      </div>                      
+                </div>
             </div>
             <div class="content_step content_step__3">
                 <div class="assistant">
@@ -104,7 +119,7 @@
                     </div>
             </div>
         </div>
-        <div class="content_right">
+        <div class="content_right js-dark">
             <div class="content_step content_step__1">
                 <img src="src/img/engine-blue.png" alt="" class="content_step-image">
                 <div class="counters">
@@ -134,8 +149,22 @@
                 </div>
             </div>
             <div class="content_step content_step__2">
-                <img src="src/img/slide-2-right.jpg" alt="" class="content_step-big-image">
-                <span class="content_step-title">Системы пассивной безопасности</span>
+                <div class="slider slider__dark glide">
+                    <div class="glide_track" data-glide-el="track">
+                        <div class="glide_slides">
+                            <div class="slider_item glide_slide">
+                                <img src="src/img/slide-3-right.jpg" alt="">
+                            </div>
+                            <div class="slider_item">
+                                <img src="src/img/slide-3-left.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                      <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide_arrow glide_arrow__left" data-glide-dir="<"></button>
+                        <button class="glide_arrow glide_arrow__right" data-glide-dir=">"></button>
+                      </div>                      
+                </div>
             </div>
             <div class="content_step content_step__3">
                 <div class="tabs">
@@ -145,26 +174,18 @@
                         <button data-tab="3" class="tabs_button">Предупреждение столкновения</button>
                         <button data-tab="4" class="tabs_button">Предупреждение в слепой зоне</button>
                     </div>
-                    <video data-tab-video="1" class="tabs_video active" autoplay loop poster="src/img/bg.jpg">
-                        <source src="src/img/bg.mp4" type="video/mp4">
-                        <source src="src/img/bg.ogv" type="video/ogg">
-                        <source src="src/img/bg.webm" type="video/webm">
-                    </video>
-                    <video data-tab-video="2" class="tabs_video" autoplay loop  poster="src/img/bg.jpg">
-                        <source src="src/img/bg.mp4" type="video/mp4">
-                        <source src="src/img/bg.ogv" type="video/ogg">
-                        <source src="src/img/bg.webm" type="video/webm">
-                    </video>
-                    <video data-tab-video="3" class="tabs_video" autoplay loop  poster="src/img/bg.jpg">
-                        <source src="src/img/bg.mp4" type="video/mp4">
-                        <source src="src/img/bg.ogv" type="video/ogg">
-                        <source src="src/img/bg.webm" type="video/webm">
-                    </video>
-                    <video data-tab-video="4" class="tabs_video" autoplay loop  poster="src/img/bg.jpg">
-                        <source src="src/img/bg.mp4" type="video/mp4">
-                        <source src="src/img/bg.ogv" type="video/ogg">
-                        <source src="src/img/bg.webm" type="video/webm">
-                    </video>
+                    <div class="tabs_content active">
+                        <img src="src/img/tabs-1.jpg" alt="" class="tabs_image">
+                    </div>
+                    <div class="tabs_content">
+                        <img src="src/img/tabs-2.jpg" alt="" class="tabs_image">
+                    </div>
+                    <div class="tabs_content">
+                        <img src="src/img/tabs-3.jpg" alt="" class="tabs_image">
+                    </div>
+                    <div class="tabs_content">
+                        <img src="src/img/tabs-4.jpg" alt="" class="tabs_image">
+                    </div>
                 </div>
             </div>
             <div class="content_step content_step__4">
@@ -187,6 +208,10 @@
                             </div>
                         </div>
                     </div>
+                      <div class="glide__arrows" data-glide-el="controls">
+                        <button class="glide_arrow glide_arrow__left" data-glide-dir="<"></button>
+                        <button class="glide_arrow glide_arrow__right" data-glide-dir=">"></button>
+                      </div>                      
                 </div>
             </div>
             <div class="content_step content_step__5">
@@ -216,12 +241,12 @@
             <span class="content_step-title-right">VC-Turbo</span>
         </div>
         <div class="content_step-intro content_step-intro__2">
-            <span class="content_step-title-left">Динамика</span>
-            <span class="content_step-title-right">Управление</span>
+            <span class="content_step-title-left">Уникальный</span>
+            <span class="content_step-title-right">дизайнУ</span>
         </div>
         <div class="content_step-intro content_step-intro__3">
-            <span class="content_step-title-left">Уникальный</span>
-            <span class="content_step-title-right">дизайн</span>
+            <span class="content_step-title-left">Динамика</span>
+            <span class="content_step-title-right">управление</span>
         </div>
         <div class="content_step-intro content_step-intro__4">
             <span class="content_step-title-left">Технологии </span>
@@ -276,7 +301,7 @@
                             р.
                             <div class="note">
                                 <div class="note_icon">★</div>
-                                <div class="note_container">
+                                <div class="note_container note_container__right">
                                     <div class="note_text">
                                         <p>Цена от 2 799 000 р. - Рекомендованная розничная цена на автомобиль в комплектации 2.0L PURE. Увеличение рекомендованной розничной цены за цвет "металлик" составляет 60 000 рублей, включая НДС, за цвет Динамичный Красный (специальный "металлик") составляет 80 000 руб., включая НДС. Предложение ограничено и действует до 31 августа 2018 г. Подробности у официальных дилеров INFINITI. </p>
                                     </div>

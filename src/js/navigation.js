@@ -20,7 +20,7 @@ function nextSlide() {
 function changeSlide(index, oldIndex) {
     if (!isAnimated) {
         isAnimated = true;
-        slide = index;
+        slide = parseInt(index);
         document.body.dataset.slide = index;
         document.body.dataset.old = oldIndex;
         changeActiveIcon(index);
@@ -32,9 +32,9 @@ function changeSlide(index, oldIndex) {
 };
 
 function changeActiveIcon(index) {
-    icons.forEach(function (el) {
-        el.classList.remove('sections_icon__active');
-    });
+    for(let i = 0; i < icons.length; i++) {
+        icons[i].classList.remove('sections_icon__active');
+    }
     icons[index - 1].classList.add('sections_icon__active');
 };
 
@@ -46,9 +46,11 @@ nextSlideElement.addEventListener('click', function (e) {
     e.preventDefault();
     nextSlide();
 });
-icons.forEach(function (el) {
-    el.addEventListener('click', function (e) {
+
+
+for(let i = 0; i < icons.length; i++) {
+    icons[i].addEventListener('click', function (e) {
         e.preventDefault();
         changeSlide(e.target.dataset.index, slide);
     });
-});
+}

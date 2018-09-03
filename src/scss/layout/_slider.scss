@@ -8,6 +8,10 @@
     align-items: center;
     background: $light_color;
 
+
+    &__dark {
+        background: #000;
+    }
     &_item {
         position: relative;
     }

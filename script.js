@@ -2,15 +2,14 @@
 
 var accordionItems = document.querySelectorAll('.accordion_item');
 
-accordionItems.forEach(function (el) {
-    el.addEventListener('click', changeAccordion);
-});
+for (var i = 0; i < accordionItems.length; i++) {
+    accordionItems[i].addEventListener('click', changeAccordion);
+}
 
 function changeAccordion(e) {
-    accordionItems.forEach(function (el) {
-        el.classList.remove('active');
-    });
-    console.log(e);
+    for (var _i = 0; _i < accordionItems.length; _i++) {
+        accordionItems[_i].classList.remove('active');
+    }
     e.currentTarget.classList.add('active');
 }
 'use strict';
@@ -142,7 +141,15 @@ function onPlayerStateChange(event) {
 'use strict';
 
 window.addEventListener('load', function () {
-  new Glide('.slider', {
+  new Glide('.content_left .content_step__2  .slider', {
+    type: 'slider',
+    perView: 1
+  }).mount();
+  new Glide('.content_right .content_step__2  .slider', {
+    type: 'slider',
+    perView: 1
+  }).mount();
+  new Glide('.content_right .content_step__4  .slider', {
     type: 'slider',
     perView: 1
   }).mount();
@@ -171,7 +178,7 @@ function nextSlide() {
 function changeSlide(index, oldIndex) {
     if (!isAnimated) {
         isAnimated = true;
-        slide = index;
+        slide = parseInt(index);
         document.body.dataset.slide = index;
         document.body.dataset.old = oldIndex;
         changeActiveIcon(index);
@@ -183,9 +190,9 @@ function changeSlide(index, oldIndex) {
 };
 
 function changeActiveIcon(index) {
-    icons.forEach(function (el) {
-        el.classList.remove('sections_icon__active');
-    });
+    for (var i = 0; i < icons.length; i++) {
+        icons[i].classList.remove('sections_icon__active');
+    }
     icons[index - 1].classList.add('sections_icon__active');
 };
 
@@ -197,48 +204,49 @@ nextSlideElement.addEventListener('click', function (e) {
     e.preventDefault();
     nextSlide();
 });
-icons.forEach(function (el) {
-    el.addEventListener('click', function (e) {
+
+for (var i = 0; i < icons.length; i++) {
+    icons[i].addEventListener('click', function (e) {
         e.preventDefault();
         changeSlide(e.target.dataset.index, slide);
     });
-});
+}
 'use strict';
 
 function setSpeedChange() {
-    document.querySelector('.js-light').addEventListener('mouseenter', function () {
-        if (document.body.classList.contains('dark')) {
+    for (var i = 0; i < document.querySelectorAll('.js-light').length; i++) {
+        document.querySelectorAll('.js-light')[i].addEventListener('mouseenter', function () {
             document.body.classList.remove('dark');
             document.body.classList.add('light');
-        }
-    });
+        });
+    }
 
-    document.querySelector('.js-dark').addEventListener('mouseenter', function () {
-        document.body.classList.add('dark');
-        document.body.classList.remove('light');
-    });
+    for (var _i = 0; _i < document.querySelectorAll('.js-dark').length; _i++) {
+        document.querySelectorAll('.js-dark')[_i].addEventListener('mouseenter', function () {
+            document.body.classList.add('dark');
+            document.body.classList.remove('light');
+        });
+    }
 };
 'use strict';
 
 var tabsButtons = document.querySelectorAll('.tabs_button');
-var tabsVideos = document.querySelectorAll('.tabs_video');
+var tabsContent = document.querySelectorAll('.tabs_content');
 
-tabsButtons.forEach(function (button) {
-    button.addEventListener('click', changeTab);
-});
+for (var i = 0; i < tabsButtons.length; i++) {
+    tabsButtons[i].addEventListener('click', changeTab);
+}
 
 function changeTab(e) {
     var tabIndex = e.currentTarget.dataset.tab - 1;
 
-    tabsButtons.forEach(function (el) {
-        el.classList.remove('active');
-    });
-    tabsVideos.forEach(function (el) {
-        el.classList.remove('active');
-    });
-    //tabsVideos.forEach(el => {el.stop()});
+    for (var _i = 0; _i < tabsButtons.length; _i++) {
+        tabsButtons[_i].classList.remove('active');
+    }
+    for (var _i2 = 0; _i2 < tabsContent.length; _i2++) {
+        tabsContent[_i2].classList.remove('active');
+    }
 
     tabsButtons[tabIndex].classList.add('active');
-    tabsVideos[tabIndex].classList.add('active');
-    //tabsVideos[tabIndex].play();
+    tabsContent[tabIndex].classList.add('active');
 }

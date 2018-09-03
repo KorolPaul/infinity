@@ -14,9 +14,10 @@
 
     &_video {
         position: absolute;
+        left: 0;
         top: 0;
-        left: 50%;
-        height: 80vh;
-        transform: translateX(-50%);
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }

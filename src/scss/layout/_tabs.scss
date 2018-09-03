@@ -30,7 +30,7 @@
             border-bottom: 4px solid $light_color;
         }
     }
-    &_video {
+    &_content {
         position: absolute;
         top: 0;
         left: 0;
@@ -47,5 +47,13 @@
             transition: .2s ease opacity .2s,
                     0s ease visibility;
         }
+    }
+    &_image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
     }
 }

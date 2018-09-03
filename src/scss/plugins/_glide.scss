@@ -60,22 +60,22 @@
 
 .glide_arrow {
     position: absolute;
-    display: block;
-    top: 50%;
+    border: none;
+    background-position: center center;
+    background-repeat: no-repeat;
+    top: 30%;
     z-index: 2;
-    color: white;
-    text-transform: uppercase;
+    height: 55px;
+    width: 30px;
     padding: 9px 12px;
-    background-color: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 4px;
-    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.1);
-    text-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
     opacity: 1;
     cursor: pointer;
-    transition: opacity 150ms ease, border 300ms ease-in-out;
+    transition: opacity 150ms ease;
     transform: translateY(-50%);
-    line-height: 1;
+
+    .slider__dark & {
+        filter: invert(1);
+    }
 }
 
 .glide_arrow:focus {
@@ -86,11 +86,13 @@
     border-color: white;
 }
 
-.glide_arrow--left {
+.glide_arrow__left {
+    background-image: url(#{$img_path}/left.svg);
     left: 2em;
 }
 
-.glide_arrow--right {
+.glide_arrow__right {
+    background-image: url(#{$img_path}/right.svg);
     right: 2em;
 }
 

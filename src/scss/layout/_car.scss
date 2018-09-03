@@ -13,12 +13,10 @@
                    10s ease-in-out car-moving2 2.5s infinite;
     }
     .light & {
-        animation: 2.5s ease-in-out car-speed-down,
-                   10s ease-in-out car-moving2 2.5s infinite;
+        animation: 10s ease-in-out car-moving infinite; //2.5s ease-in-out car-speed-down,
     }
     .dark & {
-        animation: 2.5s ease-in-out car-speed-up,
-                   10s ease-in-out car-moving 2.5s infinite;
+        animation: 10s ease-in-out car-moving infinite;//2.5s ease-in-out car-speed-up,
     }
     &__small {
         animation: none;
@@ -75,7 +73,7 @@
         }
         .light & {
             animation: .15s ease-out wheel-speed-change,
-                       .3s linear wheel .2s infinite;
+                       .5s linear wheel .2s infinite;
         }
         .car__small & {
             animation: .2s linear wheel infinite;

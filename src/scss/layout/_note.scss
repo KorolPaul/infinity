@@ -33,6 +33,11 @@
             transition: .2s ease-in-out opacity .2s,
                         0s ease visibility;
         }
+
+        &__right {
+            left: auto;
+            right: 65%;
+        }
     }
     &_text {
         font-size: 11px;

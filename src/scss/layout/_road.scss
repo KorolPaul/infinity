@@ -43,7 +43,7 @@
     .light &::before,
     .light &::after {
         animation: 1s ease road-speed-change,
-                   .8s linear road 1s infinite;
+                   1.4s linear road 1s infinite;
     }
     .light &::before {
         opacity: 1;

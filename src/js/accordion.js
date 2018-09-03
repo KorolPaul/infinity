@@ -1,11 +1,12 @@
 const accordionItems = document.querySelectorAll('.accordion_item');
 
-accordionItems.forEach(el => {
-    el.addEventListener('click', changeAccordion);
-});
+for(let i = 0; i < accordionItems.length; i++) {
+    accordionItems[i].addEventListener('click', changeAccordion);
+}
 
 function changeAccordion(e) {
-    accordionItems.forEach(el => {el.classList.remove('active')});
-    console.log(e)
+    for(let i = 0; i < accordionItems.length; i++) {
+        accordionItems[i].classList.remove('active');
+    }
     e.currentTarget.classList.add('active');
 }
