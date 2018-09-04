@@ -30,10 +30,11 @@
         @include read-pseudo;
         background-image: url(#{$img-path}/road-dark.png);
     }
-    .loaded &::before,
-    .loaded &::after {
+    .faded &::before,
+    .faded &::after {
         filter: url(#{$img-path}/filters.svg#motion-blur);
-        animation: .8s ease-in road-speed-change, .5s linear road .8s infinite;
+        animation: .8s ease-in road-speed-changes,
+                   .5s linear road .8s infinite;
     }
     .dark &::before,
     .dark &::after {

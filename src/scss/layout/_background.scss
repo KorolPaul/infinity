@@ -5,9 +5,12 @@
     right: 0;
     bottom: 10%;
     z-index: 1;
-    opacity: .6;
     transition: .2s ease opacity;
+    opacity: 0;
 
+    .faded & {
+        opacity: .6;
+    }
     .light & {
         opacity: 1;
     }

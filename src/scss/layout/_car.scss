@@ -5,10 +5,10 @@
     height: 29vh;
     width: 77vh;
     z-index: 2;
-    transform: translateX(-50%);
+    transform: translateX(-200%);
     will-change: transform;
 
-    .loaded & {
+    .faded & {
         animation: 2.5s ease-in-out car-appearance,
                    10s ease-in-out car-moving2 2.5s infinite;
     }
@@ -62,7 +62,7 @@
         //filter: url(#{$img-path}/filters.svg#wheel-blur);
         will-change: transform;
 
-        .loaded & {
+        .faded & {
             animation: .4s ease-in wheel,
                        .3s linear wheel .4s,
                        .2s linear wheel .7s infinite;

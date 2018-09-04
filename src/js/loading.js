@@ -1,6 +1,38 @@
 const loadingPercentElement = document.querySelector('.loading_percent-value');
 let player = null;
 
+function closeIntro() {
+    document.body.classList.add('faded');
+    setTimeout(() => {
+        document.body.classList.add('loaded');
+        document.querySelector('.intro').innerHTML = '';
+    }, 2000);
+
+    window.addEventListener('wheel', function addScroll(e) {
+        document.body.classList.add('scrolled');
+
+        setTimeout(function () {
+            setCounters();
+        }, 5500);
+
+        setTimeout(function () {
+            changeSlide(1);
+            window.removeEventListener('wheel', addScroll);
+            window.addEventListener('wheel', function (e) {
+                if (e.deltaY > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            });
+        }, 1500);
+    });
+
+    setTimeout(function () {
+        setSpeedChange();
+    }, 2000);
+};
+
 function init() {
         
     const loadingInterval = setInterval(function () {
@@ -25,34 +57,6 @@ function init() {
             });
         }
     }, 20);
-
-    const closeIntro = function closeIntro() {
-        document.querySelector('.intro').innerHTML = '';
-        document.body.classList.add('loaded');
-        window.addEventListener('wheel', function addScroll(e) {
-            document.body.classList.add('scrolled');
-
-            setTimeout(function () {
-                setCounters();
-            }, 5500);
-
-            setTimeout(function () {
-                changeSlide(1);
-                window.removeEventListener('wheel', addScroll);
-                window.addEventListener('wheel', function (e) {
-                    if (e.deltaY > 0) {
-                        nextSlide();
-                    } else {
-                        prevSlide();
-                    }
-                });
-            }, 1500);
-        });
-
-        setTimeout(function () {
-            setSpeedChange();
-        }, 2000);
-    };
 }
 
 function setCounters() {
@@ -98,7 +102,7 @@ function onPlayerReady(event) {
     init();
     var fadeInterval = setInterval(function () {
         if (player.getDuration() - player.getCurrentTime() <= 2) {
-            document.body.classList.add('faded');
+            closeIntro();
             clearInterval(fadeInterval);
         }
     }, 1000);
