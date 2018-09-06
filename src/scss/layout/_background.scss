@@ -11,8 +11,10 @@
     .faded & {
         opacity: .6;
     }
-    .light & {
-        opacity: 1;
+    .scrolled {
+        .light:not([data-slide="6"]) & {
+            opacity: 1;
+        }
     }
 
     &_video {

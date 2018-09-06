@@ -47,4 +47,13 @@
         bottom: 30%;
         left: 45px;
     }
+    &_title {
+        color: $light_color;
+        font: 16px $font-family__bold;
+        text-transform: uppercase;
+        position: absolute;
+        left: 50%;
+        top: 20px;
+        transform: translate(-50%, 0);
+    }
 }

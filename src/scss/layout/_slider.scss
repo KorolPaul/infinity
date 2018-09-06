@@ -14,19 +14,45 @@
     }
     &_item {
         position: relative;
+        height: 100%;
+
+        .slider__dark & {
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 90%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
     }
     &_info {
         width: 80%;
         text-align: center;
         margin: 20px auto 0;
         white-space: normal;
+
+        .slider__dark & {
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            transform: translate(-50%, 0);
+            z-index: 1;
+        }
     }
     &_title {
         font: 16px $font-family__bold;
         text-transform: uppercase;
+        .slider__dark & {
+            color: $light_color;
+        }
     }
     &_text {
         font-size: 14px;
         margin: 0;
+        .slider__dark & {
+            color: $light_color;
+        }
     }
 }

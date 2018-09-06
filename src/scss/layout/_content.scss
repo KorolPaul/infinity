@@ -31,23 +31,27 @@
         flex-grow: 1;
         position: relative;
         z-index: 2;
+        background: rgba(0, 0, 0, .7);
 
         .scrolled & {
             animation: .3s ease-in-out side-light 1s forwards,
                        .3s ease-in-out side-dark 4.5s forwards;
         }
         [data-slide="6"] & {
-            animation: .3s ease-in-out side-light 1s forwards;
+            animation: .3s ease-in-out side-extra-dark 1s forwards;
         }
     }
     &_right {
         flex-grow: 1;
         position: relative;
         z-index: 2;
-        //background: rgba(0, 0, 0, .4)
+        background: rgba(0, 0, 0, .7);
 
         .scrolled & {
             animation: .3s ease-in-out side-light 1s forwards;
+        }
+        [data-slide="6"] & {
+            animation: .3s ease-in-out side-extra-dark 1s forwards;
         }
     }
     &_intro {
@@ -63,6 +67,7 @@
         align-items: center;
         justify-content: center;
         padding: 100px 50px 50px;
+        z-index: 2;
     }
     &_intro-title {
         text-transform: uppercase;
@@ -171,6 +176,17 @@
         max-height: 27vh;
         position: relative;
         z-index: 2;
+
+        &__engine::after {
+            content: '';
+            background: url(#{$img_path}/engene-lines.png) no-repeat;
+            position: absolute;
+            height: 255px;
+            width: 664px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
     }
     &_step-big-image {
         position: absolute;
@@ -250,6 +266,21 @@
         [data-slide="5"] .content_step-intro__5 & {
             animation: 1s ease-in-out step-title-right .8s forwards,
                        1s ease-in-out step-title-right 3s forwards reverse;
+        }
+    }
+    &_frame {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     }
 }
@@ -342,5 +373,13 @@
     }
     100% {
         background: rgba(0, 0, 0, 0);
+    }
+}
+@keyframes side-extra-dark {
+    0% {
+        background: rgba(0, 0, 0, .4);
+    }
+    100% {
+        background: rgba(0, 0, 0, .5);
     }
 }
