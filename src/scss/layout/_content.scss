@@ -22,6 +22,10 @@
         transform: translateY(-100%);
         transition: .3s ease-in-out transform 1s;
         z-index: 3;
+        @include mobile {
+            height: 68px;
+            transform: translateY(0);
+        }
     }
     .scrolled &::before {
         transform: translateY(0);
@@ -69,6 +73,10 @@
         padding: 100px 50px 50px;
         z-index: 2;
         transition: .1s ease visibility 1s;
+        @include mobile {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
         .scrolled & {
             visibility: hidden;
@@ -79,6 +87,10 @@
         max-width: 480px;
         margin: -30px auto 40px;
         opacity: 0;
+        @include mobile {
+            margin: 0 auto 10px;
+            font-size: 21px;
+        }
 
         .faded & {
             animation: .6s ease-in-out text-appearance forwards;
@@ -93,6 +105,9 @@
         line-height: normal;
         max-width: 580px;
         opacity: 0;
+        @include mobile {
+            font-size: 14px;
+        }
 
         .faded & {
             animation: .6s ease-in-out text-appearance .4s forwards;

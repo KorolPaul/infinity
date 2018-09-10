@@ -1566,6 +1566,13 @@ h6,
   z-index: 2;
 }
 
+@media all and (max-width: 1025px) {
+  .logo {
+    height: 40px;
+    width: 83px;
+  }
+}
+
 body {
   background: #000;
 }
@@ -1602,6 +1609,14 @@ body {
   -webkit-transition: .3s ease-in-out transform 1s;
   transition: .3s ease-in-out transform 1s;
   z-index: 3;
+}
+
+@media all and (max-width: 1025px) {
+  .content::before {
+    height: 68px;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
 }
 
 .scrolled .content::before {
@@ -1674,6 +1689,13 @@ body {
   transition: .1s ease visibility 1s;
 }
 
+@media all and (max-width: 1025px) {
+  .content_intro {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
 .scrolled .content_intro {
   visibility: hidden;
 }
@@ -1683,6 +1705,13 @@ body {
   max-width: 480px;
   margin: -30px auto 40px;
   opacity: 0;
+}
+
+@media all and (max-width: 1025px) {
+  .content_intro-title {
+    margin: 0 auto 10px;
+    font-size: 21px;
+  }
 }
 
 .faded .content_intro-title {
@@ -1700,6 +1729,12 @@ body {
   line-height: normal;
   max-width: 580px;
   opacity: 0;
+}
+
+@media all and (max-width: 1025px) {
+  .content_intro-text {
+    font-size: 14px;
+  }
 }
 
 .faded .content_intro-text {
@@ -2224,6 +2259,14 @@ body {
   will-change: transform;
 }
 
+@media all and (max-width: 1025px) {
+  .car {
+    bottom: 11%;
+    height: 27vh;
+    width: 69vh;
+  }
+}
+
 .faded .car {
   -webkit-animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
   animation: 2.5s ease-in-out car-appearance, 10s ease-in-out car-moving2 2.5s infinite;
@@ -2319,8 +2362,20 @@ body {
   will-change: transform;
 }
 
+@media all and (max-width: 1025px) {
+  .car_wheel-wrapper {
+    bottom: 0;
+  }
+}
+
 .car_wheel-wrapper__back {
   left: 13.7%;
+}
+
+@media all and (max-width: 1025px) {
+  .car_wheel-wrapper__back {
+    left: 12.7%;
+  }
 }
 
 .dark.loaded .car_wheel-wrapper__back {
@@ -2328,13 +2383,33 @@ body {
   animation: .3s ease wheel-jolting .1s infinite;
 }
 
+@media all and (max-width: 1025px) {
+  .dark.loaded .car_wheel-wrapper__back {
+    -webkit-animation: none;
+    animation: none;
+  }
+}
+
 .car_wheel-wrapper__front {
   right: 14.1%;
+}
+
+@media all and (max-width: 1025px) {
+  .car_wheel-wrapper__front {
+    right: 13.1%;
+  }
 }
 
 .dark.loaded .car_wheel-wrapper__front {
   -webkit-animation: .3s ease wheel-jolting infinite;
   animation: .3s ease wheel-jolting infinite;
+}
+
+@media all and (max-width: 1025px) {
+  .dark.loaded .car_wheel-wrapper__front {
+    -webkit-animation: none;
+    animation: none;
+  }
 }
 
 .car__small .car_wheel-wrapper {
@@ -2820,6 +2895,12 @@ body {
   opacity: 0;
 }
 
+@media all and (max-width: 1025px) {
+  .mouse {
+    display: none;
+  }
+}
+
 .loaded .mouse {
   -webkit-animation: 1s ease-in-out mouse-appearance 1s forwards, 2s ease-in-out scroll 2s infinite;
   animation: 1s ease-in-out mouse-appearance 1s forwards, 2s ease-in-out scroll 2s infinite;
@@ -2987,6 +3068,12 @@ body {
   transition: .3s ease opacity, 0s ease visibility .3s;
 }
 
+@media all and (max-width: 1025px) {
+  .loading {
+    display: none;
+  }
+}
+
 .show-intro .loading,
 .loaded .loading {
   visibility: hidden;
@@ -3036,6 +3123,12 @@ body {
   opacity: 0;
   -webkit-transition: .3s ease opacity, 0s ease visibility;
   transition: .3s ease opacity, 0s ease visibility;
+}
+
+@media all and (max-width: 1025px) {
+  .intro {
+    display: none;
+  }
 }
 
 .intro::after {
@@ -3122,6 +3215,12 @@ body {
   transform: translateX(-50%);
   opacity: 0;
   white-space: nowrap;
+}
+
+@media all and (max-width: 1025px) {
+  .sections {
+    display: none;
+  }
 }
 
 .scrolled .sections {
@@ -3253,6 +3352,7 @@ body {
 .venom {
   position: fixed;
   top: 22%;
+  overflow: visible;
   left: 50%;
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
@@ -3264,6 +3364,8 @@ body {
   height: 197px;
   width: 197px;
   display: none;
+  will-change: auto;
+  overflow: visible;
 }
 
 [data-slide="1"] .venom__1 .venom_wrapper,
@@ -3295,8 +3397,8 @@ body {
 [data-slide="3"] .venom__3 .venom_wrapper::before,
 [data-slide="4"] .venom__4 .venom_wrapper::before,
 [data-slide="5"] .venom__5 .venom_wrapper::before {
-  -webkit-animation: 4.5s ease-out venom-rotate .8s forwards;
-  animation: 4.5s ease-out venom-rotate .8s forwards;
+  -webkit-animation: 4.5s ease-out venom-rotate  paused .8s forwards;
+  animation: 4.5s ease-out venom-rotate  paused .8s forwards;
   opacity: 1;
 }
 
@@ -3321,17 +3423,9 @@ body {
 [data-slide="3"] .venom__3 .venom_wrapper::after,
 [data-slide="4"] .venom__4 .venom_wrapper::after,
 [data-slide="5"] .venom__5 .venom_wrapper::after {
-  -webkit-animation: 4.5s ease-out venom-rotate .8s forwards;
-  animation: 4.5s ease-out venom-rotate .8s forwards;
+  -webkit-animation: 4.5s ease-out venom-rotate paused .8s forwards;
+  animation: 4.5s ease-out venom-rotate paused .8s forwards;
   opacity: 1;
-}
-
-[data-slide="1"].light .venom__1 .venom_wrapper::after,
-[data-slide="2"].light .venom__2 .venom_wrapper::after,
-[data-slide="3"].light .venom__3 .venom_wrapper::after,
-[data-slide="4"].light .venom__4 .venom_wrapper::after,
-[data-slide="5"].light .venom__5 .venom_wrapper::after {
-  animation: 0s ease-out venom-rotate 0s forwards, 4.5s ease-out venom-rotate-change reverse forwards;
 }
 
 .venom_image {

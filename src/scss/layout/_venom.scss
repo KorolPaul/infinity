@@ -1,6 +1,7 @@
 .venom {
     position: fixed;
     top: 22%;
+    overflow: visible;
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 3;
@@ -10,6 +11,8 @@
         height: 197px;
         width: 197px;
         display: none;
+        will-change: auto;
+        overflow: visible;
 
         [data-slide="1"] .venom__1 &,
         [data-slide="2"] .venom__2 &,
@@ -38,14 +41,8 @@
             [data-slide="3"] .venom__3 &,
             [data-slide="4"] .venom__4 &,
             [data-slide="5"] .venom__5 & {
-                animation: 4.5s ease-out venom-rotate .8s forwards;
+                animation: 4.5s ease-out venom-rotate  paused .8s forwards;
                 opacity: 1;
-            }
-            [data-slide="1"].light .venom__1 &,
-            [data-slide="2"].light .venom__2 &,
-            [data-slide="3"].light .venom__3 &,
-            [data-slide="4"].light .venom__4 &,
-            [data-slide="5"].light .venom__5 & {
             }
             
         }
@@ -67,17 +64,8 @@
             [data-slide="3"] .venom__3 &,
             [data-slide="4"] .venom__4 &,
             [data-slide="5"] .venom__5 & {
-                animation: 4.5s ease-out venom-rotate .8s forwards;
+                animation: 4.5s ease-out venom-rotate paused .8s forwards;
                 opacity: 1;
-            }
-
-            [data-slide="1"].light .venom__1 &,
-            [data-slide="2"].light .venom__2 &,
-            [data-slide="3"].light .venom__3 &,
-            [data-slide="4"].light .venom__4 &,
-            [data-slide="5"].light .venom__5 & {
-                animation: 0s ease-out venom-rotate 0s forwards,
-                           4.5s ease-out venom-rotate-change reverse forwards;
             }
         }
     }
