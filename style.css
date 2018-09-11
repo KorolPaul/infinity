@@ -806,8 +806,6 @@ label {
   position: relative;
   width: 100%;
   list-style: none;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
   -ms-touch-action: pan-Y;
@@ -1830,8 +1828,8 @@ body {
   padding: 20px 5vw;
   z-index: 3;
   visibility: visible;
-  -webkit-transition: 0s ease visibility 4s;
-  transition: 0s ease visibility 4s;
+  -webkit-transition: 0s ease visibility 5s;
+  transition: 0s ease visibility 5s;
 }
 
 [data-slide="1"] .content_step-intro__1,
@@ -1915,6 +1913,8 @@ body {
   text-align: right;
   z-index: 1;
   opacity: 0;
+  -webkit-transition: .2s ease opacity .3s;
+  transition: .2s ease opacity .3s;
 }
 
 .content_step-title-left::before {
@@ -1933,6 +1933,7 @@ body {
 [data-slide="5"] .content_step-intro__5 .content_step-title-left {
   -webkit-animation: 3s ease-in-out step-title-left .8s forwards;
   animation: 3s ease-in-out step-title-left .8s forwards;
+  opacity: 1;
 }
 
 .content_step-title-right {
@@ -1945,6 +1946,8 @@ body {
   width: 200px;
   z-index: 1;
   opacity: 0;
+  -webkit-transition: .2s ease opacity .3s;
+  transition: .2s ease opacity .3s;
 }
 
 .content_step-title-right::before {
@@ -1963,6 +1966,7 @@ body {
 [data-slide="5"] .content_step-intro__5 .content_step-title-right {
   -webkit-animation: 3s ease-in-out step-title-right .8s forwards;
   animation: 3s ease-in-out step-title-right .8s forwards;
+  opacity: 1;
 }
 
 .content_frame {
@@ -3281,8 +3285,8 @@ body {
   border: none;
   text-align: center;
   vertical-align: middle;
-  -webkit-transition: .2s ease background, .2s ease color;
-  transition: .2s ease background, .2s ease color;
+  -webkit-transition: .2s ease background, .2s ease color;
+  transition: .2s ease background, .2s ease color;
 }
 
 .sections_icon:hover, .sections_icon__active {
@@ -3306,8 +3310,8 @@ body {
   width: 53px;
   position: relative;
   vertical-align: middle;
-  -webkit-transition: .2s ease background, .2s ease color;
-  transition: .2s ease background, .2s ease color;
+  -webkit-transition: .2s ease background, .2s ease color;
+  transition: .2s ease background, .2s ease color;
 }
 
 .sections_prev:hover, .sections_next:hover {
@@ -3407,9 +3411,10 @@ body {
   padding: 17px;
   height: 197px;
   width: 197px;
-  display: none;
-  will-change: auto;
-  overflow: visible;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: .2s ease-in-out .2s opacity, 0s ease-in-out visibility;
+  transition: .2s ease-in-out .2s opacity, 0s ease-in-out visibility;
 }
 
 [data-slide="1"] .venom__1 .venom_wrapper,
@@ -3417,7 +3422,10 @@ body {
 [data-slide="3"] .venom__3 .venom_wrapper,
 [data-slide="4"] .venom__4 .venom_wrapper,
 [data-slide="5"] .venom__5 .venom_wrapper {
-  display: block;
+  -webkit-transition: .2s ease-in-out opacity, 0s ease-in-out .2s visibility;
+  transition: .2s ease-in-out opacity, 0s ease-in-out .2s visibility;
+  opacity: 1;
+  visibility: visible;
 }
 
 .venom_wrapper::before {
@@ -3897,8 +3905,8 @@ body {
   width: 33%;
   position: relative;
   overflow: hidden;
-  -webkit-transition: .4s ease-in-out all;
-  transition: .4s ease-in-out all;
+  -webkit-transition: .4s ease-in-out width;
+  transition: .4s ease-in-out width;
 }
 
 .accordion_item.active {
@@ -3909,12 +3917,40 @@ body {
 
 .accordion_image {
   position: absolute;
-  top: 0;
-  left: 0;
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
+  top: 50%;
+  left: 50%;
   height: 100%;
+  max-width: none;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .accordion_image {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.accordion_image .accordion_item.active .accordion_image {
+  -webkit-transition: -webkit-transform 7s;
+  transition: -webkit-transform 7s;
+  transition: transform 7s;
+  transition: transform 7s, -webkit-transform 7s;
+  -webkit-transform: scale(1.1) translate(-50%, -50%);
+  transform: scale(1.1) translate(-50%, -50%);
+}
+
+@supports ((-o-object-fit: cover) or (object-fit: cover)) {
+  .accordion_image .accordion_item.active .accordion_image {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
 }
 
 .accordion_title {

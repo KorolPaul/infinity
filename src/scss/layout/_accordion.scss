@@ -11,7 +11,7 @@
         width: 33%;
         position: relative;
         overflow: hidden;
-        transition: .4s ease-in-out all;
+        transition: .4s ease-in-out width;
 
         &.active {
             width: 80%;
@@ -20,11 +20,33 @@
     }
     &_image {
         position: absolute;
-        top: 0;
-        left: 0;
-        object-fit: cover;
-        width: 100%;
+        top: 50%;
+        left: 50%;
         height: 100%;
+        max-width: none;
+        transform: translate(-50%, -50%);
+        @supports (object-fit: cover) {
+            & {
+                object-fit: cover;
+                width: 100%;
+                top: 0;
+                left: 0;
+                -webkit-transform: none;
+                transform: none;
+            }
+        }
+
+        .accordion_item.active .accordion_image {
+            transition: transform 7s;
+            transform: scale(1.1) translate(-50%, -50%);
+            @supports (object-fit: cover) {
+                & {
+                    -webkit-transform: scale(1.1);
+                    transform: scale(1.1);
+                }
+            }
+        }
+
     }
     &_title {
         font-size: 16px;

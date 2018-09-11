@@ -10,16 +10,18 @@
         padding: 17px;
         height: 197px;
         width: 197px;
-        display: none;
-        will-change: auto;
-        overflow: visible;
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s ease-in-out .2s opacity, 0s ease-in-out visibility;
 
         [data-slide="1"] .venom__1 &,
         [data-slide="2"] .venom__2 &,
         [data-slide="3"] .venom__3 &,
         [data-slide="4"] .venom__4 &,
         [data-slide="5"] .venom__5 & {
-            display: block;
+            transition: .2s ease-in-out opacity, 0s ease-in-out .2s visibility;
+            opacity: 1;
+            visibility: visible;
         }
 
         &::before {
