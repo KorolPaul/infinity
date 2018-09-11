@@ -1631,6 +1631,17 @@ body {
   background: rgba(0, 0, 0, 0.7);
 }
 
+@media all and (max-width: 1025px) {
+  .content_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+}
+
 .scrolled .content_left {
   -webkit-animation: .3s ease-in-out side-light 1s forwards, .3s ease-in-out side-dark 4.5s forwards;
   animation: .3s ease-in-out side-light 1s forwards, .3s ease-in-out side-dark 4.5s forwards;
@@ -1648,6 +1659,16 @@ body {
   position: relative;
   z-index: 2;
   background: rgba(0, 0, 0, 0.7);
+}
+
+@media all and (max-width: 1025px) {
+  .content_right {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
 }
 
 .scrolled .content_right {
@@ -2307,7 +2328,7 @@ body {
 
 @media all and (max-width: 1025px) {
   .car {
-    bottom: 11%;
+    bottom: 16%;
     height: 27vh;
     width: 69vh;
   }
@@ -2952,6 +2973,7 @@ body {
 .loaded .mouse {
   -webkit-animation: .8s ease-in-out mouse-appearance .8s forwards, 2s ease-in-out scroll 2s infinite;
   animation: .8s ease-in-out mouse-appearance .8s forwards, 2s ease-in-out scroll 2s infinite;
+  opacity: 1;
 }
 
 .scrolled .mouse {
@@ -3405,6 +3427,7 @@ body {
   -webkit-transform: translate(-50%, 0);
   transform: translate(-50%, 0);
   z-index: 3;
+  display: none;
 }
 
 .venom_wrapper {
@@ -4095,7 +4118,14 @@ body {
   opacity: .7;
   -webkit-transition: .2s ease opacity;
   transition: .2s ease opacity;
-  display: none;
+}
+
+@media all and (max-width: 1025px) {
+  .test-drive {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
 }
 
 .test-drive:hover {

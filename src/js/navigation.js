@@ -18,7 +18,8 @@ function nextSlide() {
 };
 
 function changeSlide(index, oldIndex) {
-    if (!isAnimated) {
+    console.log(index, oldIndex)
+    if (!isAnimated && index !== oldIndex) {
         isAnimated = true;
         slide = parseInt(index);
         document.body.dataset.slide = index;
@@ -51,6 +52,6 @@ nextSlideElement.addEventListener('click', function (e) {
 for(let i = 0; i < icons.length; i++) {
     icons[i].addEventListener('click', function (e) {
         e.preventDefault();
-        changeSlide(e.target.dataset.index, slide);
+        changeSlide(parseInt(e.target.dataset.index), slide);
     });
 }

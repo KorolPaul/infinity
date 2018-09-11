@@ -10,25 +10,33 @@ function closeIntro() {
         document.querySelector('.intro').innerHTML = '';
     }, IS_MOBILE ? 0 : 2000);
 
-    window.addEventListener('wheel', function addScroll(e) {
-        document.body.classList.add('scrolled');
-
-        setTimeout(function () {
-            setCounters();
-        }, 5500);
-
-        setTimeout(function () {
+    if(!IS_MOBILE) {
+        window.addEventListener('wheel', function addScroll(e) {
+            document.body.classList.add('scrolled');
+    
+            setTimeout(function () {
+                setCounters();
+            }, 5500);
+    
+            setTimeout(function () {
+                changeSlide(1);
+                window.removeEventListener('wheel', addScroll);
+                window.addEventListener('wheel', function (e) {
+                    if (e.deltaY > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                });
+            }, 1500);
+        });
+    } else {
+        setTimeout(() => {
+            document.body.classList.add('scrolled');
             changeSlide(1);
-            window.removeEventListener('wheel', addScroll);
-            window.addEventListener('wheel', function (e) {
-                if (e.deltaY > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            });
-        }, 1500);
-    });
+            setCounters();
+        }, 1000);
+    }
 
     setTimeout(function () {
         setSpeedChange();

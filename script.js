@@ -40,25 +40,33 @@ function closeIntro() {
         document.querySelector('.intro').innerHTML = '';
     }, IS_MOBILE ? 0 : 2000);
 
-    window.addEventListener('wheel', function addScroll(e) {
-        document.body.classList.add('scrolled');
+    if (!IS_MOBILE) {
+        window.addEventListener('wheel', function addScroll(e) {
+            document.body.classList.add('scrolled');
 
-        setTimeout(function () {
-            setCounters();
-        }, 5500);
+            setTimeout(function () {
+                setCounters();
+            }, 5500);
 
+            setTimeout(function () {
+                changeSlide(1);
+                window.removeEventListener('wheel', addScroll);
+                window.addEventListener('wheel', function (e) {
+                    if (e.deltaY > 0) {
+                        nextSlide();
+                    } else {
+                        prevSlide();
+                    }
+                });
+            }, 1500);
+        });
+    } else {
         setTimeout(function () {
+            document.body.classList.add('scrolled');
             changeSlide(1);
-            window.removeEventListener('wheel', addScroll);
-            window.addEventListener('wheel', function (e) {
-                if (e.deltaY > 0) {
-                    nextSlide();
-                } else {
-                    prevSlide();
-                }
-            });
-        }, 1500);
-    });
+            setCounters();
+        }, 1000);
+    }
 
     setTimeout(function () {
         setSpeedChange();
@@ -193,7 +201,8 @@ function nextSlide() {
 };
 
 function changeSlide(index, oldIndex) {
-    if (!isAnimated) {
+    console.log(index, oldIndex);
+    if (!isAnimated && index !== oldIndex) {
         isAnimated = true;
         slide = parseInt(index);
         document.body.dataset.slide = index;
@@ -225,7 +234,7 @@ nextSlideElement.addEventListener('click', function (e) {
 for (var i = 0; i < icons.length; i++) {
     icons[i].addEventListener('click', function (e) {
         e.preventDefault();
-        changeSlide(e.target.dataset.index, slide);
+        changeSlide(parseInt(e.target.dataset.index), slide);
     });
 }
 'use strict';

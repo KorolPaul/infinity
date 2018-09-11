@@ -14,6 +14,7 @@
     .loaded & {
         animation:.8s ease-in-out mouse-appearance .8s forwards,
                    2s ease-in-out scroll 2s infinite;
+        opacity: 1;
     }
     .scrolled & {
         opacity: 0;

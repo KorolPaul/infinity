@@ -11,7 +11,12 @@
     z-index: 5;
     opacity: .7;
     transition: .2s ease opacity;
-display: none;
+    @include mobile {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+    }
+
     &:hover {
         opacity: 1;
     }
