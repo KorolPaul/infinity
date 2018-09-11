@@ -7,6 +7,11 @@
     z-index: 2;
     transform: translateX(-200%);
     will-change: transform;
+    @include mobile {
+        bottom: 11%;
+        height: 27vh;
+        width: 69vh;
+    }
 
     .faded & {
         animation: 2.5s ease-in-out car-appearance,
@@ -88,19 +93,34 @@
         width: 12vh;
         z-index: 2;
         will-change: transform;
+        @include mobile {
+            bottom: 0;
+        }
 
         &__back {
             left: 13.7%;
+            @include mobile {
+                left: 12.7%;
+            }
 
             .dark.loaded & {
                 animation: .3s ease wheel-jolting .1s infinite;
+                @include mobile {
+                    animation: none;
+                }
             }
         }
         &__front {
             right: 14.1%;
+            @include mobile {
+                right: 13.1%;
+            }
 
             .dark.loaded & {
                 animation: .3s ease wheel-jolting infinite;
+                @include mobile {
+                    animation: none;
+                }
             }
         }
         .car__small & {

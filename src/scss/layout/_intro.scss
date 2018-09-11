@@ -11,7 +11,10 @@
     opacity: 0;
     transition: .3s ease opacity,
                 0s ease visibility;
-
+    @include mobile {
+        display: none;
+    }
+    
     &::after {
         content: '';
         background: #000;

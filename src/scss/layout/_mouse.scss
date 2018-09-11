@@ -3,15 +3,21 @@
     height: 100px;
     width: 40px;
     z-index: 2;
-    transition: .2s ease opacity;
+    margin: 20px 0 0 0;
+    transition: .2s ease all .8s;
     opacity: 0;
+    z-index: 2;
+    @include mobile {
+        display: none;
+    }
 
     .loaded & {
-        animation: 1s ease-in-out mouse-appearance 1s forwards,
+        animation:.8s ease-in-out mouse-appearance .8s forwards,
                    2s ease-in-out scroll 2s infinite;
     }
     .scrolled & {
-        animation: .5s ease-in-out mouse-leave forwards;
+        opacity: 0;
+        margin: -50px 0 0 0;
     }
 }
 

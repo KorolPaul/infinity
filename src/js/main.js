@@ -9,5 +9,6 @@ window.addEventListener('load', () => {
     perView: 1
   }).mount();
 
-  let slides = document.getElementsByClassName("glide_slides") for (var i=0; i<slides.length; i++){ slides[i].style.backfaceVisibility = "visible"; }
+  let slides = document.getElementsByClassName("glide_slides");
+  for (var i=0; i<slides.length; i++){ slides[i].style.backfaceVisibility = "visible"; }
 });

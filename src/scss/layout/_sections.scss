@@ -8,7 +8,10 @@
     transform: translateX(-50%);
     opacity: 0;
     white-space: nowrap;
-    
+    @include mobile {
+        display: none;
+    }
+
     .scrolled & {
         animation: .5s ease-out sections-appereance 1s forwards;
     }

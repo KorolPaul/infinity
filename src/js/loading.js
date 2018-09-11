@@ -1,4 +1,6 @@
 const loadingPercentElement = document.querySelector('.loading_percent-value');
+const IS_MOBILE = window.innerWidth < 786;
+
 let player = null;
 
 function closeIntro() {
@@ -6,7 +8,7 @@ function closeIntro() {
     setTimeout(() => {
         document.body.classList.add('loaded');
         document.querySelector('.intro').innerHTML = '';
-    }, 2000);
+    }, IS_MOBILE ? 0 : 2000);
 
     window.addEventListener('wheel', function addScroll(e) {
         document.body.classList.add('scrolled');
@@ -78,41 +80,45 @@ function setCounters() {
     }
 }
 
-/* Youtube */
-var tag = document.createElement('script');
-tag.src = "https://www.youtube.com/iframe_api";
-var firstScriptTag = document.getElementsByTagName('script')[0];
-firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('player', {
-        height: '360',
-        width: '640',
-        videoId: '9BCdoCeS-Co',
-        playerVars: { 'fullscreen': 1, 'controls': 0, 'showinfo': 0 },
-        events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-        }
-    });
-}
-
-function onPlayerReady(event) {
-    //event.target.playVideo();
-    init();
-    var fadeInterval = setInterval(function () {
-        if (player.getDuration() - player.getCurrentTime() <= 2) {
-            closeIntro();
-            clearInterval(fadeInterval);
-        }
-    }, 1000);
-}
-
-let done = false;
-function onPlayerStateChange(event) {
-    if (event.data == YT.PlayerState.ENDED && !done) {
-        player.stopVideo();
-        closeIntro();
-        done = true;
+if (!IS_MOBILE) {
+    /* Youtube */
+    var tag = document.createElement('script');
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+    function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+            height: '360',
+            width: '640',
+            videoId: '9BCdoCeS-Co',
+            playerVars: { 'fullscreen': 1, 'controls': 0, 'showinfo': 0 },
+            events: {
+                'onReady': onPlayerReady,
+                'onStateChange': onPlayerStateChange
+            }
+        });
     }
+    
+    function onPlayerReady(event) {
+        //event.target.playVideo();
+        init();
+        var fadeInterval = setInterval(function () {
+            if (player.getDuration() - player.getCurrentTime() <= 2) {
+                closeIntro();
+                clearInterval(fadeInterval);
+            }
+        }, 1000);
+    }
+    
+    let done = false;
+    function onPlayerStateChange(event) {
+        if (event.data == YT.PlayerState.ENDED && !done) {
+            player.stopVideo();
+            closeIntro();
+            done = true;
+        }
+    }
+} else {
+    closeIntro();
 }
