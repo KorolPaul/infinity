@@ -8,4 +8,6 @@ window.addEventListener('load', () => {
     type: 'slider',
     perView: 1
   }).mount();
+
+  let slides = document.getElementsByClassName("glide_slides") for (var i=0; i<slides.length; i++){ slides[i].style.backfaceVisibility = "visible"; }
 });
