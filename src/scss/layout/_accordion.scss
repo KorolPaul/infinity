@@ -5,6 +5,10 @@
     right: 0;
     bottom: 0;
     display: flex;
+    @include mobile {
+        display: block;
+        overflow: auto;
+    }
 
     &_item {
         flex-grow: 1;
@@ -12,10 +16,16 @@
         position: relative;
         overflow: hidden;
         transition: .4s ease-in-out width;
+        @include mobile {
+            width: auto;
+        }
 
         &.active {
             width: 80%;
             flex-shrink: 0;
+            @include mobile {
+                width: auto;
+            }
         }
     }
     &_image {
@@ -34,6 +44,9 @@
                 -webkit-transform: none;
                 transform: none;
             }
+        }
+        @include mobile {
+            position: static;
         }
 
         .accordion_item.active .accordion_image {
@@ -60,5 +73,15 @@
         right: 40px;
         width: 14vw;
         z-index: 1;
+        @include mobile {
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: 10px 20px;
+            width: auto;
+            font-size: 10px;
+            background: rgba(78, 80, 99, .75);
+            opacity: 1;
+        }
     }
 }

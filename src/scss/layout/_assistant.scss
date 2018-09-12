@@ -12,9 +12,13 @@
         width: 544px;
         height: 130px;
         position: absolute;
-        top: 25px;
+        top: 50px;
         left: 50%;
         transform: translateX(-50%);
+        @include mobile {
+            background-size: 100vw;
+            top: 25px;
+        }
     }
 
     &_car {
@@ -25,6 +29,9 @@
         top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @include mobile {
+            transform: scale(0.5) translate(-100%, -100%);
+        }
     }
     &_light {
         background: url(#{$img_path}/assistant-light.png) no-repeat;
@@ -46,6 +53,12 @@
         position: absolute;
         bottom: 30%;
         left: 45px;
+        @include mobile {
+            background-size: 100% auto;
+            height: 80px;
+            width: 80px;
+            left: 20px;
+        }
     }
     &_title {
         color: $light_color;
@@ -55,5 +68,8 @@
         left: 50%;
         top: 20px;
         transform: translate(-50%, 0);
+        @include mobile {
+            display: none;
+        }
     }
 }

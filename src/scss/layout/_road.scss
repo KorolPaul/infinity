@@ -49,7 +49,12 @@
     .light &::before {
         opacity: 1;
     }
-
+    .scrolled & {
+        @include mobile {
+            opacity: 0;
+        }
+    }
+    
     &__small {
         height: 1px;
         left: -50vw;

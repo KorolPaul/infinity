@@ -10,6 +10,9 @@
         display: flex;
         position: relative;
         z-index: 1;
+        @include mobile {
+            overflow: auto;
+        }
     }
     &_button {
         color: #8c8d8f;
@@ -21,6 +24,10 @@
         text-transform: uppercase;
         padding: 20px;
         transition: .2s ease color;
+        @include mobile {
+            font-size: 10px;
+            padding: 15px;
+        }
 
         &:hover {
             color: $light_color;

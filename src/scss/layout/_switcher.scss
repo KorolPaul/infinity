@@ -6,21 +6,43 @@
     bottom: 0;
     z-index: 4;
     transition: 1.5s ease background;
+    color: transparent;
+    font-size: 0;
+    @include mobile {
+        color: $light_color;
+        font-size: 10px;
+        bottom: 50px;
+    }
 
     &_left {
-        position: absolute;
         position: absolute;
         top: 0;
         left: 0;
         right: 50%;
         bottom: 0;
+        @include mobile {
+            display: flex;
+            background: url(#{$img_path}/left-light.svg) no-repeat 5% center;
+            background-size: 20px auto;
+            align-items: center;
+            padding: 0 95px 0 0;
+            text-align: right;
+            transition: .2s ease opacity;
+        }
     }
     &_right {
-        position: absolute;
         position: absolute;
         top: 0;
         left: 50%;
         right: 0;
         bottom: 0;
+        @include mobile {
+            display: flex;
+            align-items: center;
+            padding: 0 0 0 95px;
+            transition: .2s ease opacity;
+            background: url(#{$img_path}/right-light.svg) no-repeat 95% center;
+            background-size: 20px auto;
+        }
     }
 }

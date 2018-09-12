@@ -5,7 +5,18 @@
     left: 50%;
     transform: translate(-50%, 0);
     z-index: 3;
-    display: none;
+    @include mobile {
+        top: auto;
+        bottom: 0;
+        transform: scale(.75) translate(-70%, 0);
+    }
+    
+    &__mobile {
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
 
     &_wrapper {
         padding: 17px;
@@ -23,6 +34,12 @@
             transition: .2s ease-in-out opacity, 0s ease-in-out .2s visibility;
             opacity: 1;
             visibility: visible;
+        }
+        .venom__mobile & {
+            @include mobile {
+                opacity: 1;
+                visibility: visible;
+            }
         }
 
         &::before {
@@ -45,8 +62,17 @@
             [data-slide="5"] .venom__5 & {
                 animation: 4.5s ease-out venom-rotate .8s forwards;
                 opacity: 1;
+                @include mobile {
+                    display: none;
+                }
             }
-            
+            .venom__mobile & {
+                @include mobile {
+                    opacity: 1;
+                    display: block;
+                    animation: 0s ease-out venom-rotate 0s forwards;
+                }
+            }
         }
         &::after {
             content: '';
@@ -68,6 +94,16 @@
             [data-slide="5"] .venom__5 & {
                 animation: 4.5s ease-out venom-rotate .8s forwards;
                 opacity: 1;
+                @include mobile {
+                    display: none;
+                }
+            }
+            .venom__mobile & {
+                @include mobile {
+                    opacity: 1;
+                    display: block;
+                    animation: 0s ease-out venom-rotate 0s forwards;
+                }
             }
         }
     }
@@ -86,6 +122,15 @@
         [data-slide="4"] .venom__4 &,
         [data-slide="5"] .venom__5 & {
             animation: 4.5s ease-out venom-image .2s forwards;
+            @include mobile {
+                display: none;
+            }
+        }
+        .venom__mobile & {
+            @include mobile {
+                animation: 0s ease-out venom-image 0s forwards;
+                display: block;
+            }
         }
     }
     &_face {
@@ -103,6 +148,15 @@
         [data-slide="4"] .venom__4 &,
         [data-slide="5"] .venom__5 & {
             animation: .5s ease-out face-appearance 2s forwards;
+            @include mobile {
+                display: none;
+            }
+        }
+        .venom__mobile & {
+            @include mobile {
+                animation: 0s ease-out face-appearance 0s forwards;
+                display: block;
+            }
         }
     }
 }

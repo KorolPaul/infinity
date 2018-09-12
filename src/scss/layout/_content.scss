@@ -30,8 +30,15 @@
         }
     }
 
-    .scrolled &::before {
-        transform: translateY(0);
+    .scrolled & {
+        @include mobile {
+            z-index: 4;
+            height: 100vh;
+        }
+
+        &::before {
+            transform: translateY(0);
+        }
     }
 
     &_left {
@@ -46,11 +53,20 @@
             right: 0;
             bottom: 0;
             z-index: 2;
+            display: none;
+
+            .dark & {
+                display: block;
+            }
         }
 
         .scrolled & {
             animation: .3s ease-in-out side-light 1s forwards,
-                .3s ease-in-out side-dark 4.5s forwards;
+                        .3s ease-in-out side-dark 4.5s forwards;
+            @include mobile {
+                animation-delay: 0s;
+                animation-duration: 0s;
+            }
         }
 
         [data-slide="6"] & {
@@ -69,10 +85,19 @@
             left: 0;
             right: 0;
             bottom: 0;
+            display: none;
+
+            .light & {
+                display: block;
+            }
         }
 
         .scrolled & {
             animation: .3s ease-in-out side-light 1s forwards;
+            @include mobile {
+                animation-delay: 0s;
+                animation-duration: 0s;
+            }
         }
 
         [data-slide="6"] & {
@@ -95,7 +120,6 @@
         padding: 100px 50px 50px;
         z-index: 2;
         transition: .1s ease visibility 1s;
-
         @include mobile {
             padding-left: 15px;
             padding-right: 15px;
@@ -161,6 +185,10 @@
         justify-content: center;
         align-items: center;
         padding: 20px 5vw;
+        @include mobile {
+            padding-left: 15px;
+            padding-right: 15px;
+        }
 
         [data-slide="1"] &__1,
         [data-slide="2"] &__2,
@@ -170,7 +198,12 @@
         [data-slide="6"] &__6 {
             animation: .6s ease-in-out step-appearance 3.4s forwards;
             visibility: visible;
-            //filter: url(#{$img-path}/filters.svg#slide-appearance);
+            @include mobile {
+                opacity: 1;
+                transform: none;
+                animation-delay: 0s;
+                animation-duration: 0s;
+            }
         }
 
         [data-old="1"] &__1,
@@ -180,7 +213,10 @@
         [data-old="5"] &__5,
         [data-old="6"] &__6 {
             animation: .6s ease-in-out step-leave forwards;
-            //filter: url(#{$img-path}/filters.svg#slide-leave);
+            @include mobile {
+                animation-delay: 0s;
+                animation-duration: 0s;
+            }
         }
 
         &>* {
@@ -210,6 +246,9 @@
         z-index: 3;
         visibility: visible;
         transition: 0s ease visibility 5s;
+        @include mobile {
+            display: none;
+        }
 
         [data-slide="1"] &__1,
         [data-slide="2"] &__2,
@@ -246,6 +285,9 @@
             width: 100%;
             top: 50%;
             transform: translate(-50%, -50%) scale(0);
+            @include mobile {
+                display: none;
+            }
         }
 
         [data-slide="1"] &::after {

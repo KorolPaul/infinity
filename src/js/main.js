@@ -11,4 +11,10 @@ window.addEventListener('load', () => {
 
   let slides = document.getElementsByClassName("glide_slides");
   for (var i=0; i<slides.length; i++){ slides[i].style.backfaceVisibility = "visible"; }
+
+  document.querySelector('.menu-toggle').addEventListener('click', function(e) {
+    e.preventDefault();
+    e.currentTarget.classList.toggle('opened');
+    document.querySelector('.menu').classList.toggle('opened');
+  });
 });

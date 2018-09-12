@@ -23,6 +23,11 @@
     .dark & {
         animation: 10s ease-in-out car-moving infinite;//2.5s ease-in-out car-speed-up,
     }
+    .scrolled & {
+        @include mobile {
+            opacity: 0;
+        }
+    }
     &__small {
         animation: none;
         position: relative;

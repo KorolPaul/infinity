@@ -7,6 +7,7 @@ function closeIntro() {
     document.body.classList.add('faded');
     setTimeout(() => {
         document.body.classList.add('loaded');
+        document.body.classList.add('dark');
         document.querySelector('.intro').innerHTML = '';
     }, IS_MOBILE ? 0 : 2000);
 

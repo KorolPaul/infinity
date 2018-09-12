@@ -10,6 +10,32 @@
     <title>INFINITI</title>
 </head>
 <body class="">
+    <button class="menu-toggle"></button>
+    <div class="menu">
+        <div>
+            <a href="#" class="menu_link" data-index="1">
+                <span class="menu_icon" data-char="&#xe64b;"></span>
+                дВИГАТЕЛЬ
+            </a>
+            <a href="#" class="menu_link" data-index="2">
+                <span class="menu_icon" data-char=""></span>
+                дИЗАЙН
+            </a>
+            <a href="#" class="menu_link" data-index="3">
+                <span class="menu_icon" data-char="&#xe61e;" ></span>
+                тЕХНОЛОГИИ
+            </a>
+            <a href="#" class="menu_link" data-index="4">
+                <span class="menu_icon" data-char="&#xe60b;"></span>
+                дИНАМИКА И УПРАВЛЕНИЕ
+            </a>
+            <a href="#" class="menu_link" data-index="5">
+                <span class="menu_icon" data-char="&#xe600;"></span>
+                сОЗДАН ДЛЯ ВОДИТЕЛЯ
+            </a>
+        </div>
+        <span class="menu_price">ОТ  2 799 000 ₽</span>
+    </div>
     <div class="loading">
         <img src="src/img/logo.png" alt="" class="loading_logo">
         <div class="loading_status">
@@ -48,7 +74,7 @@
         <div class="content_left js-dark">
             <div class="content_step content_step__1">
                 <div class="content_step-image-wrapper">
-                    <img src="src/img/engine-red.png" alt="" class="content_step-image">
+                    <img src="src/img/engine-red.png" srcset="src/img/engine-red-mobile.png 2x" alt="" class="content_step-image">
                 </div>
                 <div class="counters">
                     <div class="counters_item">
@@ -159,12 +185,13 @@
         <div class="content_right js-light">
             <div class="content_step content_step__1">
                 <div class="content_step-image-wrapper">
-                    <img src="src/img/engine-blue.png" alt="" class="content_step-image">
+                    <img src="src/img/engine-blue.png" srcset="src/img/engine-blue-mobile.png 2x" alt="" class="content_step-image">
                 </div>
                 <div class="counters">
                     <div class="counters_item">
                         <span class="counters_value">
                             на
+                            <br>
                             <span class="counters_number" data-number="44">0</span>
                             %
                         </span>
@@ -277,11 +304,11 @@
         <div class="content_intro">
             <h2 class="content_intro-title">Знакомьтесь с Совершенно НОВЫМ INFINITI  QX50</h2>
             <p class="content_intro-text">INFINITI QX50 — больше,
-чем автомобиль. Его дизайн — больше, чем безупречный
-внешний вид. Это современные технологии, которые
-позволят вам насладиться жизнью во всей полноте. Начните
-свое путешествие вместе с новым QX50, в котором каждая
-деталь создана, чтобы вдохновлять вас.</p>
+            чем автомобиль. Его дизайн — больше, чем безупречный
+            внешний вид. Это современные технологии, которые
+            позволят вам насладиться жизнью во всей полноте. Начните
+            свое путешествие вместе с новым QX50, в котором каждая
+            деталь создана, чтобы вдохновлять вас.</p>
             <div class="mouse"></div>
         </div>
         <div class="content_step-intro content_step-intro__1">
@@ -313,7 +340,7 @@
                         <span class="finance_price-title finance_price-title__big">ЦЕНА</span>
                         <span class="finance_price-value">
                             от
-                            <span class="finance_price-number">2 699 000</span>
+                            <span class="finance_price-number">2 549 000</span>
                             р.
                             <div class="note">
                                 <div class="note_icon">★</div>
@@ -408,6 +435,12 @@
     <div class="switcher">
         <div class="switcher_left js-dark"></div>
         <div class="switcher_right js-light"></div>
+        <div class="venom venom__mobile">
+            <div class="venom_wrapper">
+                <img src="src/img/slide-1.jpg" alt="" class="venom_image">
+                <img src="src/img/venom.jpg" alt="" class="venom_face">
+            </div>
+        </div>
     </div>
     <div class="sections">
         <button class="sections_prev js-prev-slide"></button>
@@ -496,7 +529,7 @@
 			position: absolute;
 			left: 0;
 			right: 0;
-			bottom: 5%;
+			bottom: 0%;
 			height: 200px;
             background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,1) 100%);
 		}
@@ -527,13 +560,41 @@
             line-height: 1.1;
         }
 
+        .slider__dark .slider_item img {
+            height: 100%;
+        }
+
+        .content_frame {
+            bottom: -45px;
+        }
+
         .glide_arrow {
             top: 9%;
+        }
+
+        .assistant_title {
+            text-align: center;
         }
 
         .accordion_item.active .accordion_title {
             opacity: 1;
         }
+
+        .content_step__2 .slider_info {
+          color: #fff;
+          position: absolute;
+          left: 50%;
+          top: 10px;
+          -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+          z-index: 1;
+        }
+
+        .tabs_button {
+            font-size: 12px;
+            font-family: "infiniti_brand", sans-serif
+        }
+
 
 
 
@@ -541,13 +602,15 @@
     </style>
 
     <script type="text/javascript">
-    	document.querySelector('.content_step__4').addEventListener('mouseenter', function () {
-    		document.querySelector('.content_step__4 video').play();
-    	});
-
-    	document.querySelector('.content_step__4').addEventListener('mouseleave', function () {
-    		document.querySelector('.content_step__4 video').pause();
-    	});
+        if(!IS_MOBILE) {
+            document.querySelector('.content_step__4').addEventListener('mouseenter', function () {
+                document.querySelector('.content_step__4 video').play();
+            });
+    
+            document.querySelector('.content_step__4').addEventListener('mouseleave', function () {
+                document.querySelector('.content_step__4 video').pause();
+            });
+        }
     </script>
 </body>
 </html>
