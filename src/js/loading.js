@@ -34,9 +34,13 @@ function closeIntro() {
     } else {
         setTimeout(() => {
             document.body.classList.add('scrolled');
-            changeSlide(1);
-            setCounters();
-        }, 1000);
+            
+            setTimeout(() => {
+                changeSlide(1);
+                setCounters();
+            }, 500);
+
+        }, 5000);
     }
 
     setTimeout(function () {

@@ -26,6 +26,19 @@ document.querySelector('.assistant').addEventListener('mousemove', function (e) 
     lights[0].style.transform = 'rotate(' + angle / 2 + 'deg)';
     lights[1].style.transform = 'rotate(' + angle / 2 + 'deg)';
 });
+
+document.querySelector('.assistant').addEventListener('touchmove', function (e) {
+    var width = window.innerWidth / 2,
+        x = e.clientX,
+        angle = x * 100 / width - 50;
+
+    var wheel = document.querySelector('.assistant_wheel');
+    var lights = document.querySelectorAll('.assistant_light');
+
+    wheel.style.transform = 'rotate(' + angle / 2 + 'deg)';
+    lights[0].style.transform = 'rotate(' + angle / 2 + 'deg)';
+    lights[1].style.transform = 'rotate(' + angle / 2 + 'deg)';
+});
 'use strict';
 
 var loadingPercentElement = document.querySelector('.loading_percent-value');
@@ -64,9 +77,12 @@ function closeIntro() {
     } else {
         setTimeout(function () {
             document.body.classList.add('scrolled');
-            changeSlide(1);
-            setCounters();
-        }, 1000);
+
+            setTimeout(function () {
+                changeSlide(1);
+                setCounters();
+            }, 500);
+        }, 5000);
     }
 
     setTimeout(function () {

@@ -3,6 +3,9 @@
     bottom: calc(75% - 50px);
     left: calc(100% - 50px);
     padding: 50px;
+    @include mobile {
+        display: none;
+    }
 
     &_icon {
         background: $light_color;

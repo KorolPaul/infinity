@@ -15,6 +15,19 @@
         display: none;
         @include mobile {
             display: block;
+
+            &::after {
+                content: '';
+                animation: 3.5s ease hand forwards;
+                background: url(#{$img_path}/hand.svg) no-repeat;
+                background-size: 100% auto;
+                height: 80px;
+                width: 70px;
+                position: absolute;
+                left: 90px;
+                top: 50%;
+                z-index: 1;
+            }
         }
     }
 
@@ -37,6 +50,7 @@
         }
         .venom__mobile & {
             @include mobile {
+                animation: .5s ease blink 1.7s;
                 opacity: 1;
                 visibility: visible;
             }
@@ -206,5 +220,45 @@
     }
     100% {
         transform: rotate(-180deg) scale(0.5);
+    }
+}
+
+@keyframes hand {
+    0% {
+        opacity: 0;
+        transform: translate(0, 100%);
+    }
+    20% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    47% {
+        opacity: 1;
+        transform: translate(0, 0) scale(1);
+    }
+    55% {
+        transform: translate(0, -10px) scale(.9);
+    }
+    63% {
+        transform: translate(0, 0) scale(1);
+    }
+    80% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -100%);
+    }
+}
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
     }
 }

@@ -11,6 +11,7 @@
         bottom: 16%;
         height: 27vh;
         width: 69vh;
+        transition: .2s ease opacity;
     }
 
     .faded & {

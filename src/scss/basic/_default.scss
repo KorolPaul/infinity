@@ -62,3 +62,9 @@ textarea {
         outline: none;
     }
 }
+
+* {
+    @include mobile {
+        user-select: none;
+    }
+}

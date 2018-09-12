@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
     <script src="src/plugins/countUp.min.js"></script>
@@ -32,6 +32,10 @@
             <a href="#" class="menu_link" data-index="5">
                 <span class="menu_icon" data-char="&#xe600;"></span>
                 сОЗДАН ДЛЯ ВОДИТЕЛЯ
+            </a>
+            <a href="#" class="menu_link" data-index="6">
+                <span class="menu_icon" data-char=""></span>
+                цены
             </a>
         </div>
         <span class="menu_price">ОТ  2 799 000 ₽</span>
@@ -159,7 +163,8 @@
                 </div>
             </div>
             <div class="content_step content_step__4">
-                <video muted loop poster="src/img/speed-bg.jpg"  type='video/mp4; codecs="H.264/MPEG-4"'>
+                <img class="content_step-big-image" src="src/img/speed-bg.jpg" alt="">
+                <video class="content_step-video" content_step muted loop poster="src/img/speed-bg.jpg"  type='video/mp4; codecs="H.264/MPEG-4"'>
                     <source src="src/img/speed.mp4" type="video/mp4">
                     <source src="src/img/speed.ogv" type="video/ogg">
                     <source src="src/img/speed.webm" type="video/webm">
@@ -191,7 +196,6 @@
                     <div class="counters_item">
                         <span class="counters_value">
                             на
-                            <br>
                             <span class="counters_number" data-number="44">0</span>
                             %
                         </span>
@@ -475,11 +479,6 @@
     .slider_info {
         position: relative;
     }
-    	.content_step.content_step__4 img {
-    		max-width: 75%;
-    		margin: 0 auto;
-    		display: block;
-    	}
 
     	.content_step__4 {
     		overflow: hidden;
@@ -490,7 +489,8 @@
     		height: 100%;
     		top: 0;
             left: 0;
-    		z-index: -1;
+            z-index: -1;
+            max-width: 100%;
     	}
     	.accordion_item  {
     		cursor: pointer;
