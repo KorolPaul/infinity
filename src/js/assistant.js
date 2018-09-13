@@ -13,8 +13,8 @@ document.querySelector('.assistant').addEventListener('mousemove', (e) => {
 
 document.querySelector('.assistant').addEventListener('touchmove', (e) => {
     let width = window.innerWidth / 2,
-        x = e.clientX,
-        angle = (x * 100/width) - 50;
+        x = e.touches[0].clientX,
+        angle = (x * 100/width) - 75;
 
     const wheel = document.querySelector('.assistant_wheel');
     const lights = document.querySelectorAll('.assistant_light');

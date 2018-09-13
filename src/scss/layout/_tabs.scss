@@ -35,6 +35,9 @@
         &.active {
             color: $light_color;
             border-bottom: 4px solid $light_color;
+            @include mobile {
+                background: rgba(0, 0, 0, .3);
+            }
         }
     }
     &_content {

@@ -10,6 +10,9 @@
     @include mobile {
         background: transparent;
         height: 100vh;
+        @supports (-webkit-appearance:none) {
+            height: calc(100vh - 56px);
+        }
     }
 
     .faded & {
@@ -33,6 +36,22 @@
             transform: translateY(0);
         }
     }
+    &::after {
+        content: '';
+        background: #000;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 175px;
+        transition: .3s ease-in-out transform 1s;
+        z-index: 3;
+        display: none;
+        @include mobile {
+            display: block;
+        }
+    }
+    
 
     .scrolled & {
         @include mobile {
@@ -74,6 +93,9 @@
 
         [data-slide="6"] & {
             animation: .3s ease-in-out side-extra-dark 1s forwards;
+            @include mobile {
+                animation: none;
+            }
         }
     }
 
@@ -127,7 +149,8 @@
             padding-left: 15px;
             padding-right: 15px;
             padding-top: 70px;
-            padding-bottom: 37.7vh;
+            padding-bottom: 20px;
+            bottom: 175px;
         }
 
         .scrolled & {
@@ -194,9 +217,9 @@
         align-items: center;
         padding: 20px 5vw;
         @include mobile {
-            padding: 20px 15px 180px;
+            padding: 20px 15px 20px;
             top: 68px;
-            bottom: 0;
+            bottom: 175px;
         }
 
         [data-slide="1"] &__1,

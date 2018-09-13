@@ -30,6 +30,10 @@ function changeSlide(index, oldIndex) {
         setTimeout(function () {
             isAnimated = false;
         }, IS_MOBILE ? 0: 4000);
+
+        if(slide === 4) {
+            initSliders();
+        }
     }
 };
 

@@ -29,8 +29,8 @@ document.querySelector('.assistant').addEventListener('mousemove', function (e) 
 
 document.querySelector('.assistant').addEventListener('touchmove', function (e) {
     var width = window.innerWidth / 2,
-        x = e.clientX,
-        angle = x * 100 / width - 50;
+        x = e.touches[0].clientX,
+        angle = x * 100 / width - 75;
 
     var wheel = document.querySelector('.assistant_wheel');
     var lights = document.querySelectorAll('.assistant_light');
@@ -178,30 +178,35 @@ if (!IS_MOBILE) {
 } else {
     closeIntro();
 }
-'use strict';
+"use strict";
 
 window.addEventListener('load', function () {
-  new Glide('.content_left .content_step__2  .slider', {
-    type: 'slider',
-    perView: 1
-  }).mount();
+    initSliders();
 
-  new Glide('.content_right .content_step__4  .slider', {
-    type: 'slider',
-    perView: 1
-  }).mount();
+    var slides = document.getElementsByClassName("glide_slides");
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.backfaceVisibility = "visible";
+    }
 
-  var slides = document.getElementsByClassName("glide_slides");
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].style.backfaceVisibility = "visible";
-  }
-
-  document.querySelector('.menu-toggle').addEventListener('click', function (e) {
-    e.preventDefault();
-    e.currentTarget.classList.toggle('opened');
-    document.querySelector('.menu').classList.toggle('opened');
-  });
+    document.querySelector('.menu-toggle').addEventListener('click', function (e) {
+        e.preventDefault();
+        e.currentTarget.classList.toggle('opened');
+        document.querySelector('.menu').classList.toggle('opened');
+    });
 });
+
+function initSliders() {
+    console.log(22222222);
+    new Glide('.content_left .content_step__2  .slider', {
+        type: 'slider',
+        perView: 1
+    }).mount();
+
+    new Glide('.content_right .content_step__4  .slider', {
+        type: 'slider',
+        perView: 1
+    }).mount();
+}
 'use strict';
 
 var prevSlideElement = document.querySelector('.js-prev-slide');
@@ -236,6 +241,10 @@ function changeSlide(index, oldIndex) {
         setTimeout(function () {
             isAnimated = false;
         }, IS_MOBILE ? 0 : 4000);
+
+        if (slide === 4) {
+            initSliders();
+        }
     }
 };
 

@@ -9,8 +9,8 @@
     will-change: transform;
     @include mobile {
         bottom: 16%;
-        height: 27vh;
-        width: 69vh;
+        height: 23vh;
+        width: 57vh;
         transition: .2s ease opacity;
     }
 
@@ -101,6 +101,8 @@
         will-change: transform;
         @include mobile {
             bottom: 0;
+            height: 9.5vh;
+            width: 9.5vh;
         }
 
         &__back {
@@ -147,6 +149,10 @@
         opacity: 1;
         transition: .3s ease-out opacity;
         z-index: 2;
+        @include mobile {
+            height: 8.5vh;
+            width: 53.3vh;
+        }
 
         .car__small & {
             background-image: url(#{$img-path}/light-small.png);
