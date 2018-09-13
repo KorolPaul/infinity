@@ -6,8 +6,8 @@
     bottom: 0;
     display: flex;
     @include mobile {
-        display: block;
-        overflow: auto;
+        display: flex;
+        flex-direction: column;
     }
 
     &_item {
@@ -18,6 +18,8 @@
         transition: .4s ease-in-out width;
         @include mobile {
             width: auto;
+            max-height: 33%;
+            transition: .4s ease-in-out max-height;
         }
 
         &.active {
@@ -25,6 +27,7 @@
             flex-shrink: 0;
             @include mobile {
                 width: auto;
+                max-height: 100%;
             }
         }
     }

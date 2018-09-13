@@ -1,6 +1,7 @@
 window.addEventListener('load', () => {
+
   initSliders();
-  
+
   let slides = document.getElementsByClassName("glide_slides");
   for (var i=0; i<slides.length; i++){ slides[i].style.backfaceVisibility = "visible"; }
 
@@ -12,14 +13,19 @@ window.addEventListener('load', () => {
 });
 
 function initSliders() {
-    console.log(22222222)
+    console.log('sliders init')
+    
     new Glide('.content_left .content_step__2  .slider', {
         type: 'slider',
         perView: 1
-    }).mount();
+      }).mount();
 
+    new Glide('.content_right .content_step__2  .slider', {
+        type: 'slider',
+        perView: 1
+      }).mount();
     
-    new Glide('.content_right .content_step__4  .slider', {
+    new Glide('.content_step__4  .slider', {
         type: 'slider',
         perView: 1
     }).mount();

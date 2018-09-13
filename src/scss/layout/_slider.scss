@@ -55,4 +55,10 @@
             color: $light_color;
         }
     }
+    &_image {
+        max-height: 80%;
+        max-width: 100%;
+        margin: auto;
+        display: block;
+    }
 }

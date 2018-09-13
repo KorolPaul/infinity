@@ -347,6 +347,14 @@
         }
     }
     &_step-video {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        max-width: 100%;
+        width: 100%;
+        object-fit: cover;
         @include mobile {
             display: none;
         }

@@ -181,31 +181,38 @@ if (!IS_MOBILE) {
 "use strict";
 
 window.addEventListener('load', function () {
-    initSliders();
 
-    var slides = document.getElementsByClassName("glide_slides");
-    for (var i = 0; i < slides.length; i++) {
-        slides[i].style.backfaceVisibility = "visible";
-    }
+  initSliders();
 
-    document.querySelector('.menu-toggle').addEventListener('click', function (e) {
-        e.preventDefault();
-        e.currentTarget.classList.toggle('opened');
-        document.querySelector('.menu').classList.toggle('opened');
-    });
+  var slides = document.getElementsByClassName("glide_slides");
+  for (var i = 0; i < slides.length; i++) {
+    slides[i].style.backfaceVisibility = "visible";
+  }
+
+  document.querySelector('.menu-toggle').addEventListener('click', function (e) {
+    e.preventDefault();
+    e.currentTarget.classList.toggle('opened');
+    document.querySelector('.menu').classList.toggle('opened');
+  });
 });
 
 function initSliders() {
-    console.log(22222222);
-    new Glide('.content_left .content_step__2  .slider', {
-        type: 'slider',
-        perView: 1
-    }).mount();
+  console.log('sliders init');
 
-    new Glide('.content_right .content_step__4  .slider', {
-        type: 'slider',
-        perView: 1
-    }).mount();
+  new Glide('.content_left .content_step__2  .slider', {
+    type: 'slider',
+    perView: 1
+  }).mount();
+
+  new Glide('.content_right .content_step__2  .slider', {
+    type: 'slider',
+    perView: 1
+  }).mount();
+
+  new Glide('.content_step__4  .slider', {
+    type: 'slider',
+    perView: 1
+  }).mount();
 }
 'use strict';
 
@@ -265,12 +272,14 @@ nextSlideElement.addEventListener('click', function (e) {
 });
 
 if (IS_MOBILE) {
-    document.querySelector('.switcher_left').addEventListener('click', function (e) {
-        prevSlide();
-    });
-    document.querySelector('.switcher_right').addEventListener('click', function (e) {
-        nextSlide();
-    });
+    setTimeout(function () {
+        document.querySelector('.switcher_left').addEventListener('click', function (e) {
+            prevSlide();
+        });
+        document.querySelector('.switcher_right').addEventListener('click', function (e) {
+            nextSlide();
+        });
+    }, 5000);
 }
 
 for (var i = 0; i < icons.length; i++) {
@@ -308,6 +317,7 @@ function setSpeedChange() {
         document.querySelector('.venom__mobile').addEventListener('click', function (e) {
             document.body.classList.toggle('dark');
             document.body.classList.toggle('light');
+            initSliders();
         });
     }
 };

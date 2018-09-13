@@ -54,12 +54,14 @@ nextSlideElement.addEventListener('click', function (e) {
 });
 
 if(IS_MOBILE) {
-    document.querySelector('.switcher_left').addEventListener('click', function (e) {
-        prevSlide();
-    });
-    document.querySelector('.switcher_right').addEventListener('click', function (e) {
-        nextSlide();
-    });
+    setTimeout(() => {
+        document.querySelector('.switcher_left').addEventListener('click', function (e) {
+            prevSlide();
+        });
+        document.querySelector('.switcher_right').addEventListener('click', function (e) {
+            nextSlide();
+        });
+    }, 5000);
 }
 
 

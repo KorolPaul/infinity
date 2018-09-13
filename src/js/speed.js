@@ -17,6 +17,7 @@ function setSpeedChange() {
         document.querySelector('.venom__mobile').addEventListener('click', function(e) {
             document.body.classList.toggle('dark');
             document.body.classList.toggle('light');
+            initSliders();
         });
     }
 };
