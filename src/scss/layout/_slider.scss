@@ -15,6 +15,10 @@
     &_item {
         position: relative;
         height: 100%;
+        @include mobile {
+            display: flex;
+            flex-direction: column; 
+        }
 
         .slider__dark & {
             img {
@@ -24,6 +28,11 @@
                 height: 90%;
                 width: 100%;
                 object-fit: cover;
+            }
+        }
+        video {
+            @include mobile {
+                margin-top: -20px !important;
             }
         }
     }

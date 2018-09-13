@@ -912,9 +912,21 @@ label {
   left: 2em;
 }
 
+@media all and (max-width: 1025px) {
+  .glide_arrow__left {
+    left: .5em;
+  }
+}
+
 .glide_arrow__right {
   background-image: url(src/img/right.svg);
   right: 2em;
+}
+
+@media all and (max-width: 1025px) {
+  .glide_arrow__right {
+    right: .5em;
+  }
 }
 
 .glide_arrow--disabled {
@@ -2420,8 +2432,8 @@ body {
 @media all and (max-width: 1025px) {
   .car {
     bottom: 16%;
-    height: 23vh;
-    width: 57vh;
+    height: 20vh;
+    width: 51vh;
     -webkit-transition: .2s ease opacity;
     transition: .2s ease opacity;
   }
@@ -2531,8 +2543,8 @@ body {
 @media all and (max-width: 1025px) {
   .car_wheel-wrapper {
     bottom: 0;
-    height: 9.5vh;
-    width: 9.5vh;
+    height: 8.7vh;
+    width: 8.7vh;
   }
 }
 
@@ -2604,6 +2616,7 @@ body {
   .car_light {
     height: 8.5vh;
     width: 53.3vh;
+    bottom: 9vh;
   }
 }
 
@@ -3668,6 +3681,10 @@ body {
     display: block;
     -webkit-animation: 0s ease-out venom-rotate 0s forwards;
     animation: 0s ease-out venom-rotate 0s forwards;
+    clip: rect(auto, auto, auto, 116px);
+  }
+  .light .venom__mobile .venom_wrapper::before {
+    clip: rect(auto, 116px, auto, auto);
   }
 }
 
@@ -3712,6 +3729,10 @@ body {
     display: block;
     -webkit-animation: 0s ease-out venom-rotate 0s forwards;
     animation: 0s ease-out venom-rotate 0s forwards;
+    clip: rect(auto, 116px, auto, auto);
+  }
+  .light .venom__mobile .venom_wrapper::after {
+    clip: rect(auto, auto, auto, 116px);
   }
 }
 
@@ -4328,6 +4349,18 @@ body {
   height: 100%;
 }
 
+@media all and (max-width: 1025px) {
+  .slider_item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
 .slider__dark .slider_item img {
   position: absolute;
   top: 0;
@@ -4336,6 +4369,12 @@ body {
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+
+@media all and (max-width: 1025px) {
+  .slider_item video {
+    margin-top: -20px !important;
+  }
 }
 
 .slider_info {

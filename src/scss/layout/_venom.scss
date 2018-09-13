@@ -86,6 +86,11 @@
                     opacity: 1;
                     display: block;
                     animation: 0s ease-out venom-rotate 0s forwards;
+                    clip: rect(auto, auto, auto, 116px);
+
+                    .light & {
+                        clip: rect(auto, 116px, auto, auto);
+                    }
                 }
             }
         }
@@ -118,6 +123,11 @@
                     opacity: 1;
                     display: block;
                     animation: 0s ease-out venom-rotate 0s forwards;
+                    clip: rect(auto, 116px, auto, auto);
+
+                    .light & {
+                        clip: rect(auto, auto, auto, 116px);
+                    }
                 }
             }
         }

@@ -92,11 +92,17 @@
 .glide_arrow__left {
     background-image: url(#{$img_path}/left.svg);
     left: 2em;
+    @include mobile {
+        left: .5em;
+    }
 }
 
 .glide_arrow__right {
     background-image: url(#{$img_path}/right.svg);
     right: 2em;
+    @include mobile {
+        right: .5em;
+    }
 }
 
 .glide_arrow--disabled {

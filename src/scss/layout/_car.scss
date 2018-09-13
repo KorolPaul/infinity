@@ -9,8 +9,8 @@
     will-change: transform;
     @include mobile {
         bottom: 16%;
-        height: 23vh;
-        width: 57vh;
+        height: 20vh;
+        width: 51vh;
         transition: .2s ease opacity;
     }
 
@@ -101,8 +101,8 @@
         will-change: transform;
         @include mobile {
             bottom: 0;
-            height: 9.5vh;
-            width: 9.5vh;
+            height: 8.7vh;
+            width: 8.7vh;
         }
 
         &__back {
@@ -152,6 +152,7 @@
         @include mobile {
             height: 8.5vh;
             width: 53.3vh;
+            bottom: 9vh;
         }
 
         .car__small & {
