@@ -6,12 +6,12 @@ const gulp = require('gulp'),
       concat = require('gulp-concat'),
       connect = require('gulp-connect'),
       autoprefixer = require('gulp-autoprefixer'),
-      imagemin = require('gulp-imagemin');;
-
+      image = require('gulp-image'),
+      uglify = require('gulp-uglify');
 
 gulp.task('sass', function () {
     return gulp.src('src/scss/**/*.scss')
-        .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+        .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'ie 10'],
             cascade: false
@@ -25,13 +25,14 @@ gulp.task('js', function () {
             presets: ['es2015']
         }))
         .pipe(concat('script.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('./'))
         .pipe(connect.reload());
 });
 
 gulp.task('img', () =>
-	gulp.src('src/img/*')
-		.pipe(imagemin())
+	gulp.src('src/img/**/*')
+		.pipe(image())
         .pipe(gulp.dest('images'))
 );
 
