@@ -19,6 +19,7 @@
     z-index: 1;
     will-change: background;
     @include mobile {
+        width: 100vw;
         transition: .2s ease opacity;
     }
 

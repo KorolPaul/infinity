@@ -10,6 +10,13 @@ body {
     }
 }
 
+html,
+body {
+    @include mobile {
+        height: 100%;
+    }
+}
+
 a {
     color: $link_color;
     transition: .2s ease-in-out color;
@@ -66,5 +73,11 @@ textarea {
 * {
     @include mobile {
         user-select: none;
+    }
+}
+
+[data-slide="3"].dark {
+    @include mobile {
+        overflow: hidden;
     }
 }

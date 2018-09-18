@@ -8,6 +8,7 @@
         text-transform: uppercase;
         @include mobile {
             font-size: 16px;
+            display: none;
         }
     }
     &_title {
@@ -15,8 +16,8 @@
         margin: 0 0 80px;
         text-transform: uppercase;
         @include mobile {
-            font-size:24px;
-            margin-bottom: 20px;
+            font-size: 18px;
+            margin-bottom: 14px;
         }
 
     }
@@ -45,11 +46,14 @@
         display: block;
         text-transform: uppercase;
         margin: 0 0 5px;
+        @include mobile {
+            font-size: 15px;
+        }
         
         &__big {
             font-size: 31px;
             @include mobile {
-                font-size: 22px;
+                font-size: 15px;
             }
         }
     }
@@ -58,14 +62,14 @@
         font-size: 31px;
         position: relative;
         @include mobile {
-            font-size: 22px;
+            font-size: 16px;
         }
     }
     &_price-number {
         font: bold 42px/42px $font-family__bold;
         @include mobile {
-            font-size: 26px;
-            line-height: 26px;
+            font-size: 18px;
+            line-height: 22px;
         }
     }
     &_price-description {

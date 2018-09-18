@@ -1,5 +1,5 @@
 const loadingPercentElement = document.querySelector('.loading_percent-value');
-const IS_MOBILE = window.innerWidth < 786;
+const IS_MOBILE = window.innerWidth <= 1024;
 
 let player = null;
 

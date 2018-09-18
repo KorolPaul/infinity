@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v544">
     <title>INFINITI</title>
 </head>
 <body class="">
@@ -13,15 +13,15 @@
         <div>
             <a href="#" class="menu_link" data-index="1">
                 <span class="menu_icon" data-char="&#xe64b;"></span>
-                дВИГАТЕЛЬ
+                ДВИГАТЕЛЬ VC-Tutrbo
             </a>
             <a href="#" class="menu_link" data-index="2">
                 <span class="menu_icon" data-char=""></span>
-                дИЗАЙН
+                Уникальный дизайн
             </a>
             <a href="#" class="menu_link" data-index="3">
                 <span class="menu_icon" data-char="&#xe61e;" ></span>
-                тЕХНОЛОГИИ
+                тЕХНОЛОГИИ Безопасности
             </a>
             <a href="#" class="menu_link" data-index="4">
                 <span class="menu_icon" data-char="&#xe60b;"></span>
@@ -29,14 +29,14 @@
             </a>
             <a href="#" class="menu_link" data-index="5">
                 <span class="menu_icon" data-char="&#xe600;"></span>
-                сОЗДАН ДЛЯ ВОДИТЕЛЯ
+                Удобство и комфорт
             </a>
             <a href="#" class="menu_link" data-index="6">
                 <span class="menu_icon" data-char=""></span>
-                цены
+                цена
             </a>
         </div>
-        <span class="menu_price">ОТ  2 549 000 р.</span>
+        <span class="menu_price">ОТ 2 549 000 р.*</span>
     </div>
     <div class="loading">
         <img src="src/img/logo.png" alt="" class="loading_logo">
@@ -72,9 +72,17 @@
         </video>
         <div class="background_city"></div>
     </div>
+
+    <div class="mobile-orientation">
+        <img src="src/img/rotate.png">
+        <p>Пожалуйста, переверните Ваше устройство.</p>
+    </div>
     <div class="content">
         <div class="content_left js-dark">
             <div class="content_step content_step__1">
+                <div class="slider_info">
+                    <div class="slider_title">Высокая мощность</div>
+                </div>
                 <div class="content_step-image-wrapper">
                     <img src="src/img/engine-red.png" srcset="src/img/engine-red-mobile.png 2x" alt="" class="content_step-image">
                 </div>
@@ -82,7 +90,7 @@
                     <div class="counters_item">
                         <span class="counters_value">
                             <span class="counters_number" data-number="380">0</span>
-                            нм
+                            нм.
                         </span>
                         <span class="counters_description">крутящий момент</span>
                     </div>
@@ -96,9 +104,9 @@
                     <div class="counters_item">
                         <span class="counters_value">
                             <span class="counters_number"><span data-number="7">0</span>,3</span>
-                            сек
+                            сек.
                         </span>
-                        <span class="counters_description">до 100 км/ч</span>
+                        <span class="counters_description">разгон до 100 км/ч</span>
                     </div>
                 </div>
                 
@@ -107,13 +115,6 @@
                 <div class="slider slider__dark glide">
                     <div class="glide_track" data-glide-el="track">
                         <div class="glide_slides">
-                            <div class="slider_item glide_slide">
-                                <div class="slider_info">
-                                    <p class="slider_title">Экстерьер</p>
-                                    <p class="slider_text">Увеличенный дорожный просвет и эксклюзивый дизайн  колесных дисков.</p>
-                                </div>
-                                <img src="src/img/gallery_dark/5.jpg" alt="">
-                            </div>
                             <div class="slider_item glide_slide">
                                 <div class="slider_info">
                                     <p class="slider_title">Экстерьер</p>
@@ -131,11 +132,20 @@
                             <div class="slider_item glide_slide">
                                 <div class="slider_info">
                                     <p class="slider_title">Экстерьер</p>
+                                    <p class="slider_text">Увеличенный дорожный просвет и эксклюзивый дизайн  колесных дисков.</p>
+                                </div>
+                                <img src="src/img/gallery_dark/5.jpg" alt="">
+                            </div>
+                            
+                            
+                            <div class="slider_item glide_slide">
+                                <div class="slider_info">
+                                    <p class="slider_title">Экстерьер</p>
                                     <p class="slider_text">Уникальная форма кузова снижает аэродинамическое сопротивление.</p>
                                 </div>
                                 <img src="src/img/gallery_dark/4.jpg" alt="">
                             </div>
-<!--                             <div class="slider_item glide_slide">
+                                <!--<div class="slider_item glide_slide">
                                 <div class="slider_info">
                                     <p class="slider_title">СИСТЕМА DAS</p>
                                     <p class="slider_text">дополняет движения водителя при динамичном прохождении поворотов, позволяет снизить уровень вибраций на руле и повысить маневренность.</p>
@@ -187,6 +197,9 @@
         </div>
         <div class="content_right js-light">
             <div class="content_step content_step__1">
+                <div class="slider_info">
+                    <div class="slider_title">Высокая эффективность</div>
+                </div>
                 <div class="content_step-image-wrapper">
                     <img src="src/img/engine-blue.png" srcset="src/img/engine-blue-mobile.png 2x" alt="" class="content_step-image">
                 </div>
@@ -212,7 +225,7 @@
                             <span class="counters_number"><span data-number="7">0</span>,6</span>
                             л.
                         </span>
-                        <span class="counters_description">на 100 км</span>
+                        <span class="counters_description">расход на 100 км</span>
                     </div>
                 </div>
             
@@ -300,23 +313,23 @@
                         	<div class="slider_item">
                                 <div class="slider_info">
                                     <p class="slider_title">СИСТЕМА DAS</p>
-                                    <p class="slider_text">Дополняет движения водителя при динамичном прохождении поворотов, позволяет снизить уровень вибраций на руле и повысить маневренность.</p>
+                                    <p class="slider_text">Дополняет движения водителя при динамичном прохождении поворотов, позволяет повысить маневренность.</p>
                                 </div>
                                 <img class="slider_image" src="src/img/slider-2.jpg" alt="">
                             </div>
                             <div class="slider_item glide_slide">
                                 <div class="slider_info">
                                     <p class="slider_title">БЕЗУКОРИЗНЕННАЯ УПРАВЛЯЕМОСТЬ</p>
-                                    <p class="slider_text">Исключительная устойчивость. Контролируемая плавность хода. Новая платформа обладает выдающейся жесткостью.</p>
+                                    <p class="slider_text">Исключительная устойчивость. Контролируемая плавность хода.</p>
                                 </div>
                                 <img class="slider_image" src="src/img/slider-1.jpg" alt="">
                             </div>
-                            <div class="slider_item">
+                            <div class="slider_item" style="background: #fcfbfd;">
                                 <div class="slider_info">
                                     <p class="slider_title">РУЛЕВОЕ УПРАВЛЕНИЕ</p>
                                     <p class="slider_text">Первая в мире активная опора двигателя с системой гашения вибраций подавляет шумы при ускорении автомобиля.</p>
                                 </div>
-                                <video autoplay muted loop poster="src/img/slider-4-poster.jpg" type='video/mp4; codecs="H.264/MPEG-4"' style="background: #fff;position: static; display: block; margin: 0 auto; margin-top: -60px">
+                                <video autoplay muted loop poster="src/img/slider-4-poster.jpg" type='video/mp4; codecs="H.264/MPEG-4"' style="position: static; display: block; margin: 0 auto; margin-top: -60px">
                                     <source src="src/img/anim.mp4" type="video/mp4">
                                     <source src="src/img/anim.ogv" type="video/ogg">
                                     <source src="src/img/anim.webm" type="video/webm">
@@ -342,7 +355,7 @@
                         <img src="src/img/accordion-2_2.jpg" alt="" class="accordion_image">
                     </div>
                     <div class="accordion_item">
-                        <p class="accordion_title">Аудио система bose</p>
+                        <p class="accordion_title">Аудиосистема bose</p>
                         <img src="src/img/accordion-2_3.jpg" alt="" class="accordion_image">
                     </div>
                 </div>
@@ -382,9 +395,18 @@
             <div class="finance">
                 <p class="finance_subtitle">РОСКОШЬ УПРАВЛЯТЬ СОБОЙ</p>
                 <p class="finance_title">Совершенно новый INFINITI QX50</p>
+
+                <div class="finance_note">
+                   <p>*Рекомендованная розничная цена на автомобиль INFINITI QX50 2018 года производства в комплектации 2.0L PURE с учетом выгоды по программе Trade-in. Выгода предоставляется путём снижения стоимости нового автомобиля INFINITI QX50 2018 года производства при сдаче текущего автомобиля INFINITI FX/EX/QX50/QX70 по программе лояльности. Увеличение рекомендованной розничной цены за цвет "металлик" составляет 60 000 рублей, включая НДС, за цвет Динамичный Красный (специальный "металлик") составляет 80 000 руб., включая НДС. Предложение ограничено, действует до 30 сентября 2018 г. для клиентов – участников программы лояльности. Подробности программы на www.infiniti.ru/q.html и у официальных дилеров INFINITI.</p>
+
+                    <br>
+
+                    <br>
+                    <p>*Кредитор - АО «РН Банк» (лицензия Банка России на осуществление банковских операций № 170 (бессрочная)) для приобретения автомобиля Infiniti QX50 (J55L) 2018 г. в. Предложение действует с 04.09.2018 по 30.09.2018 для клиентов – ранее приобретавших автомобиль с использованием кредитных средств в АО «РН Банк» (программы Infiniti Finance, Nissan Finance, Datsun Finance, Renault Finance), и рассчитано из следующих условий: предоставление приобретаемого автомобиля в залог АО «РН Банк»; первоначальный взнос: от 30% стоимости автомобиля; сумма кредита: от 100 тыс. руб.; валюта кредита: рубль РФ; срок кредита: 3 года; процентная ставка: 7% годовых (для клиентов, ранее не приобретавших автомобиль в АО «РН Банк» - 8%); ежемесячные равные (аннуитетные) платежи по погашению основной суммы долга и уплате процентов по кредитному договору; оплата страховой премии по следующим договорам: по договору страхования от несчастных случаев и болезней по программе «Полный+ пакет» с ООО «СК КАРДИФ» (лицензия Банка России на осуществление страхования СЛ № 4104 от 18.07.2018 г.) и договору КАСКО по любой программе Infiniti Insurance сроком на 1 год со СПАО «Ингосстрах» (лицензия Банка России на осуществление страхования СИ № 0928 (бессрочная)). Условия и тарифы могут быть изменены в одностороннем порядке. Подробности – на www.infiniti.ru и в дилерском центре.</p>
+                </div>
                 <div class="finance_prices">
                     <div class="finance_price">
-                        <span class="finance_price-title finance_price-title__big">ЦЕНА</span>
+                        <span class="finance_price-title" data-old-class=" finance_price-title__big">ЦЕНА</span>
                         <span class="finance_price-value">
                             от
                             <span class="finance_price-number">2 549 000</span>
@@ -397,6 +419,7 @@
                                     </div>
                                 </div>
                             </div>
+                            <p class="finance_price-description">по программе лояльности</p>
                         </span>
                     </div>
                     <div class="finance_price">
@@ -415,7 +438,7 @@
                         </span>
                         <p class="finance_price-description">по программе INFINITI FINANCE  </p>
                     </div>
-                    <div class="finance_price">
+                    <!-- <div class="finance_price">
                         <span class="finance_price-title">ВЫГОДА</span>
                         <span class="finance_price-value">
                             до
@@ -431,8 +454,13 @@
                             </div>
                         </span>
                         <p class="finance_price-description">по программе лояльности</p>
+                    </div> -->
+
+                   
+                </div> 
+                <div class="finance_button">
+                        <a class="finance_cta" href="https://www.infiniti.ru/vehicles/new-vehicles/qx50.html">Подробнее о модели</a>
                     </div>
-                </div>
             </div>
         </div>
         
@@ -483,10 +511,12 @@
         <div class="switcher_left js-dark"></div>
         <div class="switcher_right js-light"></div>
         <div class="venom venom__mobile">
+            <div class="venom_name_left venom_name">Совершенство<br>силы</div>
             <div class="venom_wrapper">
                 <img src="src/img/slide-1.jpg" alt="" class="venom_image">
                 <img src="src/img/venom.jpg" alt="" class="venom_face">
             </div>
+            <div class="venom_name_right venom_name">Cовершенство<br>контроля</div>
         </div>
     </div>
     <div class="sections">
@@ -526,16 +556,12 @@
         position: relative;
     }
 
-    	.content_step__4 {
-    		overflow: hidden;
-    	}
 
     	.content_step__4 video {
     		position: absolute;
     		height: 100%;
     		top: 0;
             left: 0;
-            z-index: -1;
             max-width: 100%;
     	}
     	.accordion_item  {
@@ -620,6 +646,8 @@
 
         .assistant_title {
             text-align: center;
+            display: block;
+            width: 90%;
         }
 
         .accordion_item.active .accordion_title {
@@ -638,21 +666,311 @@
 
         .tabs_button {
             font-size: 12px;
-            font-family: "infiniti_brand", sans-serif
+            font-family: "infiniti_brandregular", sans-serif
         }
 
         .tabs_button {
             background: rgba(0, 0, 0, 0.3);
         }
 
-        @media (max-width: 1025px) {
+        .content_step__1 .slider_title {
+            color: #fff;
+            margin: 20px auto;
 
-                .content_step-big-image {
-                    height: auto;
-                    top: auto;
+        }
+
+        .note_icon {
+            background: none;
+            color: #fff;
+        }
+
+        .finance_price:nth-child(2) {
+            border-right: none;
+            border-left: none;
+        }
+
+        .assistant_wheel {
+            width: 145px;
+            height: 145px;
+        }
+
+        .accordion_item {
+            position: relative;
+        }
+
+        .accordion_item:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: #000;
+            opacity: 0.5;
+            transition: all 1s; 
+        }
+
+        .counters {
+            margin-bottom: 35px;
+            margin-top: 35px;
+        }
+
+
+        .accordion_item.active:after {
+            opacity: 0;
+        }
+
+        .tabs_content {
+            top: 69px;
+            padding-bottom: 33px;
+        }
+
+        .venom_name {
+            position: absolute;
+            width: 100px;
+            font-size: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            opacity: 0.4;
+            transition: all .4s;
+        }
+
+        .venom_name_left {
+            left: -30%;
+            text-align: right;
+            top: 50%;
+        }
+
+        .venom_name_right {
+            text-align: left;
+            right: -30%;
+            top: 50%;
+        }
+
+        .dark .venom_name_left,
+        .light  .venom_name_right {
+            opacity: 1;
+        }
+
+        .content_step-intro__6 {
+            z-index: 999;
+        }
+
+        .finance_note {
+            display: none;
+        }
+
+        .finance_cta {
+            border: 1px solid currentColor;
+            color: #fff;
+            font-size: 14px;
+            text-transform: uppercase;
+            background: transparent;
+            margin-top: 20px;
+            padding: 15px 20px;
+            z-index: 5;
+            display: block;
+            text-align: center;
+            text-decoration: none;
+        }
+
+        .mobile-orientation {
+            display: none;
+        }
+
+        .finance_button a {
+            max-width: 300px;
+            margin: 20px auto 0;
+        }
+
+        .sections_next {
+            margin-left: 60px;
+        }
+
+        .sections_prev {
+            margin-right: 60px;
+        }
+
+        @media all and (max-width: 900px) {
+            .content_step-image-wrapper::after {
+                display:block;
+            }
+        }
+
+
+
+
+
+        @media (max-width: 900px) {
+
+                @media (orientation:landscape) {
+                    .mobile-orientation {
+                        color: #fff;
+                        font-size: 18px;
+                        display: flex;
+                          align-items: center;
+                          justify-content: center;
+                        background: #212121;
+                        position: fixed;
+                        z-index: 99999999999;
+                        left: 0;
+                        top: 0;
+                        bottom: 0;
+                        right: 0;
+                        text-align: center;
+                        padding: 2% 0;
+                    }
+
+                    .mobile-orientation img {
+                        width: 20%;
+                    }
+
+                    .mobile-orientation p {
+                        margin-bottom: 0;
+                    }
                 }
 
+                .content_step-big-image {
+                    top: -50px;
+                    height: auto;
+                }
+
+                .finance_title {
+                    font-size: 22px;
+                }
+
+                .content {
+                    height: 100%;
+                }
+
+                .finance_subtitle {
+                    display: none;
+                }
+
+                .venom__5 {
+                    display: none;
+                }
+
+                .content_step__2 .glide_slide:after {
+                    display: none;
+                }
+
+                .content_step__2 .glide_slide:before {
+                    height: 150px;
+                }
+
+                .content_step__1 .slider_title {
+                    color: #fff;
+                    margin: 0 auto;
+
+                }
+
+                .assistant_car {
+                    top: 58%;
+                }
+
+                .slider_info {
+                    width: 90%;
+                }
+
+                .switcher {
+                    bottom: 35px;
+                }
+
+                .content_step-intro {
+                    bottom: 73px;
+                }
+
+                .accordion_item {
+                    max-height: 33.3333333%;
+                }
+
+                .accordion_item.active {
+                    max-height: 85%;
+                }
+
+                .background {
+                    background: url(src/img/bg_mobile.jpg) no-repeat center 60px;
+                    background-size: contain;
+                }
+
+                .assistant_wheel {
+                    height: 80px;
+                    width: 80px;
+                }
+
+                .accordion_item.active .accordion_title:after {
+                    transform: rotate(90deg);
+
+                }
+
+                .accordion_title:after {
+                    position: absolute;
+                    content: '';
+                    background: url(src/img/Arrow-down.svg) no-repeat center center;
+                    width: 20px;
+                    height: 10px;
+                    right: 10px;
+                    top: 10px;
+                    background-size: contain;
+                    transition: all .3s;
+                }
+
+                .tabs_content {
+                    top: 60px;
+                }
+
+                .assistant::before {
+                    top: 65px;
+                }
+
+                .note {
+                    display: inline-block;
+                    position: relative;
+                    display: inline-block;
+                    padding: 0;
+                    left: 0;
+                    bottom: 0;
+                    top: -12px;
+                }
+
+                .note_container {
+                    display: none;
+                }
+
+                .finance_note {
+                    position: absolute;
+                    left: 0;
+                    bottom: 0;
+                    right: 0;
+                    display: block;
+                    top: 400px;
+                    opacity: 0.8;
+                }
+
+
+                .finance_note p {
+                    font-size: 9px;
+                    line-height: 11px;
+                    margin-bottom: 5px;
+                }
+
+
+
+
+        }
+
+         @media (max-width: 530px) {
+            .counters_value {
+                font-size: 10px;
             }
+
+            .counters_item {
+                flex: 1;
+            }
+
+
+         }
 
 
 
