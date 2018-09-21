@@ -390,7 +390,7 @@
         font: 24px $font-family__bold;
         text-transform: uppercase;
         position: absolute;
-        top: 41.5%;
+        top: 50%;
         left: 45%;
         width: 200px;
         text-align: right;
@@ -434,7 +434,7 @@
         font: 24px $font-family__bold;
         text-transform: uppercase;
         position: absolute;
-        top: 41.5%;
+        top: 50%;
         right: 45%;
         width: 200px;
         z-index: 1;
@@ -581,44 +581,44 @@
 @keyframes step-title-left {
     0% {
         opacity: 0;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
     }
 
     25% {
         opacity: 1;
-        transform: translateX(-325px);
+        transform: translate(-325px, -50%);
     }
 
     75% {
         opacity: 1;
-        transform: translateX(-325px);
+        transform: translate(-325px, -50%);
     }
 
     100% {
         opacity: 0;
-        transform: translateX(-50%);
+        transform: translate(-50%, -50%);
     }
 }
 
 @keyframes step-title-right {
     0% {
         opacity: 0;
-        transform: translateX(50%);
+        transform: translate(50%, -50%);
     }
 
     25% {
         opacity: 1;
-        transform: translateX(325px);
+        transform: translate(325px, -50%);
     }
 
     75% {
         opacity: 1;
-        transform: translateX(325px);
+        transform: translate(325px, -50%);
     }
 
     100% {
         opacity: 0;
-        transform: translateX(50%);
+        transform: translate(50%, -50%);
     }
 }
 
