@@ -8,6 +8,10 @@ body {
     &.fast-speed {
         background: #000;
     }
+    @include mobile {
+        opacity: 0;
+        animation: .5s ease-in-out body-fade .5s forwards;
+    }
 }
 
 html,
@@ -79,5 +83,14 @@ textarea {
 [data-slide="3"].dark {
     @include mobile {
         overflow: hidden;
+    }
+}
+
+@keyframes body-fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
