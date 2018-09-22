@@ -4,39 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="style.css?v544">
+    <meta name="theme-color" content="#000000">
+    <link rel="stylesheet" href="style.css">
     <title>INFINITI</title>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-66891908-2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-66891908-2');
+    </script>
 </head>
 <body class="">
     <button class="menu-toggle"></button>
     <div class="menu">
         <div>
-            <a href="#" class="menu_link" data-index="1">
+            <a href="#" class="menu_link" data-index="1" onclick="gtag('event', 'turbo', { 'event_category': 'Part', 'event_action': 'click', });"> 
                 <span class="menu_icon" data-char="&#xe64b;"></span>
-                ДВИГАТЕЛЬ VC-Tutrbo
+                ДВИГАТЕЛЬ VC-Turbo
             </a>
-            <a href="#" class="menu_link" data-index="2">
+            <a href="#" class="menu_link" data-index="2" onclick="gtag('event', 'design', { 'event_category': 'Part', 'event_action': 'click', });">
                 <span class="menu_icon" data-char=""></span>
                 Уникальный дизайн
             </a>
-            <a href="#" class="menu_link" data-index="3">
+            <a href="#" class="menu_link" data-index="3" onclick="gtag('event', 'tech', { 'event_category': 'Part', 'event_action': 'click', });">
                 <span class="menu_icon" data-char="&#xe61e;" ></span>
                 тЕХНОЛОГИИ Безопасности
             </a>
-            <a href="#" class="menu_link" data-index="4">
+            <a href="#" class="menu_link" data-index="4" onclick="gtag('event', 'luxe', { 'event_category': 'speed', 'event_action': 'click', });">
                 <span class="menu_icon" data-char="&#xe60b;"></span>
                 дИНАМИКА И УПРАВЛЕНИЕ
             </a>
-            <a href="#" class="menu_link" data-index="5">
+            <a href="#" class="menu_link" data-index="5" onclick="gtag('event', 'luxe', { 'event_category': 'Part', 'event_action': 'click', });">
                 <span class="menu_icon" data-char="&#xe600;"></span>
                 Удобство и комфорт
             </a>
-            <a href="#" class="menu_link" data-index="6">
+            <a href="#" class="menu_link" data-index="6" onclick="gtag('event', 'money', { 'event_category': 'Part', 'event_action': 'click', });">
                 <span class="menu_icon" data-char=""></span>
                 цена
             </a>
+
+
         </div>
-        <span class="menu_price">ОТ 2 549 000 р.*</span>
+<!--         <span class="menu_price">ОТ 2 549 000 р.*</span> -->
     </div>
     <div class="loading">
         <img src="src/img/logo.png" alt="" class="loading_logo">
@@ -324,7 +336,7 @@
                                 </div>
                                 <img class="slider_image" src="src/img/slider-1.jpg" alt="">
                             </div>
-                            <div class="slider_item" style="background: #fcfbfd;">
+                            <div class="slider_item">
                                 <div class="slider_info">
                                     <p class="slider_title">РУЛЕВОЕ УПРАВЛЕНИЕ</p>
                                     <p class="slider_text">Первая в мире активная опора двигателя с системой гашения вибраций подавляет шумы при ускорении автомобиля.</p>
@@ -352,7 +364,7 @@
                     </div>
                     <div class="accordion_item">
                         <p class="accordion_title">СИстема открывания, реагирующая на движение ноги</p>
-                        <img src="src/img/accordion-2_2.jpg" alt="" class="accordion_image">
+                        <img src="src/img/back.gif" alt="" class="accordion_image">
                     </div>
                     <div class="accordion_item">
                         <p class="accordion_title">Аудиосистема bose</p>
@@ -511,22 +523,22 @@
         <div class="switcher_left js-dark"></div>
         <div class="switcher_right js-light"></div>
         <div class="venom venom__mobile">
-            <div class="venom_name_left venom_name">Совершенство<br>силы</div>
+            <!-- <div class="venom_name_left venom_name">Совершенство<br>силы</div> -->
             <div class="venom_wrapper">
                 <img src="src/img/slide-1.jpg" alt="" class="venom_image">
                 <img src="src/img/venom.jpg" alt="" class="venom_face">
             </div>
-            <div class="venom_name_right venom_name">Cовершенство<br>контроля</div>
+           <!--  <div class="venom_name_right venom_name">Cовершенство<br>контроля</div> -->
         </div>
     </div>
     <div class="sections">
         <button class="sections_prev js-prev-slide"></button>
-        <button class="sections_icon" data-char="&#xe64b;" data-index="1"></button>
-        <button class="sections_icon" data-char="" data-index="2"></button>
-        <button class="sections_icon" data-char="&#xe61e;" data-index="3"></button>
-        <button class="sections_icon" data-char="&#xe60b;" data-index="4"></button>
-        <button class="sections_icon" data-char="&#xe600;" data-index="5"></button>
-        <button class="sections_icon" data-char="" data-index="6"></button>
+        <button class="sections_icon" data-char="&#xe64b;" data-index="1" onclick="gtag('event', 'turbo', { 'event_category': 'Part', 'event_action': 'click', });"></button>
+        <button class="sections_icon" data-char="" data-index="2" onclick="gtag('event', 'design', { 'event_category': 'Part', 'event_action': 'click', });"></button>
+        <button class="sections_icon" data-char="&#xe61e;" data-index="3" onclick="gtag('event', 'tech', { 'event_category': 'Part', 'event_action': 'click', });"></button>
+        <button class="sections_icon" data-char="&#xe60b;" data-index="4" onclick="gtag('event', 'speed', { 'event_category': 'Part', 'event_action': 'click', });"></button>
+        <button class="sections_icon" data-char="&#xe600;" data-index="5" onclick="gtag('event', 'luxe', { 'event_category': 'Part', 'event_action': 'click', });"></button>
+        <button class="sections_icon" data-char="" data-index="6" onclick="gtag('event', 'money', { 'event_category': 'Part', 'event_action': 'click', });"></button>
         <button class="sections_next js-next-slide"></button>
     </div>
     <a class="test-drive" href="https://infoinfiniti.ru/forms/test-drive-venom.php">подать заявку на тест-драйв</a>
@@ -535,27 +547,81 @@
     <script src="src/plugins/glide.min.js"></script>
     <script src="script.js"></script>
 
+    <!-- Yandex.Metrika counter -->
+    <script type="text/javascript" >
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter50391043 = new Ya.Metrika2({
+                        id:50391043,
+                        clickmap:true,
+                        trackLinks:true,
+                        accurateTrackBounce:true,
+                        webvisor:true
+                    });
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks2");
+    </script>
+    <noscript><div><img src="https://mc.yandex.ru/watch/50391043" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
     <style type="text/css">
-    .slider__dark .glide_arrow {
-        color: #fff;
-    }
-    .test-drive {
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 12px;
-        display: block;
+
+    .tabs_content {
+        transition: all .3s;
     }
 
-    .test-drive:hover {
-        border-color: #000;
-        color: #000;
-        background: #fff;
+    .legal {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 130%;
+        text-align: center;
+        font-size: 11px;
+        opacity: 0.8;
+        font-family: "infiniti_brandregular", sans-serif;
+    }
+
+    .legal span {
+        position: relative;
+        left: 5px;
+    }
+
+    .legal span:after {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: -3px;
+        top: -5px;
+        border-radius: 50%;
+        border: 1px solid #fff;
+        content: '';
+    }
+
+
+    .slider__dark .glide_arrow {
+        color: #fff;
     }
 
     .slider_info {
         position: relative;
     }
 
+    	.content_step__4 {
+    		overflow: hidden;
+    	}
 
     	.content_step__4 video {
     		position: absolute;
@@ -783,26 +849,93 @@
             margin: 20px auto 0;
         }
 
-        .sections_next {
-            margin-left: 60px;
+        .sections_icon {
+            width: 50px;
+            height: 50px;
         }
 
-        .sections_prev {
-            margin-right: 60px;
+        .sections_icon::after {
+            font-size: 26px;
         }
 
-        @media all and (max-width: 900px) {
+        .finance_subtitle {
+            margin-bottom: 10px;
+        }
+
+        .finance_title {
+            margin-bottom: 40px;
+        }
+
+        .note_container {
+            background: #fff;
+            padding: 20px 25px;
+            opacity: 0;
+            visibility: visible;
+            position: fixed;
+            bottom: auto;
+            right: 20%;
+            top: 2%;
+            left: 20%;
+        }
+
+        .note_text {
+            width: auto;
+            max-height: 100%;
+        }
+
+/*        @media all and (max-width: 900px) {
             .content_step-image-wrapper::after {
                 display:block;
             }
         }
 
 
+*/
 
 
 
-        @media (max-width: 900px) {
 
+
+
+        @media (max-width: 900px) { 
+
+            .content_step-intro__6 {
+                background: #000;
+            }
+
+            
+            .venom.venom__mobile {
+                display: block;
+                visibility: none;
+                opacity: 0;
+            }
+
+            .scrolled .venom.venom__mobile {
+                display: block;
+                transition: all .6s;
+                opacity: 1;
+
+            }
+
+            body.scrolled[data-slide='6'] .venom__mobile {
+                opacity: 0;
+            }
+
+            [data-slide="6"] .content_step-intro__6 {
+                bottom: 160px;
+            }
+
+
+
+/*            .venom__mobile .venom_wrapper::before,
+            .venom__mobile .venom_wrapper::after {
+                transition: all 1s;
+            }
+
+            .dark .venom__mobile .venom_wrapper::before,
+            .dark .venom__mobile .venom_wrapper::after {
+                transform: rotate(180deg);
+            }*/
                 @media (orientation:landscape) {
                     .mobile-orientation {
                         color: #fff;
@@ -831,7 +964,7 @@
                 }
 
                 .content_step-big-image {
-                    top: -50px;
+                    top: -120px;
                     height: auto;
                 }
 
@@ -895,6 +1028,7 @@
                 }
 
                 .assistant_wheel {
+                    bottom: 25%;
                     height: 80px;
                     width: 80px;
                 }
@@ -953,6 +1087,12 @@
                     font-size: 9px;
                     line-height: 11px;
                     margin-bottom: 5px;
+                }
+
+                
+
+                .tabs_content {
+                    padding-bottom: 0;
                 }
 
 

@@ -15,6 +15,8 @@ function prevSlide() {
 function nextSlide() {
     if (slide < 6) {
         changeSlide(slide + 1, slide);
+    } else if(slide === 6) {
+        changeSlide(1, slide);
     }
 };
 

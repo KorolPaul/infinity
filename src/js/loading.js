@@ -12,8 +12,15 @@ function closeIntro() {
     }, IS_MOBILE ? 0 : 2000);
 
     if(!IS_MOBILE) {
-        window.addEventListener('wheel', function addScroll(e) {
+        window.addEventListener('wheel', addScroll);
+        
+        setTimeout(()=> {
+            document.body.addEventListener('click', addScroll);
+        }, 2100)
+
+        function addScroll(e) {
             document.body.classList.add('scrolled');
+            document.body.removeEventListener('click', addScroll);
     
             setTimeout(function () {
                 setCounters();
@@ -30,7 +37,7 @@ function closeIntro() {
                     }
                 });
             }, 1500);
-        });
+        }
     } else {
         setTimeout(() => {
             document.body.classList.add('scrolled');

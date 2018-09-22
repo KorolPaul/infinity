@@ -1,12 +1,11 @@
 .venom {
-    position: fixed;
-    top: 22%;
+    position: absolute;
+    top: 50%;
     overflow: visible;
     left: 50%;
-    transform: translate(-50%, 0);
+    transform: translate(-50%, -50%);
     z-index: 3;
     @include mobile {
-        position: absolute;
         top: auto;
         bottom: 15px;
         transform: scale(.75) translate(-66%, 0);

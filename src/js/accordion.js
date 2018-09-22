@@ -5,8 +5,15 @@ for(let i = 0; i < accordionItems.length; i++) {
 }
 
 function changeAccordion(e) {
-    for(let i = 0; i < accordionItems.length; i++) {
-        accordionItems[i].classList.remove('active');
+    if(!e.currentTarget.classList.contains('active')) {
+        for(let i = 0; i < accordionItems.length; i++) {
+            accordionItems[i].classList.remove('active');
+        }
+
+        e.currentTarget.classList.add('active');
+    } else {
+        for(let i = 0; i < accordionItems.length; i++) {
+            accordionItems[i].classList.remove('active');
+        }
     }
-    e.currentTarget.classList.add('active');
 }

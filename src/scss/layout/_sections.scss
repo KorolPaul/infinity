@@ -21,7 +21,7 @@
         border-radius: 50%;
         height: 40px;
         width: 40px;
-        margin: 0 15px;
+        margin: 0 1vw;
         border: none;
         text-align: center;
         vertical-align: middle;
@@ -58,7 +58,7 @@
         }
     }
     &_prev {
-        margin: 0 120px 0 0;
+        margin: 0 2.5vw 0 0;
         &::before {
             content: '';
             border-style: solid;
@@ -73,7 +73,7 @@
         &::after {
             content: '';
             border-bottom: 2px solid currentColor;
-            width: 75px;
+            width: 4vw;
             position: absolute;
             top: 25px;
             left: 20px;
@@ -81,7 +81,7 @@
     }
 
     &_next {
-        margin: 0 0 0 120px;
+        margin: 0 0 0 2.5vw;
         &::before {
             content: '';
             border-style: solid;
@@ -96,7 +96,7 @@
         &::after {
             content: '';
             border-bottom: 2px solid currentColor;
-            width: 75px;
+            width: 4vw;
             position: absolute;
             top: 25px;
             right: 20px;
