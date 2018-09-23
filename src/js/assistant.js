@@ -1,14 +1,17 @@
-document.querySelector('.assistant').addEventListener('mousemove', (e) => {
+document.querySelector('.assistant_hover-area').addEventListener('mousemove', (e) => {
     let width = window.innerWidth / 2,
         x = e.clientX,
-        angle = (x * 100/width) - 50;
+        angle = (x * 110/width) - 55;
 
     const wheel = document.querySelector('.assistant_wheel');
     const lights = document.querySelectorAll('.assistant_light');
 
-    wheel.style.transform = `rotate(${angle}deg)`;
-    lights[0].style.transform = `rotate(${angle}deg)`;
-    lights[1].style.transform = `rotate(${angle}deg)`;
+    console.log(angle)
+    if(angle <= 63 && angle >= -63) {
+        wheel.style.transform = `rotate(${angle}deg)`;
+        lights[0].style.transform = `rotate(${angle}deg)`;
+        lights[1].style.transform = `rotate(${angle}deg)`;
+    }
 });
 
 document.querySelector('.assistant').addEventListener('touchmove', (e) => {

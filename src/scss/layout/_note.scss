@@ -1,8 +1,8 @@
 .note {
     position: absolute;
-    bottom: calc(75% - 50px);
-    left: calc(100% - 50px);
-    padding: 50px;
+    bottom: calc(75% - 20px);
+    left: calc(100% - 20px);
+    padding: 20px;
     @include mobile {
         display: none;
     }

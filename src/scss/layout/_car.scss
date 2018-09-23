@@ -59,6 +59,9 @@
         width: 100%;
         z-index: 1;
     }
+    &__small::after {
+        background-image: url(#{$img-path}/car-small.png);
+    }
     .light &::before {
         opacity: 1;
     }
@@ -160,7 +163,7 @@
             background-image: url(#{$img-path}/light-small.png);
             height: 261px;
             width: 1040px;
-            bottom: -99px;
+            bottom: -105px;
             left: 90%;
             opacity: 1;
         }

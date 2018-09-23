@@ -13,8 +13,6 @@ window.addEventListener('load', () => {
 });
 
 function initSliders() {
-    console.log('sliders init')
-    
     new Glide('.content_left .content_step__2  .slider', {
         type: 'slider',
         perView: 1
