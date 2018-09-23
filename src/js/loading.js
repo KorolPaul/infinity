@@ -78,7 +78,7 @@ function init() {
                 }
             });
         }
-    }, 20000);
+    }, 20);
 }
 
 function setCounters() {
